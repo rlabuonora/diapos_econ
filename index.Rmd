@@ -1,5 +1,5 @@
 ---
-title: "FPP"
+title: "Macroeconomía"
 subtitle: "⚔<br/>with xaringan"
 author: "Yihui Xie"
 date: "2016/12/12 (updated: `r Sys.Date()`)"
