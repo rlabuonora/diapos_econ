@@ -3,6 +3,7 @@ title: "Demanda Agregada y Política Fiscal"
 date: "30/7/2019"
 output:
   xaringan::moon_reader:
+    css: ["default", "my-theme.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -12,9 +13,13 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE, echo = FALSE)
+library(ggplot2)
 ```
 
 # Ciclos de Negocios
+
+
 
 - Las economías modernas pasan por períodos de auge y caída.
 - En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
@@ -30,3 +35,51 @@ options(htmltools.dir.version = FALSE)
 <img src="imgs/keynes.jpg">
 
 ]
+
+---
+# Ciclos de Negocios: Fases
+
+- Expansión
+- Pico
+- Contracción
+
+---
+# Ciclos de Negocios: características
+
+- No son predecibles
+- Se parecen más al clima que a las estaciones
+
+---
+# Características (2):
+- El empleo baja
+- La inversión baja
+- Ganacias de las empresas bajan
+
+
+---
+# Teorías
+
+- Exógenas vs. Endógenas.
+- Crisis Financieras y ciclos de negocios
+- Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria.
+
+---
+# Demanda Agregada
+
+- Es el ouput total de la economía que es demandado.
+- Tiene 4 componentes:
+  - Consumo
+  - Inversión
+  - Compras del Gobierno
+  - Exportaciones Netas
+  
+---
+# Demanda Agregada
+
+- Tiene pendiente negativa
+
+```{r}
+ggplot() + 
+  labs(title = "Tiene pendiente negativa")
+```
+
