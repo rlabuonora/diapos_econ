@@ -3,7 +3,7 @@ title: "Demanda Agregada y Política Fiscal"
 date: "30/7/2019"
 output:
   xaringan::moon_reader:
-    css: ["default", "my-theme.css"]
+    css: ["default", "default-fonts", "custom.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -13,8 +13,20 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(echo = TRUE, echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE, echo = FALSE, fig.height = 5, warning = FALSE)
 library(ggplot2)
+library(dplyr)
+library(cowplot)
+
+theme_set(
+  theme_classic() + 
+    theme(
+      plot.title = element_text(hjust = 0.5)
+    ))
+
+demand <- Hmisc::bezier(c(1, 3, 9),
+                        c(9, 3, 1)) %>%
+  as_data_frame()
 ```
 
 # Ciclos de Negocios
@@ -83,3 +95,74 @@ ggplot() +
   labs(title = "Tiene pendiente negativa")
 ```
 
+---
+# Cambios en la DA
+
+- Variables de política
+  - Política Monetaria
+  - Política Fiscal
+- Variables exógenas
+  - Ingreso internacional
+  - Activos
+  - Tecnología
+  - Otros
+  
+---
+# Movimientos de la curva vs. Movimientos sobre la curva
+
+```{r}
+
+punto_a <- slice(demand, 70)
+punto_b <- slice(demand, 30)
+
+p1 <- ggplot(demand, aes(x = x, y = y)) + 
+  geom_path(color = "#0073D9", size = 1) + 
+  geom_point(data = punto_a) + 
+  geom_segment(x=0, y=punto_a$y, xend=punto_a$x, yend=punto_a$y, linetype = "dashed") + 
+  geom_segment(x=punto_a$x, y=0, xend=punto_a$x, yend = punto_a$y, linetype = "dashed") +
+  geom_point(data = punto_b) + 
+  geom_segment(x=0, y=punto_b$y, xend=punto_b$x, yend=punto_b$y, linetype = "dashed") + 
+  geom_segment(x=punto_b$x, y=0, xend=punto_b$x, yend = punto_b$y, linetype = "dashed") +
+  geom_segment(data = slice(demand, seq(70, 30, by=-10)), 
+               aes(xend=lag(x), yend=lag(y)),
+               color = "red",
+            arrow = arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) + 
+  coord_equal() +
+  labs(title = "Movimiento sobre la curva")
+
+```
+
+```{r}
+p2 <- ggplot(demand, aes(x = x)) + 
+  geom_path(aes(y=y), color = "#0073D9", size = 1) + 
+  geom_path(aes(y=y+2), color = "#0073D9", size = 1, linetype = "dashed") + 
+  geom_segment(x=2, xend=2.5, y=7, yend=7.5, size = 0.2, 
+               arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +
+  geom_segment(x=4.6, xend=5.2, y=4, yend=4.7, size = 0.2, 
+               arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +
+  coord_equal() +
+  labs(title = "Movimiento sobre la curva")
+
+```
+---
+.pull-left[
+```{r}
+p1
+```
+]
+
+.pull-right[
+```{r}
+p2
+```
+]
+
+
+
+---
+# Caída en la demanda agregada
+
+
+
+---
+# El modelo del multiplicador
