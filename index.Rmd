@@ -13,6 +13,10 @@ output:
 
 <style>
 
+li {
+  margin: 40px;
+}
+
 .center2 {
   margin: 0;
   position: absolute;
@@ -47,7 +51,7 @@ demand <- Hmisc::bezier(c(1, 3, 9),
 # Ciclos de Negocios
 .pull-left[
 - El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
-- Keynes fue el que originó esta rama de la economía en los años 30s.
+- John Maynard Keynes fue el que originó esta rama de la economía en los años 30.
 ]
 
 .pull-right[
@@ -58,72 +62,81 @@ demand <- Hmisc::bezier(c(1, 3, 9),
 ---
 # Ciclos de Negocios
 
-
-
+.pull-left[
 - Las economías modernas pasan por períodos de auge y caída.
-- En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
+- El empleo baja.
+- La inversión baja.
+- Ganacias de las empresas bajan.
+]
 
 
 ---
-# Ciclos de Negocios: Fases
 
-- Expansión
-- Pico
-- Contracción
+## Ciclo de negocios en Uruguay
 
-Agregar Ejercicio 4 del capítulo del PIB
-
----
-# Ciclos de Negocios: características
-
-- No son predecibles
-- Se parecen más al clima que a las estaciones
-
----
-# Características (2):
-- El empleo baja
-- La inversión baja
-- Ganacias de las empresas bajan
 
 
 ---
-# Teorías
+# ¿Por qué hay ciclos?
 
-- Exógenas vs. Endógenas.
-- Crisis Financieras y ciclos de negocios
-- Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria.
+- Teorías con causas exógenas (Guerras, demografía) 
+- Teorías con causas endógenas (crisis financieras y bancarias, pánicos, burbujas)
 
 ---
 # Demanda Agregada
 
-- Es el ouput total de la economía que es demandado.
-- Tiene 4 componentes:
-  - Consumo
-  - Inversión
-  - Compras del Gobierno
-  - Exportaciones Netas
+- Es la producción total de bienes y servicios de una economía que alguien se planifica comprar a cierto precio.
+
   
 ---
 # Demanda Agregada
 
+.pull-left[
 - Tiene pendiente negativa
+- Si aumenta el nivel de precio cae la riqueza real y las exportaciones netas.
+]
 
+
+.pull-right[
 ```{r}
-ggplot() + 
-  labs(title = "Tiene pendiente negativa")
+ggplot(demand, aes(x = x, y = y)) + 
+  geom_path(color = "#0073D9", size = 1)
 ```
+]
+
+---
+# Demanda Agregada
+
+.pull-left[
+- Tiene pendiente negativa
+- Si aumenta el nivel de precio cae la riqueza real y las exportaciones netas.
+- Tiene 4 componentes: Consumo, Inversión, Compras del Gobierno, Exportaciones Netas
+]
+
+
+.pull-right[
+```{r}
+
+df <- tibble(componente = c("C", "G", "I"),
+             y = 3, 
+             x=c(3.5, 4, 5.08))
+
+ggplot(demand, aes(x = x, y = y)) + 
+  geom_path(color = "#0073D9", size = 1) + 
+  geom_segment(aes(x=0, y=y, xend=x, yend=y), 
+               arrow = arrow(type = "open", angle = 30, length = unit(0.1, "inches")),
+               data =df) +
+  scale_x_continuous(expand=c(0, 0)) +
+  geom_text(data = df, aes(label = componente), nudge_y = -.4, nudge_x = -.2)
+```
+]
+
 
 ---
 # Cambios en la DA
 
-- Variables de política
-  - Política Monetaria
-  - Política Fiscal
-- Variables exógenas
-  - Ingreso internacional
-  - Activos
-  - Tecnología
-  - Otros
+- Variables de política: Política Fiscal, Política Monetaria
+- Variables exógenas: Ingreso internacional, Riqueza, Tecnología, Otros
   
 ---
 
