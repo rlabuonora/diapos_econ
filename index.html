@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
@@ -17,16 +18,22 @@ class: center, middle, inverse, title-slide
 ---
 
 
+&lt;style&gt;
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+&lt;/style&gt;
 
 
-# Ciclos de Negocios
 
 
-
-- Las economías modernas pasan por períodos de auge y caída.
-- En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
-
----
 # Ciclos de Negocios
 .pull-left[
 - El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
@@ -39,11 +46,22 @@ class: center, middle, inverse, title-slide
 ]
 
 ---
+# Ciclos de Negocios
+
+
+
+- Las economías modernas pasan por períodos de auge y caída.
+- En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
+
+
+---
 # Ciclos de Negocios: Fases
 
 - Expansión
 - Pico
 - Contracción
+
+Agregar Ejercicio 4 del capítulo del PIB
 
 ---
 # Ciclos de Negocios: características
@@ -95,18 +113,15 @@ class: center, middle, inverse, title-slide
   - Otros
   
 ---
-# Movimientos de la curva vs. Movimientos sobre la curva
+
+## Movimientos de la DA vs. Movimientos sobre la DA
 
 
 
 
 
-.pull-left[
+.center2[
 ![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
-]
-
-.pull-right[
-![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 ]
 
 
@@ -114,10 +129,85 @@ class: center, middle, inverse, title-slide
 ---
 # Caída en la demanda agregada
 
+![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
 
 
 ---
-# El modelo del multiplicador
+## El modelo del multiplicador
+
+
+Ejemplo numérico
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; GDP &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Consumo &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; S &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; I &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 400 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3900 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3400 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2700 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$ C = 1000 + \frac{2}{3} GDP $$
+
+
+---
+## Gráficamente: Equilibrio
+
+
+
+
+![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+## Ajustes fuera del equilibrio
+
+![](index_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+## Aumento del gasto exógeno
+
+![](index_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
