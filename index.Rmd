@@ -311,8 +311,24 @@ graf_equilibrio +
 ```
 
 ---
-## Aumento del gasto exógeno (2)
+## El multiplicador
 
-El efecto multiplicador
+- El multiplicador es el impacto de un cambio en el gasto exógeno sobre el PIB.
+- Si hay trabajadores desempleados y los contratamos para construir una carretera de $1000, el PIB aumenta más que $1000.
+- Si ahorran todo lo que les pagamos, el PIB aumenta $1000, pero como una parte de esos ingresos lo consumen, se generan aumentos del PIB de *segunda vuelta*. 
 
 
+---
+## El multiplicador (2)
+
+
+
+- Estos aumentos generan más aumentos encadenados. El aumento total en el PIB es:
+
+$$ \$1000 + \frac{2}{3} \$1000 + (\frac{2}{3}) (\frac{2}{3}) \$1000 + ...$$
+
+- Es una suma infinita, pero converge a una cantidad finita:
+
+$$ \$1000 * \frac{1}{1-\frac{2}{3}} $$
+
+## Gráficamente
