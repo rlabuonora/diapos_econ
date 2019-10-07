@@ -62,12 +62,11 @@ demand <- Hmisc::bezier(c(1, 3, 9),
 ---
 # Ciclos de Negocios
 
-.pull-left[
 - Las economías modernas pasan por períodos de auge y caída.
 - El empleo baja.
 - La inversión baja.
 - Ganacias de las empresas bajan.
-]
+
 
 ---
 
