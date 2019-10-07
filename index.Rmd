@@ -69,14 +69,8 @@ demand <- Hmisc::bezier(c(1, 3, 9),
 - Ganacias de las empresas bajan.
 ]
 
-
 ---
 
-## Ciclo de negocios en Uruguay
-
-
-
----
 # ¿Por qué hay ciclos?
 
 - Teorías con causas exógenas (Guerras, demografía) 
