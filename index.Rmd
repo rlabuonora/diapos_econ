@@ -41,16 +41,52 @@ theme_set(
 ```
 
 
-# 
+# ¿Por qué estudiar economía?
+
+Algunas preguntas que busca responder la economía:
+
+- ¿Por qué algunos países son más ricos que otros?
+- ¿Cómo se determina el salario de los trabajadores?
+- ¿Qué medidas debe tomar el gobierno para mejorar el bienestar de la población?
+- ¿Qué efectos tiene el comercio con otros países?
+
+---
+
+# Conceptos Clave
+
+- Economía normativa y economía positiva.
+- Escasez y eficiencia.
+- Macroeconomía y microeconomía.
+
+---
+
+# Los principales problemas que enfrenta la economía
+
+- ¿Qué producir?
+Las economías tienen estructuras productivas diferentes.
+
+- ¿Cómo producir?
+Las economías usan tecnologías diferentes para producir bienes y servicios.
+
+- ¿Para quién producir?
+Las economías distribuyen lo que producen de formas diferentes.
+
+---
+# Precios 
+
+- Determinan las respuestas a estas preguntas.
+- La teoría económica busca entender cómo se determinan.
+---
+
 .pull-left[
-- El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
-- Keynes fue el que originó esta rama de la economía en los años 30s.
-]
+<img src="imgs/smith.jpg">
 
+]
 .pull-right[
-<img src="imgs/keynes.jpg">
-
+- Adam Smith fue el primero en entender el papel de los mercados en este proceso.
 ]
+
+
 
 ---
 
