@@ -70,13 +70,23 @@ Las economías usan tecnologías diferentes para producir bienes y servicios.
 
 - ¿Para quién producir?
 Las economías distribuyen lo que producen de formas diferentes.
+---
+
+# Economías Mixtas
+
+- Economías **mixtas**: los recursos se asignan por mecanismos de _mercado_ y directamente por el _estado_.
 
 ---
-# Precios 
 
-- Determinan las respuestas a estas preguntas.
-- La teoría económica busca entender cómo se determinan.
+# El mercado
+
+- Es donde se encuentran los compradores (demanda) y vendedores (oferta).
+- Coordina millones de agentes descentralizadamente.
+- Determinan el precio de un bien y la cantidad vendida
+
+
 ---
+# Mercado y Precios 
 
 .pull-left[
 <img src="imgs/smith.jpg">
@@ -84,9 +94,64 @@ Las economías distribuyen lo que producen de formas diferentes.
 ]
 .pull-right[
 - Adam Smith fue el primero en entender el papel de los mercados en este proceso.
+- Funcionan como señales para que los agentes económicos tomen decisiones.
+- Estas decisiones determinan qué, cómo y para quién se produce.
 ]
 
+---
+# ¿Qué se produce?
+
+- Las empresas deciden qué producir para maximizar sus __beneficios__
+- Los precios a los que venden su producto y los precios de sus insumos impactan estos beneficios.
+
+---
+# ¿Cómo se produce?
+
+- Las empresas eligen las técnicas de producción.
+
+---
+# ¿Para quién se produce?
+
+- El ingreso de los ciudadanos depende de la remuneración que obtienen por los factores de producción que poseen. 
+
+- Estos factores de producción pueden ser trabajo, tierra o capital.
+
+---
+# Tecnología y preferencias
+
+- Son las grandes determinantes del comportamiento de los agentes.
+
+---
+
+# Comercio
+
+- El comercio permite la división y la **especialización** de los factores productivos: la tierra, el trabajo y el capital.
+- La globalización agrandan el tamaño del mercado y aumentan las posibilidades de división del trabajo de forma que un profesor de economía en Uruguay pueda acceder a bienes producidos en China por una empresa de EUA con mano de obra local.
+
+---
+# Capital
+
+- En las economías modernas el capital -maquinaria, edificios, etc- tiene un rol fundamental para aumentar la productividad de los trabajadores.
+
+---
+# Dinero
+
+- La importancia del dinero para facilitar el intercambio y la especialización. 
+- Sin dinero deberíamos usar el trueque, y dependemos de que las personas que producen lo que necesitamos quieran lo que nostros producimos.
 
 
 ---
+# El rol del Estado
+
+En **competencia perfecta**, el mercado asigna los recursos de manera eficiente. Sin embargo, en una economía mixta, el Estado tiene un rol clave para:
+
+- Corregir situaciones en el que el mercado no funciona en competencia perfecta
+  - Monopolios
+  - Externalidades
+
+- Corregir resultados eficientes pero injustos (distribución del ingreso demasiado desigual)
+
+- Proveer estabilidad macroeconómica
+  - Política Fiscal 
+  - Política Monetaria
 
