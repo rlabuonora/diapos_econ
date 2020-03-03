@@ -13,13 +13,9 @@ output:
 
 <style>
 
-.center2 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+li {
+  margin-bottom: 20px;
+
 }
 
 </style>
@@ -81,8 +77,13 @@ Las economías distribuyen lo que producen de formas diferentes.
 # El mercado
 
 - Es donde se encuentran los compradores (demanda) y vendedores (oferta).
+
 - Coordina millones de agentes descentralizadamente.
+
 - Determinan el precio de un bien y la cantidad vendida
+
+  <img src="imgs/mercado.jpg">
+
 
 
 ---
@@ -99,18 +100,16 @@ Las economías distribuyen lo que producen de formas diferentes.
 ]
 
 ---
-# ¿Qué se produce?
+## ¿Qué se produce?
 
 - Las empresas deciden qué producir para maximizar sus __beneficios__
 - Los precios a los que venden su producto y los precios de sus insumos impactan estos beneficios.
 
----
-# ¿Cómo se produce?
+## ¿Cómo se produce?
 
 - Las empresas eligen las técnicas de producción.
 
----
-# ¿Para quién se produce?
+## ¿Para quién se produce?
 
 - El ingreso de los ciudadanos depende de la remuneración que obtienen por los factores de producción que poseen. 
 
@@ -131,13 +130,30 @@ Las economías distribuyen lo que producen de formas diferentes.
 ---
 # Capital
 
+.pull-left[
 - En las economías modernas el capital -maquinaria, edificios, etc- tiene un rol fundamental para aumentar la productividad de los trabajadores.
+]
+
+.pull-right[
+  <img src="imgs/maquinas.jpeg">
+
+]
+
 
 ---
 # Dinero
 
+.pull-left[
 - La importancia del dinero para facilitar el intercambio y la especialización. 
 - Sin dinero deberíamos usar el trueque, y dependemos de que las personas que producen lo que necesitamos quieran lo que nostros producimos.
+
+]
+
+.pull-right[
+  <img src="imgs/dinero.jpg">
+
+]
+
 
 
 ---
@@ -145,13 +161,70 @@ Las economías distribuyen lo que producen de formas diferentes.
 
 En **competencia perfecta**, el mercado asigna los recursos de manera eficiente. Sin embargo, en una economía mixta, el Estado tiene un rol clave para:
 
-- Corregir situaciones en el que el mercado no funciona en competencia perfecta
-  - Monopolios
-  - Externalidades
-
-- Corregir resultados eficientes pero injustos (distribución del ingreso demasiado desigual)
-
+- Ineficiencias
+- Resultados eficientes pero injustos
 - Proveer estabilidad macroeconómica
-  - Política Fiscal 
-  - Política Monetaria
 
+---
+# Competencia Imperfecta
+
+Los oferentes o los demandantes tienen __poder de mercado__.
+
+
+.pull-left[
+  <img src="imgs/ancap.png">
+]
+
+.pull-right[
+  <img src="imgs/google.jpeg">
+]
+
+---
+# Externalidades
+
+Es cuando la actividad económico genera efectos que no se reflejan en los precios.
+
+.pull-left[
+  Postivas
+  <img src="imgs/innovation.jpg">
+]
+
+.pull-right[
+  Negativas
+  <img src="imgs/pollution.jpg">
+
+]
+---
+#Bienes Públicos
+
+No es posible excluir personas de su consumo
+
+.pull-left[
+    <img src="imgs/ejercito.jpeg">
+
+]
+
+---
+# Desigualdad
+
+
+-Algunos resultados pueden ser ineficientes pero injustos
+
+<img src="imgs/distribucion.webp">
+
+---
+# Estabilidad Macroeconómica
+
+El nivel de actividad, el empleo y el nivel general de precios.
+
+.pull-left[
+  - Política Fiscal (en Uruguay depende del Ministerio de Economía)
+
+  <img src="imgs/mef.png">
+]
+
+.pull-right[
+  - Política Monetaria (Bancos Centrales)
+  <img src="imgs/bcu.jpg">
+
+]
