@@ -263,52 +263,34 @@ __Distribución__ del producto de la economía.
 
 ---
 
-# Tecnología y preferencias
+# Tecnología y preferencias.
 
 - Son las grandes determinantes del comportamiento de los agentes.
 
 ---
 
-# Comercio
+# Tres aspectos clave en las economías modernas
 
-- El comercio permite la división y la **especialización** de los factores productivos: la tierra, el trabajo y el capital.
-- La globalización agrandan el tamaño del mercado y aumentan las posibilidades de división del trabajo de forma que un profesor de economía en Uruguay pueda acceder a bienes producidos en China por una empresa de EUA con mano de obra local.
-
----
-# Capital
-
-.pull-left[
-- En las economías modernas el capital -maquinaria, edificios, etc- tiene un rol fundamental para aumentar la productividad de los trabajadores.
-]
-
-.pull-right[
-  <img src="imgs/maquinas.jpeg">
-
-]
-
-
----
-# Dinero
-
-.pull-left[
-- La importancia del dinero para facilitar el intercambio y la especialización. 
-- Sin dinero deberíamos usar el trueque, y dependemos de que las personas que producen lo que necesitamos quieran lo que nostros producimos.
-
-]
-
-.pull-right[
-  <img src="imgs/dinero.jpg">
-
-]
+- El __comercio__ permite la **especialización** de los factores productivos.
+- El __dinero__ facilita el intercambio y la especialización. 
+- El __capital__ tiene un rol fundamental para aumentar la productividad de los trabajadores.
 
 ---
 # El rol del Estado
+
+.pull-left[
 
 En **competencia perfecta**, el mercado asigna los recursos de manera eficiente. Sin embargo, en una economía mixta, el Estado tiene un rol clave para:
 
 - Ineficiencias
 - Resultados eficientes pero injustos
 - Proveer estabilidad macroeconómica
+]
+
+.pull-right[
+  <img src="imgs/tabare.jpg">
+
+]
 
 ---
 # Competencia Imperfecta
@@ -347,14 +329,12 @@ Es cuando la actividad económico genera efectos que no se reflejan en los preci
 ]
 
 ---
-#Bienes Públicos
+class: center
+# Bienes Públicos
 
 No es posible excluir personas de su consumo
 
-.pull-left[
-    <img src="imgs/ejercito.jpeg">
-
-]
+<img src="imgs/ejercito.jpeg">
 
 ---
 class:center
@@ -364,7 +344,7 @@ class:center
 
 -Algunos resultados pueden ser eficientes pero injustos
 
-<img src="imgs/distribucion.jpeg" height=300 width = 400>
+<img src="imgs/distribucion.jpg">
 
 ---
 # Estabilidad Macroeconómica
