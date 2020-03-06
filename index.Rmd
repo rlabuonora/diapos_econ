@@ -111,7 +111,7 @@ fig_1
 ---
 # FPP
 
-```{r warning=FALSE, fig.width=10}
+```{r warning=FALSE, message=FALSE, fig.width=10}
 library(patchwork)
 
 highlight_A <- fig_1 + 
@@ -206,13 +206,16 @@ Podemos aplicar la FPP para analizar decisiones entre dos alternativas.
 # Los principales problemas que enfrenta la economía
 
 - ¿Qué producir?
-Las economías tienen __estructuras productivas__ diferentes.
+
+Economías con __estructura productivas__ diferentes.
 
 - ¿Cómo producir?
-Las economías usan tecnologías diferentes para producir bienes y servicios.
+
+Economías disponen de diferentes __tecnologías__.
 
 - ¿Para quién producir?
-Las economías distribuyen lo que producen de formas diferentes.
+
+__Distribución__ del producto de la economía.
 
 
 ---
@@ -220,7 +223,7 @@ Las economías distribuyen lo que producen de formas diferentes.
 # Economías Mixtas
 
 - Las economías modernas don __economías **mixtas**__ 
-- Responden estas preguntas con una combinación de dos mecanismos:
+- Combinan dos mecanismos para asignar recursos:
   - El mercado
   - El estado
 
@@ -228,12 +231,18 @@ Las economías distribuyen lo que producen de formas diferentes.
 
 # El mercado
 
-- Es donde se encuentran los compradores (demanda) y vendedores (oferta).
-- Coordina millones de agentes descentralizadamente.
-
+.pull-left[
+- Reúne compradores (demanda) y vendedores (oferta).
+- Coordina millones de agentes __descentralizadamente__.
 - Determinan el precio de un bien y la cantidad vendida
 
+]
+
+.pull-right[
   <img src="imgs/mercado.jpg">
+
+]
+
 
 ---
 # Mercado y Precios 
@@ -348,6 +357,8 @@ No es posible excluir personas de su consumo
 ]
 
 ---
+class:center
+
 # Desigualdad
 
 
