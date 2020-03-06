@@ -362,7 +362,7 @@ class:center
 # Desigualdad
 
 
--Algunos resultados pueden ser ineficientes pero injustos
+-Algunos resultados pueden ser eficientes pero injustos
 
 <img src="imgs/distribucion.jpeg" height=300 width = 400>
 
