@@ -43,11 +43,19 @@ demand <- Hmisc::bezier(c(1, 3, 9),
   as_data_frame()
 ```
 
+# La Demanda
+
+<img src="imgs/demanda.jpg">
+
+
+---
 
 # ¿Qué es la demanda?
 La demanda de un bien es la cantidad que alguien está dispuesto a comprar de ese bien __a determinado precio__.
 
 Es la __relación__ entre la cantidad demandada y el precio del bien.
+
+
 
 ---
 # Varias formas de visualizarlo
