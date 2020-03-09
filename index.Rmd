@@ -85,7 +85,8 @@ $$ Q_d = Q(p_d) $$
 
 
 ---
-# En un gráfico
+class: center
+# Gráficamente
 
 ```{r}
 # Nordhaus pg. 46
@@ -99,19 +100,83 @@ df <- tribble(
   2,     15,          "D",  "Después",
   1,     20,          "E",  "Después"
 )
+
 ggplot(df, aes(x=cantidad, y=precio, color = momento)) + 
   geom_line(size = 1) + 
   geom_point(size= 4) +
-  geom_text_repel(aes(label=lab), show.legend=FALSE, size = 8) + 
+  #geom_text_repel(aes(label=lab), show.legend=FALSE, size = 8) + 
   xlim(5, 20) + 
   ylim(0, 5) + 
   labs(x="Cantidad de Maíz",
        y="Precio del Maíz",
-       title = "Demanda de Maíz",
-       subtitle = "A medida que el precio se reduce \nlos consumidores demandan más") +
+       title = "Demanda de Maíz"
+       ) +
   theme(legend.position = "none",
     plot.title = element_text(hjust = 0.5),
     plot.subtitle = element_text(hjust = 0.5)
 )
 
 ```
+
+---
+
+# La cantidad demandada no es la demanda
+
+- La _demanda_ es la _cantidad demandada_ __para cada precio__.
+- Un cambio en la demanda no es lo mismo que un cambio en la cantidad demandada.
+- Si cambia el precio, cambia la cantidad demandada ( $Q_d$ ), pero no la demanda.
+- Si cambia otro factor que afecta la demanda, cambia la demanda.
+
+
+
+---
+
+# Variables endógenas y variables exógenas
+
+- Las variables endógenas son los efectos.
+- Las variables exógenas son las causas.
+- En el modelo de demanda, las variables endógenas son
+  - La cantidad
+  - El precio
+  
+---
+# Factores exógenos
+
+- Las exógenas son los __factores que explican la demanda__
+  - Ingreso de los consumidores
+  - Tamaño del mercado
+  - Disponibilidad y precio de bienes relacionados
+  - Preferencias de los consumidores
+  - Factores coyunturales
+
+- Cambian la __relación entre $Q_d$ y $P$.
+
+---
+# Cambios en la demanda
+
+.pull-left[
+- Si aumenta el ingreso de los consumidores la curva se desplaza hacia la derecha
+]
+
+.pull-right[
+```{r, warning=FALSE}
+df_2 <- bind_rows(
+  df,
+  mutate(df, 
+         momento = "Antes",
+         cantidad = cantidad-5)
+)
+ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) + 
+  geom_line(size = 2) + 
+  geom_point() +
+  xlim(0, 20) + 
+  ylim(0, 5) + 
+  annotate("segment", x = 6, xend = 9, y=4, yend=4, arrow = arrow(length = unit(0.2, "cm"))) + 
+  annotate("segment", x = 11, xend = 14, y=2, yend=2, arrow = arrow(length = unit(0.2, "cm"))) + 
+  labs(x="Cantidad de Maíz",
+       y="Precio del Maíz",
+       title = "Demanda de Maíz",
+       subtitle = "") +
+  scale_color_discrete(name = "")
+```
+]
