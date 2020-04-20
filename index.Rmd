@@ -1,5 +1,5 @@
 ---
-title: "Demanda"
+title: "Demanda y Oferta"
 date: "30/7/2020"
 output:
   xaringan::moon_reader:
@@ -166,6 +166,7 @@ df_2 <- bind_rows(
          momento = "Antes",
          cantidad = cantidad-5)
 )
+
 ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) + 
   geom_line(size = 2) + 
   geom_point() +
@@ -180,3 +181,138 @@ ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) +
   scale_color_discrete(name = "")
 ```
 ]
+
+---
+
+# Oferta
+
+<img src="imgs/oferta.jpeg">
+
+---
+
+# La curva de oferta
+
+Cuando aumenta el precio del bien que venden, los empresarios quieren producir más de ese bien. Eso implica que la curva de oferta de un bien tiene **pendiente positiva** en el plano $(Q, P)$
+
+---
+
+```{r}
+df_3 <- mutate(df, 
+         cantidad_ofrecida = c(18, 16, 12, 7, 0))
+
+ggplot(df_3, aes(x=cantidad_ofrecida, y=precio, color = momento)) + 
+  geom_line() + 
+  geom_point() +
+  labs(x="Cantidad de Maíz",
+       y="Precio del Maíz",
+       title = "Oferta de Maíz",
+       subtitle = "Si el precio aumenta \nlos productores producen más") +
+  theme(legend.position = "none")
+```
+
+---
+
+# Factores que desplazan la curva de oferta
+
+- Precios de los inputs
+- Tecnología
+- Precios de bienes relacionados (ejemplo soja-maíz)
+- Políticas del gobierno
+- Factores coyunturales de cada mercado
+
+---
+
+# Equilibrio de mercado
+
+- Se da cuando los vendedores y compradores están en __equilibrio__.
+- Si nadie tiene incentivos a cambiar sus decisiones, la situación es estable, y estamos en equilibrio.
+- Si al precio de mercado vigente, los demandantes compran la cantidad que los productores están dispuestos a ofrecer, el mercado está en equilibrio.
+
+---
+
+# Gráficamente
+
+```{r, message=FALSE}
+theme_set(theme_minimal() + 
+            theme(axis.text = element_text(size=8),
+              plot.title = element_text(hjust = 0.5)))
+
+library(reconPlots)
+library(viridis)
+x_max <- 5
+
+
+line.1 <- data.frame(x = c(0, x_max),
+                     y = c(0, x_max),
+                     name="supply")
+
+line.2 <- data.frame(x = c(x_max, 0),
+                     y = c(0, x_max),
+                     name="demand")
+
+line.3 <- line.1 %>% 
+  mutate(y = y + 2,
+         name="demand_1")
+
+line.intersection <- curve_intersect(line.1, line.2)
+
+line.intersection.1 <- curve_intersect(line.3, line.2)
+
+
+ggplot(mapping = aes(x=x, y=y)) + 
+  geom_line(data = line.1, aes(color=name), size = 2) + 
+  geom_line(data = line.2, aes(color=name), size = 2) + 
+  geom_segment(lty = "dashed", 
+               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) + 
+  geom_segment(lty = "dashed", 
+               aes(x=line.intersection$x, y=0, xend=line.intersection$x, yend=line.intersection$y)) +
+  scale_color_manual(name = NULL, 
+                     labels = c("Demanda", "Oferta"),
+                     values = c("#23576E", "#099FDB", 
+                                "#29B00E", "#208F84", 
+                                "#F55840", "#924F3E")) +
+  scale_x_continuous(expand = c(0, 0.2), breaks = c(0, line.intersection$x), labels=c("", expression(~Q[0])))  +
+  scale_y_continuous(expand = c(0, 0.2), breaks = c(0, line.intersection$y), labels=c("", expression(~P[0]))) + 
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 6), arrow = arrow(length=unit(0.2, "cm"))) +
+  geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + 
+  theme(axis.title.y = 
+          element_text(angle = 0),
+        axis.title.x = 
+          element_text(hjust=0.95, vjust=6))  +
+  labs(x="Q", y="P")
+```
+
+---
+## Estática Comparativa
+
+Un aumento de la oferta provoca un aumento en la cantidad ofrecida y demandada y en una caída del precio.
+
+```{r}
+ggplot(mapping = aes(x=x, y=y)) + 
+  geom_line(data = line.1, aes(group = 1, color=name), size=2) + 
+  geom_line(data = line.2, aes(group = 1, color=name), size=2) + 
+  geom_line(data = line.3, aes(group = 1, color=name), size=2) + 
+  geom_segment(lty = "dashed", 
+               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) + 
+  geom_segment(lty = "dashed", 
+               aes(x=line.intersection$x, y=0, xend=line.intersection$x, yend=line.intersection$y)) + 
+  geom_segment(lty = "dashed",
+               aes(x=line.intersection.1$x, y=0, xend=line.intersection.1$x, yend=line.intersection.1$y)) + 
+  geom_segment(lty = "dashed",
+               aes(x=0, y=line.intersection.1$y, xend=line.intersection.1$x, yend=line.intersection.1$y)) + 
+  annotate("point", x=line.intersection$x, y=line.intersection$y) + 
+  annotate("point", x=line.intersection.1$x, y = line.intersection.1$y) + 
+  ylim(c(0, 7)) + 
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 7), arrow = arrow(length=unit(0.2, "cm"))) +
+  geom_segment(aes(x=0, y=0, xend = 7, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + 
+  scale_color_manual( name="", values = c("#23576E", "#099FDB", 
+                                 "#29B00E", "#208F84", 
+                                 "#F55840", "#924F3E"),
+                      labels=c("Oferta",
+                               "Oferta (t=0)",
+                               "Oferta (t=1)")) +
+  annotate("segment", x=3.5, y=4.85, xend=3.9, yend=4.5, arrow = arrow(length = unit(0.2, "cm"))) +
+  labs(x="", y="")
+
+```
+
