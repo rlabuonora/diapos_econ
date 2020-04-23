@@ -308,7 +308,7 @@ ggplot(mapping = aes(x=x, y=y)) +
   scale_color_manual( name="", values = c("#23576E", "#099FDB", 
                                  "#29B00E", "#208F84", 
                                  "#F55840", "#924F3E"),
-                      labels=c("Oferta",
+                      labels=c("Demanda",
                                "Oferta (t=0)",
                                "Oferta (t=1)")) +
   annotate("segment", x=3.5, y=4.85, xend=3.9, yend=4.5, arrow = arrow(length = unit(0.2, "cm"))) +
