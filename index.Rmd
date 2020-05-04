@@ -394,3 +394,27 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - Si la elasticidad es mayor a 1, la demanda es __elástica__.
 - Si la elasticidad es menor a 1 es __inelástica__.
 - Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
+
+
+---
+# Efecto de un impuesto
+
+- Incidencia legal 
+- Incidencia económica
+
+---
+# Análisis económico
+
+<img src="imgs/impuesto.png">
+
+
+---
+# Subsidios
+
+- Son similares pero desplazan la oferta.
+
+---
+# Precios máximos y mínimos
+
+<img src="imgs/salario_minimo.png">
+
