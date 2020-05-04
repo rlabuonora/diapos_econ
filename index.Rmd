@@ -314,3 +314,83 @@ ggplot(mapping = aes(x=x, y=y)) +
 
 ```
 
+---
+# Elasticidad Precio de la Demanda
+
+- Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio.
+
+- Si cambia mucho, decimos que la demanda es __elástica__.
+- Si cambia poco, decimos que la demanda es __inelástica__.
+
+---
+# Factores que afectan la elasticidad de la demanda de un bien
+
+- El horizonte temporal considerado.
+- La existencia de bienes sustitutos.
+
+---
+# Forma de cálculo
+
+La elasticidad precio de la demanda $(E_d)$ se calcula como el cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio:
+
+$$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
+
+---
+# Variación absoluta y variación porcentual
+
+- Si una cantidad pasa de 190 a 210, la variación absoluta es 20.
+- La variación porcentual es 10%.
+- La variación porcentual se calcula como el porcentaje que representa la variación absoluta en la cantidad. 
+- La cantidad se puede considerar antes o después del cambio (190 o 210).
+- Para resolver esto, tomamos el punto medio (200).
+
+---
+# Ejemplo
+
+
+<img src="imgs/elasticidad.png">
+
+---
+
+# Ejemplo (1)
+
+- El precio pasa de 90 a 110.
+- La cantidad pasa de 240 a 160.
+
+---
+
+# Ejemplo (2)
+
+- La variación absoluta del precio es 20.
+- La variación absoluta de la cantidad es 80.
+
+- La variación porcentual del precio es 20%. $(\frac{20}{\frac{90+110}{2}})$
+- La variación porcentual de la cantidad es 40% $(\frac{80}{\frac{160+240}{2}})$.
+
+---
+# Ejercicio
+
+| Q | dQ|P  |dP |Ed |
+|---|---|---|---|---|
+| 0 |   | 6 |   |   |
+| 10|   | 4 |   |   |
+| 20|   | 2 |   |   |
+| 30|   | 0 |   |   |
+
+---
+# Ejercicio (sol)
+
+| Q | dQ|P  |dP |Ed |
+|---|---|---|---|---|
+| 0 |  -| 6 |-  |-  |
+| 10| 10| 4 |2  | 5 |
+| 20| 10| 2 |2  | 1 |
+| 30| 10| 0 |2  | 0.2 |
+
+
+---
+# Distintos casos
+
+- Si la elasticidad es mayor a 1, la demanda es __elástica__.
+- Si la elasticidad es menor a 1 es __inelástica__.
+- Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
