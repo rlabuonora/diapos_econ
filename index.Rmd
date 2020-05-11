@@ -389,6 +389,12 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 
 
 ---
+# Casos extremos
+
+<img src="imgs/extremos.png">
+
+
+---
 # Distintos casos
 
 - Si la elasticidad es mayor a 1, la demanda es __elástica__.
@@ -396,16 +402,55 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
 
 
+
+---
+# Elasticidad e ingresos
+
+- El ingreso total de las empresas es $P.Q$
+- Si sube $P$, baja $Q$.
+- Qué pasa con el ingreso de las empresas si sube el precio?
+
+---
+# Elasticidad e ingresos (2)
+
+- Depende de la elasticidad de la demanda
+<img src="imgs/casos.png">
+
+---
+# Elasticidad e ingresos
+
+- Si la demanda es muy elástica, la caída en $Q$ va a ser grande, el ingreso total $P.Q$ cae.
+- Si la demanda es inelástica, la caída en $Q$ va a ser baja, el ingreso total $P.Q$ sube.
+- Si la elasticidad es unitaria, $Q$ cae en la misma proporción que $P$ sube. 
+
+
+
+
 ---
 # Efecto de un impuesto
 
-- Incidencia legal 
+- Incidencia legal
 - Incidencia económica
+
+- A veces los productores pueden trasladar todo el peso del impuesto a los consumidores. 
+
+- Depende de las elasticades relativas de oferta y demanda.
 
 ---
 # Análisis económico
 
 <img src="imgs/impuesto.png">
+
+- ¿Cuál es más elástica, la demanda o la oferta?
+---
+# Análisis económico (2)
+
+- El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos.
+
+- El impuesto hace que la oferta se desplace hacia la izquierda por $2.
+- Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes.
+
+- El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores.
 
 
 ---
