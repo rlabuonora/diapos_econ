@@ -95,9 +95,9 @@ La utilidad total es la suma de las utilidades marginales de las unidades consum
 
 - Este principio implica que la utilidad marginal del dinero gastado en todos los bienes que compramos debe ser igual.
 
-- Qué es $\frac{MU_{alfajores}}{P_{alfajores}}$?
+- Qué es $\frac{UM_{alfajores}}{P_{alfajores}}$?
 
-Es la utilidad que me da gastar un peso extra en el bien 1. Si un alfajor vale $50 y me da 100 unidades de utilidad, un peso extra gastado en alfajores me da 20 unidades de utilidad.
+Es la utilidad que me da gastar un peso extra en alfajores. Si un alfajor vale $50 y me da 100 unidades de utilidad, un peso extra gastado en alfajores me da 20 unidades de utilidad.
 ---
 
 # El principio de equimarginalidad (2)
