@@ -212,6 +212,10 @@ $$CMe = \frac{CT}{q}$$
 
 <img src="imgs/costos.png" />
 
+---
+
+- El Costo Fijo Medio decrece cuando aumentamos la cantidad producida.
+- Los Costos Medios y Marginales tienen forma de U por la productividad marginal (creciente al principio y decreciente después).
 - Si el costo marginal es menor que el costo medio, la última unidad fue más __barata__ que el promedio. Eso hace que el costo medio __baje__.
 - Si el costo marginal es mayor que el costo medio, la última unidad fue más __cara__ que el promedio. Eso hace que el costo medio __suba__.
 - Si el costo marginal es igual al costo medio, el costo medio está en un extremo, ni sube ni baja.
