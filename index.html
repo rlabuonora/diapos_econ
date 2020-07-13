@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
     <title>Estructuras de Mercado</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <script src="libs/kePrint/kePrint.js"></script>
@@ -59,6 +58,13 @@ Analizamos estos mercados y el comportamiento de las empresas en base a dos supu
 - Maximizan beneficios.
 
 ---
+# Demanda de mercado y demanda individal
+
+La curva de demanda que enfrentan los productores en compentencia perfecta es horizontal.
+
+&lt;img src="imgs/demanda_individual_mercado.png"/&gt;
+
+---
 # Maximización de beneficios
 
 ¿Qué desean los empresarios? 
@@ -73,6 +79,12 @@ $$ max\ PY - C(q) $$ Si.
 
 
 
+---
+# Tabla
+
+- Relación entre Precio, Costo Medio y Beneficios.
+- Relación entre Precio, Costo Marginal y Beneficios Marginales.
+- Máximo beneficio.
 ---
 
 # Ejemplo Numérico
@@ -166,6 +178,27 @@ $$ max\ PY - C(q) $$ Si.
 &lt;/table&gt;
 
 
+
+---
+# Oferta y Costo marginal
+
+&lt;img src="imgs/oferta_costo_margina.png"/&gt;
+
+---
+# Punto de cierre
+
+&lt;img src="imgs/punto_de_cierre.png"/&gt;
+---
+
+# Distintos tipos de oferta
+
+.pull-left[
+&lt;img src="imgs/costos_constantes.png"/&gt;
+]
+
+.pull-right[
+&lt;img src="imgs/costos_crecientes.png"/&gt;
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -212,25 +245,9 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
+})();</script>
+
+<script>
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -239,23 +256,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
+</script>
 
 <script>
 slideshow._releaseMath = function(el) {
