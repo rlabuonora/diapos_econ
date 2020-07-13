@@ -72,4 +72,8 @@ Analizamos estos mercados y el comportamiento de las empresas en base a dos supu
 - Ganar las mayores ganancias posibles. Si.
 
 ---
-# 
+# Tabla
+
+- Relación entre Precio, Costo Medio y Beneficios.
+- Relación entre Precio, Costo Marginal y Beneficios Marginales.
+- Máximo beneficio.
