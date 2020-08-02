@@ -30,6 +30,7 @@ knitr::opts_chunk$set(echo = TRUE, echo = FALSE, warning = FALSE)
 
 library(kableExtra)
 library(tibble)
+library(emo)
 library(dplyr)
 library(ggplot2)
 theme_set(
@@ -76,14 +77,9 @@ La curva de demanda que enfrentan los productores en compentencia perfecta es ho
 # Maximización de beneficios
 
 ¿Qué desean los empresarios? 
-- ¿Vender lo más posible 
-$$ max\ PY $$ No.
-- ¿Gastar lo menos posible
-$$ min\ C(q) $$ ? No.
-
-- Ganar las mayores ganancias posibles. 
-
-$$ max\ PY - C(q) $$ Si.
+- ¿Vender lo más posible? `r emo::ji("x")`
+- ¿Gastar lo menos posible? `r emo::ji("x")`
+- Ganar las mayores ganancias posibles. `r emo::ji("white_check_mark")`
 
 
 
@@ -131,6 +127,23 @@ datos %>%
 # Punto de cierre
 
 <img src="imgs/punto_de_cierre.png"/>
+
+- La empresa tendrá pérdidas si $P < C\ Medio$
+- La empresa cerrará si $P < C\ Variable\ Medio $
+---
+
+# Corto Plazo y Largo Plazo
+
+<img src="imgs/corto_largo_plazo.png"/>
+
+
+----
+# Distintas ofertas de largo plazo
+
+<img src="imgs/oferta_lp.png"/>
+
+
+
 ---
 
 # Distintos tipos de oferta
@@ -142,3 +155,31 @@ datos %>%
 .pull-right[
 <img src="imgs/costos_crecientes.png"/>
 ]
+
+---
+
+# Distintos tipos de oferta (2)
+
+<img src="imgs/oferta_fija.png"/>
+
+
+
+---
+# Eficiencia
+
+¿Qué es?
+
+---
+# Mercados Competitivos y Eficiencia
+
+- La demanda viene dada por la Utilidad Marginal
+- La demanda viene dada por el Costo Marginal
+
+<img src="imgs/excedente.png"/>
+
+---
+
+# Equilibrio Competitivo
+
+- En equilibrio, $$P=C Marg = U Marg $$
+- Cualquier otro punto tiene menor excedente económico.
