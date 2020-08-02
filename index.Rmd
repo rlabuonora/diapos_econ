@@ -126,13 +126,33 @@ datos %>%
 ---
 # Punto de cierre
 
+.pull-left[
+- La empresa tendrá pérdidas si __Precio__ es menor al __Costo Medio__.
+- La empresa cerrará si el __Precio__ es menor al __Costo Variable Medio__.
+]
+
+.pull-right[
 <img src="imgs/punto_de_cierre.png"/>
 
-- La empresa tendrá pérdidas si $P < C\ Medio$
-- La empresa cerrará si $P < C\ Variable\ Medio $
+]
+
+
+
+
 ---
 
-# Corto Plazo y Largo Plazo
+# Equilibrio de corto y largo plazo (1)
+
+
+- Si hay un aumento en la demanda, los productores van a tener un incentivo a producir más para beneficiarse del aumento de precios.
+- En el corto plazo, pueden aumentar la producción contratando factores __variables__ de producción, pero esto limita el aumento de la cantidad producida.
+- En el largo plazo, pueden invertir y contratar una mayor cantidad de factores fijos de producción (capital).
+
+- Esto implica que en el largo plazo la cantidad producida aumenta más, por lo que la elasticidad precio de la oferta en el largo plazo es __mayor__.
+
+
+---
+# Equilibrio de corto y largo plazo (2)
 
 <img src="imgs/corto_largo_plazo.png"/>
 
