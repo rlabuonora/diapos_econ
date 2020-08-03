@@ -163,6 +163,13 @@ datos %>%
 <img src="imgs/oferta_lp.png"/>
 
 
+---
+# Entrada y salida de empresas
+
+- Si el precio de equilibrio está por abajo de los costos medios de las empresas, las empresas tienen pérdidas, y salen del mercado.
+- Esto hace que la oferta disminuya y el precio suba.
+- Si el precio de equilibrio está por arriba de los costos medios de las empresas, pasa lo contrario, y entran empresas al mercado.
+
 
 ---
 
