@@ -1,6 +1,6 @@
 ---
-title: "Demanda Agregada y Política Fiscal"
-date: "30/7/2019"
+title: "Titulo"
+date: "30/7/2020"
 output:
   xaringan::moon_reader:
     css: ["default", "default-fonts", "custom.css"]
@@ -22,6 +22,15 @@ output:
   transform: translate(-50%, -50%);
 }
 
+.remark-slide-content {
+
+ height: 200px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
 </style>
 
 ```{r setup, include=FALSE}
@@ -29,283 +38,8 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE, echo = FALSE, warning = FALSE)
 library(ggplot2)
 library(dplyr)
-library(cowplot)
 library(kableExtra)
 
-theme_set(
-  theme_classic() + 
-    theme(
-      plot.title = element_text(hjust = 0.5)
-    ))
-
-demand <- Hmisc::bezier(c(1, 3, 9),
-                        c(9, 3, 1)) %>%
-  as_data_frame()
-```
-
-
-# Ciclos de Negocios
-.pull-left[
-- El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
-- Keynes fue el que originó esta rama de la economía en los años 30s.
-]
-
-.pull-right[
-<img src="imgs/keynes.jpg">
-
-]
-
----
-# Ciclos de Negocios
-
-
-- Las economías modernas pasan por períodos de auge y caída.
-- En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
-
-
----
-# Ciclos de Negocios: Fases
-
-- Expansión
-- Pico
-- Contracción
-
-!Agregar Ejercicio 4 del capítulo del PIB
-
----
-# Ciclos de Negocios: características
-
-- No son predecibles
-- Se parecen más al clima que a las estaciones
-
----
-# Características (2):
-- El empleo baja
-- La inversión baja
-- Ganacias de las empresas bajan
-
-
----
-# Teorías
-
-- Exógenas vs. Endógenas.
-- Crisis Financieras y ciclos de negocios
-- Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria.
-
----
-# Demanda Agregada
-
-- Es el ouput total de la economía que es demandado.
-- Tiene 4 componentes:
-  - Consumo
-  - Inversión
-  - Compras del Gobierno
-  - Exportaciones Netas
-  
----
-# Demanda Agregada
-
-- Tiene pendiente negativa
-
-```{r}
-ggplot() + 
-  labs(title = "Tiene pendiente negativa")
-```
-
----
-# Cambios en la DA
-
-- Variables de política
-  - Política Monetaria
-  - Política Fiscal
-- Variables exógenas
-  - Ingreso internacional
-  - Activos
-  - Tecnología
-  - Otros
-  
----
-
-## Movimientos de la DA vs. Movimientos sobre la DA
-
-```{r}
-
-punto_a <- slice(demand, 70)
-punto_b <- slice(demand, 30)
-
-p1 <- ggplot(demand, aes(x = x, y = y)) + 
-  geom_path(color = "#0073D9", size = 1) + 
-  geom_point(data = punto_a) + 
-  geom_segment(x=0, y=punto_a$y, xend=punto_a$x, yend=punto_a$y, linetype = "dashed") + 
-  geom_segment(x=punto_a$x, y=0, xend=punto_a$x, yend = punto_a$y, linetype = "dashed") +
-  geom_point(data = punto_b) + 
-  geom_segment(x=0, y=punto_b$y, xend=punto_b$x, yend=punto_b$y, linetype = "dashed") + 
-  geom_segment(x=punto_b$x, y=0, xend=punto_b$x, yend = punto_b$y, linetype = "dashed") +
-  geom_segment(data = slice(demand, seq(70, 30, by=-10)), 
-               aes(xend=lag(x), yend=lag(y)),
-               color = "red",
-            arrow = arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) + 
-  scale_y_continuous(lim = c(0, 11), expand = c(0, 0)) +  
-  coord_equal() +
-  labs(title = "Movimiento sobre la curva")
 
 ```
-
-```{r}
-p2 <- ggplot(demand, aes(x = x)) + 
-  geom_path(aes(y=y), color = "#0073D9", size = 1) + 
-  geom_path(aes(y=y+2), color = "#0073D9", size = 1, linetype = "dashed") + 
-  geom_segment(x=2, xend=2.5, y=7, yend=7.5, size = 0.2, 
-               arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +
-  geom_segment(x=4.6, xend=5.2, y=4, yend=4.7, size = 0.2, 
-               arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +
-  scale_y_continuous(lim = c(0, 11), expand = c(0, 0)) +  
-  coord_equal() +
-  labs(title = "Movimiento de la curva")
-
-```
-
-.center2[
-```{r}
-plot_grid(p1, p2)
-```
-]
-
-
-
----
-# Caída en la demanda agregada
-
-```{r}
-demand <- function(q) (q - 10)^2
-demand_2 <- function(q) (q - 10)^2 + 40
-supply <- function(q) q^2 + 2*q + 8
-
-x <- 0:10
-
-
-q_1 <- uniroot(function(x) demand(x) - supply(x), range(x))$root
-q_2 <- uniroot(function(x) demand_2(x) - supply(x), range(x))$root
-
-
-p_1 <- supply(q_1)
-p_2 <- supply(q_2)
-
-chart <- ggplot() +
-  stat_function(aes(x, color = "Demand_2"), 
-                xlim = c(1.5, 8),
-                fun = demand, linetype = "dashed") +
-  stat_function(aes(x, color = "Demand_1"), 
-                xlim = c(1.5, 8),
-                fun = demand_2) +
-  stat_function(aes(x, color = "Supply"), fun = supply) +
-  labs(title = "Caída en la DA",
-    caption = "Una caída de la demanda agregada reduce el PIB y el nivel de precios", 
-    y="P", x="Q")
-
-caida <- chart +
-  annotate("point", x = q_1, y = p_1) + # Refactor to use another data set?
-  annotate("point", x = q_2, y = p_2) + # geom_point, geom_step, geom_text_repel
-  annotate("segment", x=0, y=p_1, xend=q_1, yend=p_1, linetype = "dashed") + 
-  annotate("segment", x=q_1, y=p_1, xend=q_1, yend=0, linetype = "dashed") + 
-  annotate("segment", x=0, y=p_2, xend=q_2, yend=p_2, linetype = "dashed") + 
-  annotate("segment", x=q_2, y=p_2, xend=q_2, yend=0, linetype = "dashed") + 
-  scale_x_continuous(breaks = c(q_1, q_2), labels = expression(Q[1], Q[2]),
-                     expand = expand_scale(add = c(0, 2),
-                                           mult = c(0, 0))) +
-  scale_y_continuous(breaks = c(p_1, p_2), 
-                     labels = expression(P[1], P[2]),
-                     limits = c(0, 101),
-                     expand = c(0, 0)) +
-  geom_segment(aes(color = "Qd", x = 10, xend = 10, y=0, yend = 100), size = 1) + # Add manual legend
-  theme(
-    axis.title.y = element_text(angle = 0, vjust = 1) ,
-    axis.title.x = element_text(hjust = 1, vjust = 6)
-  )
-
-caida
-```
-
-
----
-## El modelo del multiplicador
-
-
-Ejemplo numérico
-
-```{r}
-df <- tibble(
-  GDP = seq(4200, 2700, by=-300),
-  Consumo = seq(3800, 2800, by = -200),
-  S = GDP-Consumo,
-  I = 200
-)
-
-knitr::kable(df) %>% 
-  kable_styling()
-
-```
-
-$$ C = 1000 + \frac{2}{3} GDP $$
-
-
----
-## Gráficamente: Equilibrio
-
-```{r}
-# Fig. 22-7
-base_multiplicador <- df %>% 
-  ggplot() + 
-  geom_line(aes(GDP, Consumo+I)) +
-  geom_abline(slope = 1, intercept = 0) + 
-  scale_x_continuous(expand = c(0, 0)) + 
-  scale_y_continuous(expand = c(0, 0), breaks = df$GDP) +
-  coord_equal() + 
-  labs(x = "GDP", y="Gasto Agregado")
-
-```
-
-
-```{r}
-equilibrio <- filter(df, GDP == Consumo + I)
-
-graf_equilibrio <- base_multiplicador + 
-  #geom_line(aes(GDP, Consumo), linetype = "dashed") + 
-  geom_point(aes(x=GDP, y=Consumo+I), data = equilibrio) +
-  geom_segment(aes(x=2700, y=equilibrio$GDP, xend=equilibrio$GDP, yend = equilibrio$GDP)) +
-  geom_segment(aes(x=equilibrio$GDP, y=equilibrio$GDP, xend=equilibrio$GDP, yend = 2750))
-graf_equilibrio
-
-
-```
-
----
-## Ajustes fuera del equilibrio
-
-```{r, fig.width = 10, fig.height=10}
-g1 <- base_multiplicador + 
-  labs(title = "Ingreso < DA")
-
-g2 <- base_multiplicador + 
-  labs(title = "Ingreso > DA")
-
-plot_grid(g1, g2)
-```
-
-
----
-## Aumento del gasto exógeno
-
-```{r}
-graf_equilibrio + 
- geom_line(aes(GDP, Consumo), color ="red") +
- geom_segment(aes(x=3900, y=3650, xend=3900, yend=3750), arrow=arrow(length=unit(0.20,"cm"))) +
- geom_segment(aes(x=3000, y=3050, xend=3000, yend=3150), arrow=arrow(length=unit(0.20,"cm")))
-```
-
----
-## Aumento del gasto exógeno (2)
-
-El efecto multiplicador
-
 
