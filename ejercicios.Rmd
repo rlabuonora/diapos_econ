@@ -1,0 +1,106 @@
+---
+title: "Ejercicios Demanda"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1.
+
+Si el gobierno decide aplicar un impuesta a la producción de un producto, la capacidad del productor de trasladar el impuesto al consumidor es mayor cuando:
+
+- Más elástica es la demanda del producto.
+- Más inelástica es la demanda del producto.
+- Más elástica es la oferta del producto.
+- Más inelástica es la oferta del producto.
+
+# 2. 
+
+El caso de un impuesta cuando la elasticidad precio de la demanda es 0. 
+
+# 3. Múltiple opción
+
+Si el gobierno fija un precio mínimo menor que el precio de equilibrio de mercado:
+
+- El precio mínimo no tiene ningún efecto. (Correcta)
+- El precio mínimo genera un exceso de oferta.
+- El precio mínimo genera un exceso de demanda.
+- Ninguna de las anteriores.
+
+# 4. Múltiple opción
+
+Si el gobierno fija un precio máximo menor que el precio de equilibrio de mercado:
+
+- El precio mínimo no tiene ningún efecto. 
+- El precio mínimo genera un exceso de oferta.
+- El precio mínimo genera un exceso de demanda. (Correcta)
+- Ninguna de las anteriores.
+
+# 5. Múltiple opción
+
+Si el gobierno fija un precio máximo mayor que el precio de equilibrio de mercado:
+
+- El precio mínimo no tiene ningún efecto. (Correcta)
+- El precio mínimo genera un exceso de oferta.
+- El precio mínimo genera un exceso de demanda. 
+- Ninguna de las anteriores.
+
+# 6. Múltiple opción
+
+Si el gobierno fija un precio mínimo mayor que el precio de equilibrio de mercado:
+
+- El precio mínimo no tiene ningún efecto. 
+- El precio mínimo genera un exceso de oferta. (Correcta)
+- El precio mínimo genera un exceso de demanda. 
+- Ninguna de las anteriores.
+
+# 7. Suponga que el recio del yogurth baja de $4 a $5, y la cantidad vendida pasa de 230 litros por semana a 220 litros por semana.
+
+- La variación absoluta en el precio es ($10)
+- La variación porcentual en el precio es ()
+
+- La variación absoluta en la cantidad es (10)
+- La variación porcentual en la cantidad es (.4%)
+
+- La elasticidad precio de la demanda es (.)
+
+# 8. El precio del detergente pasa de $4.1 a $3.5
+
+
+# 9. La siguiente tabla muestra la curva de demanda de zapatos
+
+| Precio   |Cantidad Demandada   |
+|----------|---------------------|
+| $5       |385   |
+| $10      |365   |
+| $15      |345   |
+| $20      |325   |
+| $25      |305   |
+| $30      |285   |
+| $35      |265   |
+| $40      |245   |
+    
+    
+1. Graficar la curva de demanda. (No)
+2. Suponga que el precio pasa de $25 a $30, calcular la elasticidad precio de la demanda.
+3. La demanda es
+- Elástica
+- Tiene elasticidad unitaria
+- Inelástica
+
+# Otro
+
+Un productor de detergente sube el precio de su producto de $2.5 a $3.9, y la cantidad vendida pasa de 210 toneladas vendidas a 130.
+
+- Calcular el ingreso del productor antes y después de la suba de precios.
+- Cómo es la demanda de detergente (elástica)
+
+
+Suponga que la elasticidad precio de la demanda del detergente es 4. Si el precio aumenta 2%, la cantidad demandada va a aumentar:
+
+- 0.5 toneladas de jabón.
+- 8%
+- 8 toneladas de jabón.
+- 0.5 %
