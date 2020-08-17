@@ -22,6 +22,15 @@ output:
   transform: translate(-50%, -50%);
 }
 
+.remark-slide-content {
+
+ height: 200px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
 </style>
 
 ```{r setup, include=FALSE}
@@ -120,7 +129,7 @@ theme_set(
 ---
 # Ingreso marginal y precio
 
-- Siempre se cumple que $I. Mg. < P$.
+- Siempre se cumple que el Ingreso marginal es menor al precio.
 - ¿Por qué?
 
 
@@ -146,6 +155,30 @@ tabla %>%
   kable_styling()
 ```
 
+
+---
+# Ejemplo numérico (2)
+
+
+```{r}
+tabla_completa %>% 
+  knitr::kable() %>% 
+  kable_styling()
+```
+
+
+---
+
+# Elasticidad e ingreso marginal
+
+- Si la demanda es lineal, cuando las ventas son muy bajas $E_d = \frac{ \Delta Q\%}{\Delta P \%}$, es muy alto porque $\Delta Q\%$ es muy alto (tiende a infinto)
+- A medida que aumento las vantas, la elasticidad baja.
+- Cuando el precio es muy bajo, se da el efecto inverso, ${\Delta P \%}$ tiende a infinito y la elasticidad es muy baja.
+- En algún punto intermedio, la elasticidad es unitaria, y el ingreso marginal es 0.
+- El máximo beneficio del monopolista se da a una cantidad vendida __menor__.
+
+---
+
 ---
 # Gráficamente
 
@@ -155,3 +188,13 @@ tabla %>%
 # Ingresos, beneficios y costos
 
 ![tres](imgs/costos.png)
+
+---
+# Grandes Monopolios de la historia
+.center[
+![ricos](imgs/Andrew-Carnegie-John-D-Rockefeller.jpg)
+- Los __robber barons__ de la _Gilded Age_ en EUA crearon grandes fortunas en base al crecimiento de la economía a fines del S. XIX.
+- Actuaban de forma inescrupulosa para eliminar a la competencia y consolidarse como monopolistas en las industrias más importantes de la época: ferrocarriles, petróleo.
+- En 1910 la Standard Oil, propiedad de Rockefeller se desmembró gracias la las leyes antimonopolio impulasadas por los gobiernos progresistas.
+]
+
