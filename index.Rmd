@@ -120,6 +120,24 @@ $$Salario=Precio * Producto\ Marginal\ del\ Trabajo(L)$$
 ![](imgs/cirujanos.png)
 
 
+---
+## Clasificación de la población: 
+- PET: Población en edad de trabajar (14+)
+- PEA: Trabajan o buscan trabajo.
+
+![](imgs/poblacion.png)
 
 
+---
+## Indicadores del desempeño del mercado de trabajo
+- Tasa de Empleo
 
+$$TE = \frac{O}{PET}$$
+- Tasa de Desocupación
+$$TD = \frac{D}{PEA}$$
+---
+## Tipos de desempleo
+
+- Cíclico
+- Estructural
+- Friccional
