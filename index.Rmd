@@ -141,14 +141,106 @@ $$Salario=Precio * Producto\ Marginal\ del\ Trabajo(L)$$
 
 ---
 ## Indicadores del desempeño del mercado de trabajo
-- Tasa de Empleo
 
+- Las agencias de estadísticas reportan algunos indicadores estándar para evaluar el desempeño del mercado laboral de cada país.
+
+---
+## Indicadores (1):
+
+### Tasa de Empleo
 $$TE = \frac{O}{PET}$$
-- Tasa de Desocupación
+
+---
+## Indicadores (2):
+
+### Tasa de Desocupación
 $$TD = \frac{D}{PEA}$$
+
+---
+## Desempleados desalentados
+
+- Cuando alguien deja de buscar trabajo porque pierde la esperanza de conseguir un empleo.
+- No figuran en la tasa de desempleo (salen de la PEA).
+- Pasa cuando las crisis coyunturales se prolongan.
+- ¿Qué tasa tengo que mirar para evitar ese potencial problema?
+
+![](imgs/desalentados.png)
+
+---
+## Indicadores (3):
+
+### Tasa de actividad
+
+$$TA = \frac{PEA}{PET}$$
+
+
+
+
+
 ---
 ## Tipos de desempleo
 
-- Cíclico
-- Estructural
-- Friccional
+### Cíclico
+
+El nivel de actividad económica es cíclico. En fases de __expansión__ el desempleo baja. En fases de __contracción__ el desempleo sube.
+
+### Estructural
+Los cambios en la __estructura productiva__ de la economía producen reasignación de trabajadores de un sector a otro.
+
+### Friccional
+Siemprea va a haber alguien buscando trabajo.
+
+---
+## Mercado de trabajo en Uruguay (1980-2020)
+
+## Principales tendencias
+
+- Envejecimiento de la población
+- Aumento de la tasa de actividad
+- Retraso en las edades de ingreso y egreso al mercado de trabajo
+- Cambio tecnológico
+
+---
+# Envejecimiento de la población (1)
+
+![](imgs/piramide_1950_2000.png)
+---
+## Envejecimiento de la población (2)
+
+![](imgs/piramide_2050.png)
+
+---
+## Causas
+
+- Reducción en la tasa de natalidad
+- Aumento de la esperanza de vida
+
+![](imgs/esperanza.png)
+
+
+---
+
+## Aumentos en la tasa de actividad
+
+- Especialmente en las mujeres
+
+![](imgs/pea_sexo_opp_sin_proy.png)
+
+---
+## Postergación de edad de ingreso al mercado laboral
+
+![](imgs/tasa_actividad_15_19.png)
+
+---
+## Posibles causas
+
+
+![](imgs/anios_educ.png)
+
+
+---
+## Postergación de edad de egreso del mercado de trabajo.
+
+![](imgs/tasa_actividad_edad_celade_tramos_altos.png)
+
+
