@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
   <head>
-    <title>Demanda Agregada y Política Fiscal</title>
+    <title>Macroeconomía</title>
     <meta charset="utf-8" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <script src="libs/kePrint/kePrint.js"></script>
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Demanda Agregada y Política Fiscal
+# Macroeconomía
 ### 30/7/2019
 
 ---
@@ -34,10 +33,62 @@ class: center, middle, inverse, title-slide
 
 
 
+# Macroeconomía
+
+La Macroeconomía es la rama de la economía que estudia el comportamiento de la economía de una región, un país o el mundo.
+
+---
+
+# Macroeconomía (2)
+
+Busca responder preguntas como:
+
+- ¿Qué tan difícil es encontrar empleo?
+- ¿Los salarios y el bienestar material de la población esta mejorando?
+- ¿Qué pasa con el nivel de precios y el poder adquisitivo de los ingresos?
+- ¿Cómo se comporta el tipo de cambio?
+
+---
+
+
+# Algunos conceptos importantes:
+
+- __Ciclo de negocios__ La economía pasa por períodos de expansión y contracción del nivel de actividad.
+
+- __Inflación__ El nivel general de precios de la economía puede ser más o menos estable.
+
+- __Crecimiento económico__ En el largo plazo, el bienestar de los habitantes de un país depende de la capacidad de la economía de aumentar la producción de bienes y servicios.
+
+
+
+---
+
+## Objetivos de la política macroeconómica
+
+- __Nivel de actividad__ Alto y creciente. Se mide por el PIB.
+- __Nivel de precios__ Estable. La inflación tiene efectos negativos sobre la toma de decisiones y tiene un impacto regresivo en la distribución del ingreso.
+- __Desempleo__ Bajo. Es un problema social e implica capacidades productivas inutilizadas. Está muy ligado al ciclo de negocios.
+
+---
+
+## Instrumentos de la política macroeconómica
+
+- __Política Fiscal__ 
+A través de los impuestos, el gobierno afecta los ingresos de los hogares y los precios relativos de algunos bienes (energía, cigarrillos).
+
+A través del __gasto público__ el gobierno afecta los ingresos de los hogares (transferencias) y el acceso a ciertos bienes (salud, educación, seguridad).
+
+- __Política Monetaria__ El gobierno regula la cantidad de dinero circulante en la economía, el crédito y los precios de ciertos clave modificando las tasas de interés y administrando el sistema bancario. 
+
+- __Inserción internacional__ El comercio internacional (exportaciones e importaciones) son clave para las economías pequeñas como Uruguay. Los instrumentos disponibles para incidir en estas variables son los aranceles y las cuotas. Además, las economías tienen relaciones financieras con el exterior. El gobierno regula estas relaciones mediante el sistema cambiario.
+
+
+
+---
 # Ciclos de Negocios
 .pull-left[
 - El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
-- Keynes fue el que originó esta rama de la economía en los años 30s.
+- John Maynard Keynes fue el que originó esta rama de la economía en los años 30s.
 ]
 
 .pull-right[
@@ -46,7 +97,7 @@ class: center, middle, inverse, title-slide
 ]
 
 ---
-# Ciclos de Negocios
+# Ciclos de Negocios (2)
 
 
 - Las economías modernas pasan por períodos de auge y caída.
@@ -60,7 +111,6 @@ class: center, middle, inverse, title-slide
 - Pico
 - Contracción
 
-!Agregar Ejercicio 4 del capítulo del PIB
 
 ---
 # Ciclos de Negocios: características
@@ -82,6 +132,12 @@ class: center, middle, inverse, title-slide
 - Crisis Financieras y ciclos de negocios
 - Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria.
 
+
+---
+# El modelo de Oferta y Demanda Agregadas
+
+![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+
 ---
 # Demanda Agregada
 
@@ -97,8 +153,6 @@ class: center, middle, inverse, title-slide
 
 - Tiene pendiente negativa
 
-![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
-
 ---
 # Cambios en la DA
 
@@ -110,108 +164,194 @@ class: center, middle, inverse, title-slide
   - Activos
   - Tecnología
   - Otros
-  
----
 
-## Movimientos de la DA vs. Movimientos sobre la DA
+---  
+# La OA
 
-
-
+- Tiene pendiente positiva en el plano `\((Y, P)\)`
 
 
-.center2[
-![](index_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
-]
+&lt;!-- ## Movimientos de la DA vs. Movimientos sobre la DA --&gt;
 
+&lt;!-- ```{r eval = FALSE} --&gt;
 
+&lt;!-- punto_a &lt;- slice(demand, 70) --&gt;
+&lt;!-- punto_b &lt;- slice(demand, 30) --&gt;
 
----
-# Caída en la demanda agregada
+&lt;!-- p1 &lt;- ggplot(demand, aes(x = x, y = y)) +  --&gt;
+&lt;!--   geom_path(color = "#0073D9", size = 1) +  --&gt;
+&lt;!--   geom_point(data = punto_a) +  --&gt;
+&lt;!--   geom_segment(x=0, y=punto_a$y, xend=punto_a$x, yend=punto_a$y, linetype = "dashed") +  --&gt;
+&lt;!--   geom_segment(x=punto_a$x, y=0, xend=punto_a$x, yend = punto_a$y, linetype = "dashed") + --&gt;
+&lt;!--   geom_point(data = punto_b) +  --&gt;
+&lt;!--   geom_segment(x=0, y=punto_b$y, xend=punto_b$x, yend=punto_b$y, linetype = "dashed") +  --&gt;
+&lt;!--   geom_segment(x=punto_b$x, y=0, xend=punto_b$x, yend = punto_b$y, linetype = "dashed") + --&gt;
+&lt;!--   geom_segment(data = slice(demand, seq(70, 30, by=-10)),  --&gt;
+&lt;!--                aes(xend=lag(x), yend=lag(y)), --&gt;
+&lt;!--                color = "red", --&gt;
+&lt;!--             arrow = arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) +  --&gt;
+&lt;!--   scale_y_continuous(lim = c(0, 11), expand = c(0, 0)) +   --&gt;
+&lt;!--   coord_equal() + --&gt;
+&lt;!--   labs(title = "Movimiento sobre la curva") --&gt;
 
-![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+&lt;!-- ``` --&gt;
 
+&lt;!-- ```{r} --&gt;
+&lt;!-- p2 &lt;- ggplot(demand, aes(x = x)) +  --&gt;
+&lt;!--   geom_path(aes(y=y), color = "#0073D9", size = 1) +  --&gt;
+&lt;!--   geom_path(aes(y=y+2), color = "#0073D9", size = 1, linetype = "dashed") +  --&gt;
+&lt;!--   geom_segment(x=2, xend=2.5, y=7, yend=7.5, size = 0.2,  --&gt;
+&lt;!--                arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) + --&gt;
+&lt;!--   geom_segment(x=4.6, xend=5.2, y=4, yend=4.7, size = 0.2,  --&gt;
+&lt;!--                arrow=arrow(type = "open", angle = 30, length = unit(0.1, "inches"))) + --&gt;
+&lt;!--   scale_y_continuous(lim = c(0, 11), expand = c(0, 0)) +   --&gt;
+&lt;!--   coord_equal() + --&gt;
+&lt;!--   labs(title = "Movimiento de la curva") --&gt;
 
----
-## El modelo del multiplicador
+&lt;!-- ``` --&gt;
 
-
-Ejemplo numérico
-
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:right;"&gt; GDP &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Consumo &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; S &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; I &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4200 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3800 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 400 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3900 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3400 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3300 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3200 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 2700 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2800 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -100 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-$$ C = 1000 + \frac{2}{3} GDP $$
-
-
----
-## Gráficamente: Equilibrio
+&lt;!-- .center2[ --&gt;
+&lt;!-- ```{r} --&gt;
+&lt;!-- plot_grid(p1, p2) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
 
 
 
+&lt;!-- --- --&gt;
+&lt;!-- # Caída en la demanda agregada --&gt;
 
-![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+&lt;!-- ```{r} --&gt;
+&lt;!-- demand &lt;- function(q) (q - 10)^2 --&gt;
+&lt;!-- demand_2 &lt;- function(q) (q - 10)^2 + 40 --&gt;
+&lt;!-- supply &lt;- function(q) q^2 + 2*q + 8 --&gt;
 
----
-## Ajustes fuera del equilibrio
-
-![](index_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+&lt;!-- x &lt;- 0:10 --&gt;
 
 
----
-## Aumento del gasto exógeno
+&lt;!-- q_1 &lt;- uniroot(function(x) demand(x) - supply(x), range(x))$root --&gt;
+&lt;!-- q_2 &lt;- uniroot(function(x) demand_2(x) - supply(x), range(x))$root --&gt;
 
-![](index_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
----
-## Aumento del gasto exógeno (2)
+&lt;!-- p_1 &lt;- supply(q_1) --&gt;
+&lt;!-- p_2 &lt;- supply(q_2) --&gt;
 
-El efecto multiplicador
+&lt;!-- chart &lt;- ggplot() + --&gt;
+&lt;!--   stat_function(aes(x, color = "Demand_2"),  --&gt;
+&lt;!--                 xlim = c(1.5, 8), --&gt;
+&lt;!--                 fun = demand, linetype = "dashed") + --&gt;
+&lt;!--   stat_function(aes(x, color = "Demand_1"),  --&gt;
+&lt;!--                 xlim = c(1.5, 8), --&gt;
+&lt;!--                 fun = demand_2) + --&gt;
+&lt;!--   stat_function(aes(x, color = "Supply"), fun = supply) + --&gt;
+&lt;!--   labs(title = "Caída en la DA", --&gt;
+&lt;!--     caption = "Una caída de la demanda agregada reduce el PIB y el nivel de precios",  --&gt;
+&lt;!--     y="P", x="Q") --&gt;
+
+&lt;!-- caida &lt;- chart + --&gt;
+&lt;!--   annotate("point", x = q_1, y = p_1) + # Refactor to use another data set? --&gt;
+&lt;!--   annotate("point", x = q_2, y = p_2) + # geom_point, geom_step, geom_text_repel --&gt;
+&lt;!--   annotate("segment", x=0, y=p_1, xend=q_1, yend=p_1, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=q_1, y=p_1, xend=q_1, yend=0, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=0, y=p_2, xend=q_2, yend=p_2, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=q_2, y=p_2, xend=q_2, yend=0, linetype = "dashed") +  --&gt;
+&lt;!--   scale_x_continuous(breaks = c(q_1, q_2), labels = expression(Q[1], Q[2]), --&gt;
+&lt;!--                      expand = expand_scale(add = c(0, 2), --&gt;
+&lt;!--                                            mult = c(0, 0))) + --&gt;
+&lt;!--   scale_y_continuous(breaks = c(p_1, p_2),  --&gt;
+&lt;!--                      labels = expression(P[1], P[2]), --&gt;
+&lt;!--                      limits = c(0, 101), --&gt;
+&lt;!--                      expand = c(0, 0)) + --&gt;
+&lt;!--   geom_segment(aes(color = "Qd", x = 10, xend = 10, y=0, yend = 100), size = 1) + # Add manual legend --&gt;
+&lt;!--   theme( --&gt;
+&lt;!--     axis.title.y = element_text(angle = 0, vjust = 1) , --&gt;
+&lt;!--     axis.title.x = element_text(hjust = 1, vjust = 6) --&gt;
+&lt;!--   ) --&gt;
+
+&lt;!-- caida --&gt;
+&lt;!-- ``` --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- ## El modelo del multiplicador --&gt;
+
+
+&lt;!-- Ejemplo numérico --&gt;
+
+&lt;!-- ```{r} --&gt;
+&lt;!-- df &lt;- tibble( --&gt;
+&lt;!--   GDP = seq(4200, 2700, by=-300), --&gt;
+&lt;!--   Consumo = seq(3800, 2800, by = -200), --&gt;
+&lt;!--   S = GDP-Consumo, --&gt;
+&lt;!--   I = 200 --&gt;
+&lt;!-- ) --&gt;
+
+&lt;!-- knitr::kable(df) %&gt;%  --&gt;
+&lt;!--   kable_styling() --&gt;
+
+&lt;!-- ``` --&gt;
+
+&lt;!-- $$ C = 1000 + \frac{2}{3} GDP $$ --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Gráficamente: Equilibrio --&gt;
+
+&lt;!-- ```{r} --&gt;
+&lt;!-- # Fig. 22-7 --&gt;
+&lt;!-- base_multiplicador &lt;- df %&gt;%  --&gt;
+&lt;!--   ggplot() +  --&gt;
+&lt;!--   geom_line(aes(GDP, Consumo+I)) + --&gt;
+&lt;!--   geom_abline(slope = 1, intercept = 0) +  --&gt;
+&lt;!--   scale_x_continuous(expand = c(0, 0)) +  --&gt;
+&lt;!--   scale_y_continuous(expand = c(0, 0), breaks = df$GDP) + --&gt;
+&lt;!--   coord_equal() +  --&gt;
+&lt;!--   labs(x = "GDP", y="Gasto Agregado") --&gt;
+
+&lt;!-- ``` --&gt;
+
+
+&lt;!-- ```{r} --&gt;
+&lt;!-- equilibrio &lt;- filter(df, GDP == Consumo + I) --&gt;
+
+&lt;!-- graf_equilibrio &lt;- base_multiplicador +  --&gt;
+&lt;!--   #geom_line(aes(GDP, Consumo), linetype = "dashed") +  --&gt;
+&lt;!--   geom_point(aes(x=GDP, y=Consumo+I), data = equilibrio) + --&gt;
+&lt;!--   geom_segment(aes(x=2700, y=equilibrio$GDP, xend=equilibrio$GDP, yend = equilibrio$GDP)) + --&gt;
+&lt;!--   geom_segment(aes(x=equilibrio$GDP, y=equilibrio$GDP, xend=equilibrio$GDP, yend = 2750)) --&gt;
+&lt;!-- graf_equilibrio --&gt;
+
+
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Ajustes fuera del equilibrio --&gt;
+
+&lt;!-- ```{r, fig.width = 10, fig.height=10} --&gt;
+&lt;!-- g1 &lt;- base_multiplicador +  --&gt;
+&lt;!--   labs(title = "Ingreso &lt; DA") --&gt;
+
+&lt;!-- g2 &lt;- base_multiplicador +  --&gt;
+&lt;!--   labs(title = "Ingreso &gt; DA") --&gt;
+
+&lt;!-- plot_grid(g1, g2) --&gt;
+&lt;!-- ``` --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Aumento del gasto exógeno --&gt;
+
+&lt;!-- ```{r} --&gt;
+&lt;!-- graf_equilibrio +  --&gt;
+&lt;!--  geom_line(aes(GDP, Consumo), color ="red") + --&gt;
+&lt;!--  geom_segment(aes(x=3900, y=3650, xend=3900, yend=3750), arrow=arrow(length=unit(0.20,"cm"))) + --&gt;
+&lt;!--  geom_segment(aes(x=3000, y=3050, xend=3000, yend=3150), arrow=arrow(length=unit(0.20,"cm"))) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- ## Aumento del gasto exógeno (2) --&gt;
+
+&lt;!-- El efecto multiplicador --&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
