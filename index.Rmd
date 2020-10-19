@@ -39,11 +39,12 @@ library(kableExtra)
 
 # Macroeconomía
 
-La Macroeconomía es la rama de la economía que estudia el comportamiento de la economía de una región, un país o el mundo.
+- Es la rama de la economía que estudia el comportamiento de la economía de una región, un país o el mundo.
+
 
 ---
 
-# Macroeconomía (2)
+# Preguntas 
 
 Busca responder preguntas como:
 
@@ -53,46 +54,12 @@ Busca responder preguntas como:
 - ¿Cómo se comporta el tipo de cambio?
 
 ---
+# Contexto histórico
 
-
-# Algunos conceptos importantes:
-
-- __Ciclo de negocios__ La economía pasa por períodos de expansión y contracción del nivel de actividad.
-
-- __Inflación__ El nivel general de precios de la economía puede ser más o menos estable.
-
-- __Crecimiento económico__ En el largo plazo, el bienestar de los habitantes de un país depende de la capacidad de la economía de aumentar la producción de bienes y servicios.
-
-
-
----
-
-## Objetivos de la política macroeconómica
-
-- __Nivel de actividad__ Alto y creciente. Se mide por el PIB.
-- __Nivel de precios__ Estable. La inflación tiene efectos negativos sobre la toma de decisiones y tiene un impacto regresivo en la distribución del ingreso.
-- __Desempleo__ Bajo. Es un problema social e implica capacidades productivas inutilizadas. Está muy ligado al ciclo de negocios.
-
----
-
-## Instrumentos de la política macroeconómica
-
-- __Política Fiscal__ 
-A través de los impuestos, el gobierno afecta los ingresos de los hogares y los precios relativos de algunos bienes (energía, cigarrillos).
-
-A través del __gasto público__ el gobierno afecta los ingresos de los hogares (transferencias) y el acceso a ciertos bienes (salud, educación, seguridad).
-
-- __Política Monetaria__ El gobierno regula la cantidad de dinero circulante en la economía, el crédito y los precios de ciertos clave modificando las tasas de interés y administrando el sistema bancario. 
-
-- __Inserción internacional__ El comercio internacional (exportaciones e importaciones) son clave para las economías pequeñas como Uruguay. Los instrumentos disponibles para incidir en estas variables son los aranceles y las cuotas. Además, las economías tienen relaciones financieras con el exterior. El gobierno regula estas relaciones mediante el sistema cambiario.
-
-
-
----
-# Ciclos de Negocios
 .pull-left[
-- El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
+
 - John Maynard Keynes fue el que originó esta rama de la economía en los años 30s.
+- Desarrolló los fundamentos teóricos de las __políticas macroeconómicas__
 ]
 
 .pull-right[
@@ -101,77 +68,65 @@ A través del __gasto público__ el gobierno afecta los ingresos de los hogares 
 ]
 
 ---
-# Ciclos de Negocios (2)
 
 
-- Las economías modernas pasan por períodos de auge y caída.
+## Objetivos de la política macroeconómica
+
+- __Nivel de actividad económica__ Alto y creciente. Se mide por el PIB.
+- __Nivel de precios__ Estable. La inflación tiene efectos negativos sobre la toma de decisiones y tiene un impacto regresivo en la distribución del ingreso.
+
+- __Desempleo__ Bajo. Es un problema social e implica capacidades productivas inutilizadas. 
+
+---
+
+## Instrumentos de la política macroeconómica
+
+- __Política Fiscal__ 
+A través de los impuestos, el gobierno afecta los ingresos de los hogares y los precios relativos de algunos bienes (energía, cigarrillos). A través del __gasto público__ el gobierno afecta los ingresos de los hogares (transferencias) y el acceso a ciertos bienes (salud, educación, seguridad).
+
+- __Política Monetaria__ El gobierno regula la cantidad de dinero circulante en la economía, el crédito actuando sobre las tasas de interés y regulando el sistema bancario. 
+
+- __Inserción internacional__ El comercio internacional (exportaciones e importaciones) son clave para las economías pequeñas como Uruguay. Los instrumentos disponibles para incidir en estas variables son los aranceles y las cuotas. Además, las economías tienen relaciones financieras con el exterior. El gobierno regula estas relaciones mediante el sistema cambiario.
+
+
+---
+# Actividad Económica
+
+- Las economías modernas pasan por períodos de auge y caída (fluctuaciones)
+
 - En los períodos de auge es fácil conseguir empleo, los beneficios de las empresas son bajos y las fábricas trabajan por debajo de su capacidad.
 
+---
+# Explicaciones
+
+- __Endógenas__: Crisis Financieras y ciclos de negocios
+- __Exógenas__: Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria, pandemias.
 
 ---
-# Ciclos de Negocios: Fases
 
-- Expansión
-- Pico
-- Contracción
+# Producto Real y Producto Potencial
 
 
----
-# Ciclos de Negocios: características
-
-- No son predecibles
-- Se parecen más al clima que a las estaciones
+- El producto real es la producción de la economía en cada año.
+- El producto potencial busca eliminar el componente cíclico.
 
 ---
-# Características (2):
-- El empleo baja
-- La inversión baja
-- Ganacias de las empresas bajan
+# Evolución Reciente
 
 
----
-# Teorías
-
-- Exógenas vs. Endógenas.
-- Crisis Financieras y ciclos de negocios
-- Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria.
+<img src="imgs/ciclo_pib.png">
 
 
 ---
 # El modelo de Oferta y Demanda Agregadas
 
-```{r echo = FALSE, warning=FALSE, message=FALSE}
-library(tidyverse)
+<img src="imgs/modelo_oa_da.png">
 
-OA <- Hmisc::bezier(
-  x=c(1000, 3000, 3200, 3300, 3500, 3700, 3900),
-  y=c(100, 150, 155, 160, 170, 180, 250)
-) %>% 
-  as_tibble
-
-
-DA <- Hmisc::bezier(
-  x=c(1200, 1500, 3000, 3800, 4300),
-  y=c(300, 250, 150, 90, 70)
-) %>% 
-  as_tibble()
-
-ggplot(data.frame(), aes(x, y)) + 
-  geom_line(data = OA) +
-  geom_line(data = DA) +
-  scale_x_continuous(limits =c(0, 5000)) + 
-  scale_y_continuous(limits = c(0, 280)) + 
-  geom_point(data=tibble(x=3000, y=150)) + 
-  annotate("text", x=4500, y=55, label="DA") + 
-  annotate("text", x=4000, y=260, label="OA") + 
-  labs(y="Nivel de Precios", x="PIB") +
-  theme_bw()
-```
 
 ---
 # Demanda Agregada
 
-- Es el ouput total de la economía que es demandado.
+- Es el output total de la economía que es demandado.
 - Tiene 4 componentes:
   - Consumo
   - Inversión
@@ -189,16 +144,33 @@ ggplot(data.frame(), aes(x, y)) +
 - Variables de política
   - Política Monetaria
   - Política Fiscal
+  
 - Variables exógenas
   - Ingreso internacional
   - Activos
   - Tecnología
   - Otros
 
----  
-# La OA
+
+
+---
+# La Oferta Agregada
 
 - Tiene pendiente positiva en el plano $(Y, P)$
+- Cambia cuando cambian los factores de producción o la tecnología de la economía.
+
+
+---
+# Equilibrio Macroeconómico
+
+<img src="imgs/equilibrio_macro.png">
+
+---
+
+# Shock en la demanda
+
+<img src="imgs/shock_demanda.png">
+
 
 
 <!-- ## Movimientos de la DA vs. Movimientos sobre la DA -->
