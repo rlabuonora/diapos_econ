@@ -471,3 +471,97 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 
 <img src="imgs/salario_minimo.png">
 
+
+---
+
+- La elasticidad de la demanda mide cuanto cambia la cantidad demandada ($Q_d$) cuando cambian los precios. Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad cuantifica esa caída.
+
+- Si $Q_d$ baja (sube) mucho cuando sube (baja) el precio, la demanda del bien es __elástica__.
+- Si $Q_d$ baja (sube) poco cuando sube (baja) el precio, la demanda del bien es __inelástica__.
+
+- La elasticidad de la demanda de un bien depende de varios factores:
+  - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica.
+  - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo.
+  - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica.
+  
+- La elasticidad se calcula como:
+
+$$ E_p = \frac{|Cambio\ Porcentual\ en\ Q_d|}{|Cambio\ Porcentual\ en\ P|} $$
+
+---
+
+# Un ejemplo numérico
+  - Si $E_p = 1$ el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien.
+  - Si $E_p > 1$ el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien.
+  - Si $E_p < 1$ el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien.
+  
+  
+---
+
+# A tener en cuenta:
+  - La elasticidad es siempre positiva. Si el precio del bien sube, la cantidad demandada baja (por la ley de la demanda). Si no usamos valores absolutos, esto haría que en la fórmula de $E_p$ el numerador y el denominador tuvieran distintos signos, y el resultado sería negativo. Como no nos interesa saber el sentido de la variación (ya lo sabemos), usamos el valor absoluto y la elasticidad siempre es positiva.
+  - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida. (Los cambios porcentuales son iguales si los calculamos en kilos o en toneladas.)
+  - Para calcular la variación porcentual, uso el promedio del valor inicial y el final como denominador. Por ejemplo, para el precio:
+$$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$
+Donde $\Delta P$ es la variación absoluta de $P$ ($P_1 - P_0$), $P_0$ es el precio inicial y $P_1$ el precio final.
+
+---
+
+- El equilibrio del mercado de un bien pasa de A a B:
+
+```{r, echo = FALSE, warning = FALSE, message=FALSE, fig.width = 5, fig.height = 4}
+library(reconPlots)
+library(viridis)
+library(tidyverse)
+
+line.2 <- data.frame(x = c(4, 1),
+                     y = c(1, 4),
+                     name="demand")
+
+ggplot(mapping = aes(x=x, y=y)) + 
+  geom_line(data = line.2, aes(color=name)) + 
+  geom_segment(lty = "dashed", 
+               aes(x=0, y = 2, xend=3, yend=2)) + 
+  geom_segment(lty = "dashed", 
+               aes(x=3, y=0, xend=3, yend=2)) +
+  geom_segment(lty = "dashed", 
+               aes(x=0, y = 3, xend=2, yend=3)) + 
+  geom_segment(lty = "dashed", 
+               aes(x=2, y=0, xend=2, yend=3)) +
+  scale_color_manual(name = NULL, 
+                     labels = c("Demanda", "Oferta"),
+                     values = c("#23576E", "#099FDB")) +
+  scale_x_continuous(expand = c(0, 0.2),
+                     breaks = c(0, 2, 3), 
+                     labels = c("", 160, 240))  +
+  scale_y_continuous(expand = c(0, 0.2), 
+                     breaks = c(0, 2, 3), 
+                     labels = c("", 90, 110)) + 
+  geom_segment(aes(x = 0, y = 0, xend = 0, yend = 6), arrow = arrow(length=unit(0.2, "cm"))) +
+  geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + 
+  annotate("point", x=2, y=3) + 
+  annotate("point", x=3, y=2) +
+  annotate("text", x=2.1, y=3.2, label = "A") + 
+  annotate("text", x=3.1, y=2.2, label = "B") + 
+    theme_minimal() +
+  theme(axis.title.y = 
+          element_text(angle = 0),
+        axis.title.x = 
+          element_text(hjust=0.95, vjust=6))  +
+  labs(x="Q", y="P") + 
+  guides(color = FALSE)
+```
+
+
+---
+
+La variación absoluta en $P$ es $\Delta P = P_B - P_A = 90-110 = -20$. La variación porcentual en P (en valor absoluto) es $\frac{-20}{(\frac{90 + 110}{2})} = \frac{2}{5}$. La variación absoluta en $Q$ es $\Delta Q = Q_B - Q_A = 240 - 160 = 80$. La variación porcentual en Q (en valor absoluto) es $\frac{80}{(\frac{160 + 260}{2})} = \frac{1}{5}$.
+  
+Sustituyendo en la fórmula $E_P = \frac{\frac{2}{5}}{\frac{1}{5}}  =2$.
+
+---
+
+# Aplicaciones
+
+- Impuestos.
+- Precios mínimos y máximos.
