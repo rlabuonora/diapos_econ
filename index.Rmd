@@ -126,142 +126,6 @@ Algunas preguntas que busca responder la economía:
 
 <!-- --- -->
 
-<!-- # Eficiencia -->
-
-<!-- ```{r} -->
-<!-- library(ggrepel) -->
-<!-- library(cowplot) -->
-<!-- theme_set(theme_minimal(base_size = 22) +  -->
-<!--             theme(plot.title = element_text(hjust = 0.5))) -->
-<!-- ``` -->
-
-<!-- - Una economía es __eficiente__ cuando produce la máxima cantidad dados los recursos que tiene. -->
-<!-- - Los recursos de una economía son los __factores de producción__ o __inputs__: -->
-<!--   - Trabajo -->
-<!--   - Capital -->
-<!--   - Recursos Naturales -->
-
-
-<!-- --- -->
-<!-- # Frontera de Posiblidadades de Producción -->
-
-<!-- .pull-left[ -->
-<!-- - 2 bienes. -->
-<!-- - ¿Cuánto producimos de cada uno? -->
-<!-- - Opciones dependen de factores disponibles y tecnología. -->
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ```{r} -->
-<!-- # Table 1.1 -->
-<!-- table_1 <- tibble(manteca = 0:5, -->
-<!--                   armas = c(15, 14, 12, 9, 5, 0), -->
-<!--                   labs = LETTERS[1:6]) -->
-<!-- fig_1 <- ggplot(table_1, aes(manteca, armas)) +  -->
-<!--   geom_point() +  -->
-<!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 18), arrow = arrow(length=unit(0.2, "cm"))) + -->
-<!--   geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) +  -->
-<!--   scale_x_continuous(breaks = c(0:5), -->
-<!--                      labels = c(0:5)) + -->
-<!--   geom_text_repel(aes(label=labs)) +  -->
-<!--   labs(x= "Manteca\n(Millones de kilos)", y="Armas (Miles)") -->
-<!-- fig_1 -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- --- -->
-<!-- # FPP -->
-
-<!-- ```{r warning=FALSE, message=FALSE, fig.width=10} -->
-<!-- library(patchwork) -->
-
-<!-- highlight_A <- fig_1 +  -->
-<!--   geom_point(data = filter(table_1, labs == "A"), alpha = 1, color = "red", size = 5, shape = 21) +  -->
-<!--   labs(title = "Solo Armas") -->
-
-<!-- highlight_B <- fig_1 +  -->
-<!--   geom_point(data = filter(table_1, labs == "F"), alpha = 1, color = "red", size = 5, shape = 21) +  -->
-<!--   labs(title = "Solo Manteca") -->
-
-<!-- highlight_A + highlight_B -->
-<!-- ``` -->
-
-<!-- --- -->
-
-<!-- # FPP -->
-
-<!-- .pull-left[ -->
-<!-- - Si estamos adentro de la FPP somos ineficientes. -->
-<!-- - Nunca podemos estar afuera. -->
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ```{r} -->
-<!-- fig_2_data <- bind_rows(table_1, -->
-<!--   tibble(manteca = c(4, 2), -->
-<!--                        armas = c(9, 6), -->
-<!--                        labs = c("I", "U"))) -->
-
-<!-- plot <- ggplot(fig_2_data, aes(manteca, armas)) +  -->
-<!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 18), arrow = arrow(length=unit(0.2, "cm"))) + -->
-<!--   geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + -->
-<!--   geom_line(data = table_1) +  -->
-<!--   geom_area(data = table_1, alpha = 0.3) +  -->
-<!--   geom_point() +  -->
-<!--   geom_text_repel(aes(label=labs)) +  -->
-<!--   labs(x= "Manteca\n(Millones de kilos)", y="Armas (Miles)") -->
-
-<!-- plot -->
-<!-- ``` -->
-<!-- ] -->
-
-
-<!-- --- -->
-<!-- # Avances tecnológicos -->
-
-<!-- .pull-left[ -->
-<!-- - Desplazamientos cuando la tecnología nos hace más productivos -->
-
-<!-- ] -->
-
-<!-- .pull-right[ -->
-<!-- ```{r} -->
-<!-- df <- tribble( -->
-<!--   ~food, ~machines,   ~lab, -->
-<!--   0,      150,        "A",   -->
-<!--   10,     140,        "B", -->
-<!--   20,     120,        "C", -->
-<!--   30,     90,         "D", -->
-<!--   40,     50,         "E", -->
-<!--   50,     0,          "F" -->
-<!-- ) %>%  -->
-<!--     mutate(machines_2 = machines + 30) %>%  -->
-<!--   bind_rows(c(machines=0, machines_2=0, food = 55 )) -->
-<!-- # Figure 3 - Crecimiento Economico -->
-<!-- ggplot(df, aes(x=food, y=machines)) +  -->
-<!--   geom_point() +  -->
-<!--   geom_line() +  -->
-<!--   geom_line(aes(x=food, y = machines_2), lty="dashed") +  -->
-<!--   geom_ribbon(aes(ymin = 0, ymax=machines), alpha = 0.5) +  -->
-<!--   geom_ribbon(aes(ymin = machines, ymax = machines_2), alpha = 0.5, fill = "red") + -->
-<!--   geom_line(aes(x=food, y=machines)) +  -->
-<!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 200), arrow = arrow(length=unit(0.2, "cm"))) + -->
-<!--   geom_segment(aes(x=0, y=0, xend = 60, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + -->
-<!--   labs(x="Comida", y= "Máquinas") -->
-<!-- ``` -->
-
-<!-- ] -->
-
-
-<!-- --- -->
-<!-- # Aplicaciones -->
-
-<!-- Podemos aplicar la FPP para analizar decisiones entre dos alternativas. -->
-<!--   - Consumo civil vs. consumo militar (EUA) -->
-<!--   - Producción agrícola vs. industrias (China) -->
-<!--   - Alimentos y manufacturas -->
-<!--   - Consumo e inversión -->
 
 ---
 # Los principales problemas que enfrenta la economía
@@ -321,6 +185,34 @@ __Distribución__ del producto de la economía.
 - Estas decisiones determinan qué, cómo y para quién se produce.
 
 ]
+
+
+---
+## El mercado como mecanismo de asignación de recursos
+
+- Un mercado es el marco en el que interactúan los *oferentes* y los *demandantes* de un bien, que son los que deciden cuanto compra y venden a cierto precio con el fin de obtener un resultado (ganancia, satisfacción de necesidades, etc.).
+- No hay un individuo o empresa responsable de "hacer funcionar" los mercados. Hay mercados de muchos tipos (centralizados, descentralizados, electrónicos, etc.).
+- El rol de los mercados es determinar los **precios** y las **cantidades** que se compran de cada bien en la economía (autos, toneladas de celulosa, clases de economía).
+- Estos precios sirven como **señales** para los agentes económicos, y son imprescindibles para **coordinar** su acción.
+- El **equilibrio** de mercado es una combinación de precios y cantidades que haya un balance entre oferta y demanda, y que no se produzca de más ni de menos.
+
+---
+## El mercado como mecanismo de asignación de recursos (2)
+
+- Los mercados son una forma de determinar:
+  - ¿Qué producir? Si nadie compra algo, el productor recibe una señal de que no es socialmente deseable destinar recursos a su producción.
+  - ¿Cómo producir? Una nueva tecnología de producción será adoptada si aumenta más los ingresos que los costos.
+  - ¿Para quién producir? Los ingresos de los miembros de una sociedad se determinan por los precios de los factores productivos que poseen.
+  
+  
+---
+## El mercado como mecanismo de asignación de recursos (3)
+
+- Los principales fuerzas que determinan el funcionamiento de la economía: las preferencias y la tecnología.
+- Las preferencias son los gustos de los consumidores, y determinan donde nos vamos a parar en la FPP.
+- La tecnología determina los límites de lo que podemos producir con los factores productivos que poseemos.
+- El flujo circular
+- Adam Smith y el descubrimiento del mercado como mecanismo asignador de recursos.
 
 ---
 
