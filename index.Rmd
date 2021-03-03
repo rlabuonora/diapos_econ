@@ -63,16 +63,19 @@ theme_set(
 # Objetivos del curso
 
 - Presentar las principales herramientas de la ciencia economómica para entender el mundo.
-- Dar un panorama de qué hacen los economistas
+- Dar un panorama de qué hacen los economistas.
 
 ---
 
-# Recursos (1): Digitales
+# Recursos (1)
 
 
 - Google Classroom
   - Materiales
-  - Links para clases via Google Meet
+  - Cuestionarios
+  - Foro
+  - Link para clases via Google Meet
+  
   
 - Sitio web [](econ.rlabuonora.com)
   - Linkeado desde classroom
@@ -81,7 +84,15 @@ theme_set(
 
 ---
 
-# Recursos (2): El Libro
+# Recursos(2)
+
+- Diapositivas
+  - Linkeadas desde el classroom.
+  - Tienen un resúmen de lo que tienen que saber.
+  - Pueden no tener el nivel de detalle necesario para entender todo.
+---
+
+# Recursos (3)
 
 Samuelson
 
@@ -98,7 +109,7 @@ Samuelson
 - Participación en clase
   - Preguntas
   - Resupuestas
-  - Ejercicios
+  - Ejercicios (estan en la web)
 - Escrito
   - 2 escritos
   - 2 parciales
@@ -325,4 +336,14 @@ El nivel de actividad, el empleo y el nivel general de precios.
   <img src="imgs/bcu.jpg">
 ]
 
+---
+# Método
 
+- La economía como ciencia
+  - ¿Qué es una ciencia? Experimentos, empiria.
+  - Matemática, el lenguaje de la ciencia (Álgebra)
+    - Ecuaciones
+    - Variables
+    - Gráficos
+
+- Economía aplicada, historia y narrativa.

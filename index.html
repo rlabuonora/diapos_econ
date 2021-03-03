@@ -53,16 +53,19 @@ li {
 # Objetivos del curso
 
 - Presentar las principales herramientas de la ciencia economómica para entender el mundo.
-- Dar un panorama de qué hacen los economistas
+- Dar un panorama de qué hacen los economistas.
 
 ---
 
-# Recursos (1): Digitales
+# Recursos (1)
 
 
 - Google Classroom
   - Materiales
-  - Links para clases via Google Meet
+  - Cuestionarios
+  - Foro
+  - Link para clases via Google Meet
+  
   
 - Sitio web [](econ.rlabuonora.com)
   - Linkeado desde classroom
@@ -71,7 +74,15 @@ li {
 
 ---
 
-# Recursos (2): El Libro
+# Recursos(2)
+
+- Diapositivas
+  - Linkeadas desde el classroom.
+  - Tienen un resúmen de lo que tienen que saber.
+  - Pueden no tener el nivel de detalle necesario para entender todo.
+---
+
+# Recursos (3)
 
 Samuelson
 
@@ -88,7 +99,7 @@ Samuelson
 - Participación en clase
   - Preguntas
   - Resupuestas
-  - Ejercicios
+  - Ejercicios (estan en la web)
 - Escrito
   - 2 escritos
   - 2 parciales
@@ -116,142 +127,6 @@ Algunas preguntas que busca responder la economía:
 
 &lt;!-- --- --&gt;
 
-&lt;!-- # Eficiencia --&gt;
-
-&lt;!-- ```{r} --&gt;
-&lt;!-- library(ggrepel) --&gt;
-&lt;!-- library(cowplot) --&gt;
-&lt;!-- theme_set(theme_minimal(base_size = 22) +  --&gt;
-&lt;!--             theme(plot.title = element_text(hjust = 0.5))) --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- - Una economía es __eficiente__ cuando produce la máxima cantidad dados los recursos que tiene. --&gt;
-&lt;!-- - Los recursos de una economía son los __factores de producción__ o __inputs__: --&gt;
-&lt;!--   - Trabajo --&gt;
-&lt;!--   - Capital --&gt;
-&lt;!--   - Recursos Naturales --&gt;
-
-
-&lt;!-- --- --&gt;
-&lt;!-- # Frontera de Posiblidadades de Producción --&gt;
-
-&lt;!-- .pull-left[ --&gt;
-&lt;!-- - 2 bienes. --&gt;
-&lt;!-- - ¿Cuánto producimos de cada uno? --&gt;
-&lt;!-- - Opciones dependen de factores disponibles y tecnología. --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-right[ --&gt;
-&lt;!-- ```{r} --&gt;
-&lt;!-- # Table 1.1 --&gt;
-&lt;!-- table_1 &lt;- tibble(manteca = 0:5, --&gt;
-&lt;!--                   armas = c(15, 14, 12, 9, 5, 0), --&gt;
-&lt;!--                   labs = LETTERS[1:6]) --&gt;
-&lt;!-- fig_1 &lt;- ggplot(table_1, aes(manteca, armas)) +  --&gt;
-&lt;!--   geom_point() +  --&gt;
-&lt;!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 18), arrow = arrow(length=unit(0.2, "cm"))) + --&gt;
-&lt;!--   geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) +  --&gt;
-&lt;!--   scale_x_continuous(breaks = c(0:5), --&gt;
-&lt;!--                      labels = c(0:5)) + --&gt;
-&lt;!--   geom_text_repel(aes(label=labs)) +  --&gt;
-&lt;!--   labs(x= "Manteca\n(Millones de kilos)", y="Armas (Miles)") --&gt;
-&lt;!-- fig_1 --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- # FPP --&gt;
-
-&lt;!-- ```{r warning=FALSE, message=FALSE, fig.width=10} --&gt;
-&lt;!-- library(patchwork) --&gt;
-
-&lt;!-- highlight_A &lt;- fig_1 +  --&gt;
-&lt;!--   geom_point(data = filter(table_1, labs == "A"), alpha = 1, color = "red", size = 5, shape = 21) +  --&gt;
-&lt;!--   labs(title = "Solo Armas") --&gt;
-
-&lt;!-- highlight_B &lt;- fig_1 +  --&gt;
-&lt;!--   geom_point(data = filter(table_1, labs == "F"), alpha = 1, color = "red", size = 5, shape = 21) +  --&gt;
-&lt;!--   labs(title = "Solo Manteca") --&gt;
-
-&lt;!-- highlight_A + highlight_B --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- # FPP --&gt;
-
-&lt;!-- .pull-left[ --&gt;
-&lt;!-- - Si estamos adentro de la FPP somos ineficientes. --&gt;
-&lt;!-- - Nunca podemos estar afuera. --&gt;
-
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-right[ --&gt;
-&lt;!-- ```{r} --&gt;
-&lt;!-- fig_2_data &lt;- bind_rows(table_1, --&gt;
-&lt;!--   tibble(manteca = c(4, 2), --&gt;
-&lt;!--                        armas = c(9, 6), --&gt;
-&lt;!--                        labs = c("I", "U"))) --&gt;
-
-&lt;!-- plot &lt;- ggplot(fig_2_data, aes(manteca, armas)) +  --&gt;
-&lt;!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 18), arrow = arrow(length=unit(0.2, "cm"))) + --&gt;
-&lt;!--   geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + --&gt;
-&lt;!--   geom_line(data = table_1) +  --&gt;
-&lt;!--   geom_area(data = table_1, alpha = 0.3) +  --&gt;
-&lt;!--   geom_point() +  --&gt;
-&lt;!--   geom_text_repel(aes(label=labs)) +  --&gt;
-&lt;!--   labs(x= "Manteca\n(Millones de kilos)", y="Armas (Miles)") --&gt;
-
-&lt;!-- plot --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ] --&gt;
-
-
-&lt;!-- --- --&gt;
-&lt;!-- # Avances tecnológicos --&gt;
-
-&lt;!-- .pull-left[ --&gt;
-&lt;!-- - Desplazamientos cuando la tecnología nos hace más productivos --&gt;
-
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-right[ --&gt;
-&lt;!-- ```{r} --&gt;
-&lt;!-- df &lt;- tribble( --&gt;
-&lt;!--   ~food, ~machines,   ~lab, --&gt;
-&lt;!--   0,      150,        "A",   --&gt;
-&lt;!--   10,     140,        "B", --&gt;
-&lt;!--   20,     120,        "C", --&gt;
-&lt;!--   30,     90,         "D", --&gt;
-&lt;!--   40,     50,         "E", --&gt;
-&lt;!--   50,     0,          "F" --&gt;
-&lt;!-- ) %&gt;%  --&gt;
-&lt;!--     mutate(machines_2 = machines + 30) %&gt;%  --&gt;
-&lt;!--   bind_rows(c(machines=0, machines_2=0, food = 55 )) --&gt;
-&lt;!-- # Figure 3 - Crecimiento Economico --&gt;
-&lt;!-- ggplot(df, aes(x=food, y=machines)) +  --&gt;
-&lt;!--   geom_point() +  --&gt;
-&lt;!--   geom_line() +  --&gt;
-&lt;!--   geom_line(aes(x=food, y = machines_2), lty="dashed") +  --&gt;
-&lt;!--   geom_ribbon(aes(ymin = 0, ymax=machines), alpha = 0.5) +  --&gt;
-&lt;!--   geom_ribbon(aes(ymin = machines, ymax = machines_2), alpha = 0.5, fill = "red") + --&gt;
-&lt;!--   geom_line(aes(x=food, y=machines)) +  --&gt;
-&lt;!--   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 200), arrow = arrow(length=unit(0.2, "cm"))) + --&gt;
-&lt;!--   geom_segment(aes(x=0, y=0, xend = 60, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + --&gt;
-&lt;!--   labs(x="Comida", y= "Máquinas") --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- ] --&gt;
-
-
-&lt;!-- --- --&gt;
-&lt;!-- # Aplicaciones --&gt;
-
-&lt;!-- Podemos aplicar la FPP para analizar decisiones entre dos alternativas. --&gt;
-&lt;!--   - Consumo civil vs. consumo militar (EUA) --&gt;
-&lt;!--   - Producción agrícola vs. industrias (China) --&gt;
-&lt;!--   - Alimentos y manufacturas --&gt;
-&lt;!--   - Consumo e inversión --&gt;
 
 ---
 # Los principales problemas que enfrenta la economía
@@ -450,6 +325,18 @@ El nivel de actividad, el empleo y el nivel general de precios.
   - Política Monetaria (Bancos Centrales)
   &lt;img src="imgs/bcu.jpg"&gt;
 ]
+
+---
+# Método
+
+- La economía como ciencia
+  - ¿Qué es una ciencia? Experimentos, empiria.
+  - Matemática, el lenguaje de la ciencia (Álgebra)
+    - Ecuaciones
+    - Variables
+    - Gráficos
+
+- Economía aplicada, historia y narrativa.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
