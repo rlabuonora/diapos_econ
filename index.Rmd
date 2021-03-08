@@ -137,6 +137,15 @@ Algunas preguntas que busca responder la economía:
 
 <!-- --- -->
 
+---
+# Método: ¿Cómo estudia la economía?
+
+- La economía como ciencia.
+- Teorías científicas.
+- Matemática: el lenguaje de la ciencia.
+  - Ecuaciones
+  - Variables
+  - Funciones
 
 ---
 # Los principales problemas que enfrenta la economía
@@ -336,14 +345,4 @@ El nivel de actividad, el empleo y el nivel general de precios.
   <img src="imgs/bcu.jpg">
 ]
 
----
-# Método
 
-- La economía como ciencia
-  - ¿Qué es una ciencia? Experimentos, empiria.
-  - Matemática, el lenguaje de la ciencia (Álgebra)
-    - Ecuaciones
-    - Variables
-    - Gráficos
-
-- Economía aplicada, historia y narrativa.
