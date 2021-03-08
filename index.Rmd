@@ -191,9 +191,14 @@ Los cambios en la __estructura productiva__ de la economía producen reasignaci�
 Siemprea va a haber alguien buscando trabajo.
 
 ---
-## Mercado de trabajo en Uruguay (1980-2020)
+## Mercado de trabajo en Uruguay: Evolución Reciente
 
-## Principales tendencias
+![](imgs/mercado_de_trabajo.jpeg)
+
+---
+
+## Mercado de trabajo en Uruguay: Evolución de mediano plazo
+
 
 - Envejecimiento de la población
 - Aumento de la tasa de actividad
@@ -204,10 +209,7 @@ Siemprea va a haber alguien buscando trabajo.
 # Envejecimiento de la población (1)
 
 ![](imgs/piramide_1950_2000.png)
----
-## Envejecimiento de la población (2)
 
-![](imgs/piramide_2050.png)
 
 ---
 ## Causas
