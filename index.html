@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>Demanda y Oferta</title>
     <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -26,6 +27,15 @@ class: center, middle, inverse, title-slide
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.remark-slide-content {
+
+ height: 200px;
+}
+
+li {
+  margin-bottom: 20px;
 }
 
 &lt;/style&gt;
@@ -243,37 +253,68 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 
 
 ---
-# Distintos casos
-
-- Si la elasticidad es mayor a 1, la demanda es __elástica__.
-- Si la elasticidad es menor a 1 es __inelástica__.
-- Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
-
----
 # Casos extremos
 
 &lt;img src="imgs/extremos.png"&gt;
 
 
 ---
+# Distintos casos
+
+- Si la elasticidad es mayor a 1, la demanda es __elástica__.
+- Si la elasticidad es menor a 1 es __inelástica__.
+- Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
+
+
+
+---
 # Elasticidad e ingresos
 
-- El ingreso `\(P.Q\)`
+- El ingreso total de las empresas es `\(P.Q\)`
+- Si sube `\(P\)`, baja `\(Q\)`.
+- Qué pasa con el ingreso de las empresas si sube el precio?
 
+---
+# Elasticidad e ingresos (2)
+
+- Depende de la elasticidad de la demanda
 &lt;img src="imgs/casos.png"&gt;
+
+---
+# Elasticidad e ingresos
+
+- Si la demanda es muy elástica, la caída en `\(Q\)` va a ser grande, el ingreso total `\(P.Q\)` cae.
+- Si la demanda es inelástica, la caída en `\(Q\)` va a ser baja, el ingreso total `\(P.Q\)` sube.
+- Si la elasticidad es unitaria, `\(Q\)` cae en la misma proporción que `\(P\)` sube. 
+
 
 
 
 ---
 # Efecto de un impuesto
 
-- Incidencia legal 
+- Incidencia legal
 - Incidencia económica
+
+- A veces los productores pueden trasladar todo el peso del impuesto a los consumidores. 
+
+- Depende de las elasticades relativas de oferta y demanda.
 
 ---
 # Análisis económico
 
 &lt;img src="imgs/impuesto.png"&gt;
+
+- ¿Cuál es más elástica, la demanda o la oferta?
+---
+# Análisis económico (2)
+
+- El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos.
+
+- El impuesto hace que la oferta se desplace hacia la izquierda por $2.
+- Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes.
+
+- El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores.
 
 
 ---
@@ -285,6 +326,60 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 # Precios máximos y mínimos
 
 &lt;img src="imgs/salario_minimo.png"&gt;
+
+
+---
+
+- La elasticidad de la demanda mide cuanto cambia la cantidad demandada ($Q_d$) cuando cambian los precios. Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad cuantifica esa caída.
+
+- Si `\(Q_d\)` baja (sube) mucho cuando sube (baja) el precio, la demanda del bien es __elástica__.
+- Si `\(Q_d\)` baja (sube) poco cuando sube (baja) el precio, la demanda del bien es __inelástica__.
+
+- La elasticidad de la demanda de un bien depende de varios factores:
+  - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica.
+  - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo.
+  - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica.
+  
+- La elasticidad se calcula como:
+
+$$ E_p = \frac{|Cambio\ Porcentual\ en\ Q_d|}{|Cambio\ Porcentual\ en\ P|} $$
+
+---
+
+# Un ejemplo numérico
+  - Si `\(E_p = 1\)` el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien.
+  - Si `\(E_p &gt; 1\)` el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien.
+  - Si `\(E_p &lt; 1\)` el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien.
+  
+  
+---
+
+# A tener en cuenta:
+  - La elasticidad es siempre positiva. Si el precio del bien sube, la cantidad demandada baja (por la ley de la demanda). Si no usamos valores absolutos, esto haría que en la fórmula de `\(E_p\)` el numerador y el denominador tuvieran distintos signos, y el resultado sería negativo. Como no nos interesa saber el sentido de la variación (ya lo sabemos), usamos el valor absoluto y la elasticidad siempre es positiva.
+  - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida. (Los cambios porcentuales son iguales si los calculamos en kilos o en toneladas.)
+  - Para calcular la variación porcentual, uso el promedio del valor inicial y el final como denominador. Por ejemplo, para el precio:
+$$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$
+Donde `\(\Delta P\)` es la variación absoluta de `\(P\)` ($P_1 - P_0$), `\(P_0\)` es el precio inicial y `\(P_1\)` el precio final.
+
+---
+
+- El equilibrio del mercado de un bien pasa de A a B:
+
+![](index_files/figure-html/unnamed-chunk-6-1.png)&lt;!-- --&gt;
+
+
+---
+
+La variación absoluta en `\(P\)` es `\(\Delta P = P_B - P_A = 90-110 = -20\)`. La variación porcentual en P (en valor absoluto) es `\(\frac{-20}{(\frac{90 + 110}{2})} = \frac{2}{5}\)`. La variación absoluta en `\(Q\)` es `\(\Delta Q = Q_B - Q_A = 240 - 160 = 80\)`. La variación porcentual en Q (en valor absoluto) es `\(\frac{80}{(\frac{160 + 260}{2})} = \frac{1}{5}\)`.
+  
+Sustituyendo en la fórmula `\(E_P = \frac{\frac{2}{5}}{\frac{1}{5}}  =2\)`.
+
+---
+
+# Aplicaciones
+
+- Impuestos.
+- Precios mínimos y máximos.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -331,9 +426,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -342,7 +453,23 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-</script>
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {
