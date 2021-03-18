@@ -155,7 +155,7 @@ ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
   - Preferencias de los consumidores
   - Factores coyunturales
 
-- Cambian la __relación entre $Q_d$ y $P$.
+- Cambian la __relación__ entre $Q_d$ y $P$.
 
 ---
 # Cambios en la demanda
