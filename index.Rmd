@@ -321,8 +321,16 @@ ggplot(mapping = aes(x=x, y=y)) +
   labs(x="", y="")
 
 ```
+---
+# Precios máximos y mínimos
+
+<img src="imgs/salario_minimo.png">
+
+
 
 ---
+
+
 # Elasticidad Precio de la Demanda
 
 - Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio.
@@ -465,11 +473,6 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 # Subsidios
 
 - Son similares pero desplazan la oferta.
-
----
-# Precios máximos y mínimos
-
-<img src="imgs/salario_minimo.png">
 
 
 ---
