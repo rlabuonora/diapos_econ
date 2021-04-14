@@ -151,11 +151,24 @@ ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
 - Las exógenas son los __factores que explican la demanda__
   - Ingreso de los consumidores
   - Tamaño del mercado
-  - Disponibilidad y precio de bienes relacionados
+  - Disponibilidad y precio de bienes relacionados (sustitutos y complementarios)
   - Preferencias de los consumidores
   - Factores coyunturales
 
 - Cambian la __relación__ entre $Q_d$ y $P$.
+
+---
+# Bienes sustitutos
+
+
+- Si dos bienes son sustitutos, el aumento del precio de uno hace que aumente la demanda del otro.
+- Si sube el precio del pescado, la demanda de carne aumenta, porque los consumidores demandan más carne para sustituir el pescado que consumían a precios menores.
+
+---
+# Bienes Complementarios
+
+- Si dos bienes son complementarios, el aumento del precio de uno hace que disminuya la demanda del otro.
+- Si aumentan los precios de las consolas de videojuegos, la demanda por los juegos disminuye.
 
 ---
 # Cambios en la demanda
@@ -384,27 +397,6 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - La variación porcentual de la cantidad es 40% $(\frac{80}{\frac{160+240}{2}})$.
 
 ---
-# Ejercicio
-
-| Q | dQ|P  |dP |Ed |
-|---|---|---|---|---|
-| 0 |   | 6 |   |   |
-| 10|   | 4 |   |   |
-| 20|   | 2 |   |   |
-| 30|   | 0 |   |   |
-
----
-# Ejercicio (sol)
-
-| Q | dQ|P  |dP |Ed |
-|---|---|---|---|---|
-| 0 |  -| 6 |-  |-  |
-| 10| 10| 4 |2  | 5 |
-| 20| 10| 2 |2  | 1 |
-| 30| 10| 0 |2  | 0.2 |
-
-
----
 # Casos extremos
 
 <img src="imgs/extremos.png">
@@ -417,10 +409,17 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - Si la elasticidad es menor a 1 es __inelástica__.
 - Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
 
+--- 
+
+# Elasticidad Ingreso de la demanda
+
+- Cuando los ingresos de los consumidores cambian, la demanda se desplaza.
+- Para la mayoría de los bienes, si el ingreso del consumidor aumenta, la demanda de estos bienes aumenta.
+- Sin embargo, `para algunos bienes, llamado __inferiores__, un aumento del ingreso de los consumidores reduce su demanda. 
 
 
 ---
-# Elasticidad e ingresos
+# La elasticidad y los ingresos de las empresas
 
 - El ingreso total de las empresas es $P.Q$
 - Si sube $P$, baja $Q$.
@@ -564,7 +563,3 @@ Sustituyendo en la fórmula $E_P = \frac{\frac{2}{5}}{\frac{1}{5}}  =2$.
 
 ---
 
-# Aplicaciones
-
-- Impuestos.
-- Precios mínimos y máximos.
