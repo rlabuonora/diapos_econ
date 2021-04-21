@@ -410,7 +410,6 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - Si la elasticidad es igual a 1 el bien tiene __elasticidad unitaria__. 
 
 --- 
-
 # Elasticidad Ingreso de la demanda
 
 - Cuando los ingresos de los consumidores cambian, la demanda se desplaza.
@@ -421,9 +420,8 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 ---
 # La elasticidad y los ingresos de las empresas
 
-- El ingreso total de las empresas es $P.Q$
-- Si sube $P$, baja $Q$.
-- Qué pasa con el ingreso de las empresas si sube el precio?
+- Si hay un aumento en la oferta, baja el precio ($P$) y sube la cantidad ($Q$) .
+- ¿Qué pasa con el ingreso de las empresas ($P.Q$)?
 
 ---
 # Elasticidad e ingresos (2)
@@ -431,15 +429,33 @@ $$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 - Depende de la elasticidad de la demanda
 <img src="imgs/casos.png">
 
+
 ---
 # Elasticidad e ingresos
 
-- Si la demanda es muy elástica, la caída en $Q$ va a ser grande, el ingreso total $P.Q$ cae.
-- Si la demanda es inelástica, la caída en $Q$ va a ser baja, el ingreso total $P.Q$ sube.
+- Si la demanda es elástica, el aumento en $Q$ va a ser mayor que la caída en $P$, por lo que el ingreso total $P.Q$ sube.
+- Si la demanda es inelástica, el aumento en $Q$ va a ser menor que la caída en $P$ y el ingreso total $P.Q$ cae.
 - Si la elasticidad es unitaria, $Q$ cae en la misma proporción que $P$ sube. 
 
 
+---
 
+# Elasticidad Ingresos
+
+- Se define como $$ E_d = \frac{ \Delta Q\%}{\Delta Y \%}$$
+- Mide cuanto cambia la demanda cuando cambia el ingreso.
+- Para los bienes normales, la demanda aumenta cuando los consumidores son más ricos.
+- Para los bienes inferiores la demanda cae cuando los consumidores son más ricos.
+
+---
+# Elasticidad Ingreso de la demanda de alimentos
+
+![](imgs/ingreso_alimentos.png)
+
+---
+# Elasticidad Ingreso de la demanda de alimentos (2)
+
+![](imgs/ingreso_alimentos_2.png)
 
 ---
 # Efecto de un impuesto
@@ -562,4 +578,3 @@ La variación absoluta en $P$ es $\Delta P = P_B - P_A = 90-110 = -20$. La varia
 Sustituyendo en la fórmula $E_P = \frac{\frac{2}{5}}{\frac{1}{5}}  =2$.
 
 ---
-
