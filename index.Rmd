@@ -360,7 +360,25 @@ ggplot(mapping = aes(x=x, y=y)) +
 # Precios máximos
 
 - Si el gobierno fija un precio máximo menor que el precio de equilibrio, hay un exceso de demanda.
-- Si el gobierno fija un precio máximo mayor que el precio de equilibrio, rige el precio de equilibrio.
+
+---
+# Precios máximos en Argentina   🇦🇷
+
+![](imgs/precios_maximos.png)
+
+![](imgs/precios_populares.png)
+
+---
+# Precios máximos en Venezuela 🇻🇪
+
+![](imgs/super_venezuela_2.png)
+
+
+---
+
+# Precios máximos en Venezuela 🇻🇪
+
+![](imgs/super_venezuela_3.png)
 
 ---
 # Elasticidad Precio de la Demanda
