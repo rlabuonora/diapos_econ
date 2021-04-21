@@ -346,45 +346,32 @@ ggplot(mapping = aes(x=x, y=y)) +
 
 # Elasticidad Precio de la Demanda
 
+
+- Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad precio de la demanda ( $E_p$ cuantifica esa caída.
+
 - Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio.
 
-- Si cambia mucho, decimos que la demanda es __elástica__.
-- Si cambia poco, decimos que la demanda es __inelástica__.
+- Se calcula como el valor absoluto del cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio:
 
+$$ E_d = | \frac{ \Delta Q\%}{\Delta P \%} |$$
 ---
-# Factores que afectan la elasticidad de la demanda de un bien
+# Elasticidad Precio de la Demanda (2)
 
-- El horizonte temporal considerado.
-- La existencia de bienes sustitutos.
-
----
-
-- La elasticidad de la demanda mide cuanto cambia la cantidad demandada ($Q_d$) cuando cambian los precios. Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad cuantifica esa caída.
-
-- Si $Q_d$ baja (sube) mucho cuando sube (baja) el precio, la demanda del bien es __elástica__.
-- Si $Q_d$ baja (sube) poco cuando sube (baja) el precio, la demanda del bien es __inelástica__.
 
 - La elasticidad de la demanda de un bien depende de varios factores:
   - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica.
   - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo.
   - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica.
-  
-- La elasticidad se calcula como:
-
-$$ E_p = \frac{|Cambio\ Porcentual\ en\ Q_d|}{|Cambio\ Porcentual\ en\ P|} $$
 
 ---
-# Slide
+# Elasticidad Precio de la Demanda (3)
+
 
   - Si $E_p = 1$ el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien.
   - Si $E_p > 1$ el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien.
   - Si $E_p < 1$ el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien.
----
-# Forma de cálculo
 
-La elasticidad precio de la demanda $(E_d)$ se calcula como el cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio:
 
-$$ E_d = \frac{ \Delta Q\%}{\Delta P \%}$$
 
 ---
 
@@ -425,19 +412,17 @@ Donde $\Delta P$ es la variación absoluta de $P$ ($P_1 - P_0$), $P_0$ es el pre
 ![](imgs/extremos.png)
 
 
-
----
-
 ---
 # La elasticidad y los ingresos de las empresas
 
 - Si hay un aumento en la oferta, baja el precio ( $P$ ) y sube la cantidad ( $Q$ ) .
 - ¿Qué pasa con el ingreso de las empresas ( $P \times Q$ )?
 
+- Depende de la elasticidad de la demanda.
+
 ---
 # Elasticidad e ingresos (2)
 
-- Depende de la elasticidad de la demanda
 <img src="imgs/casos.png">
 
 
