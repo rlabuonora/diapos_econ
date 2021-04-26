@@ -471,55 +471,39 @@ Donde $\Delta P$ es la variación absoluta de $P$ ( $P_1 - P_0$ ), $P_0$ es el p
 # Elasticidad e ingresos
 
 - Si la demanda es elástica, el aumento en $Q$ va a ser mayor que la caída en $P$, por lo que el ingreso total $P \times Q$ sube.
-- Si la demanda es inelástica, el aumento en $Q$ va a ser menor que la caída en $P$ y el ingreso total $P
-\times Q$ cae.
+- Si la demanda es inelástica, el aumento en $Q$ va a ser menor que la caída en $P$ y el ingreso total $ P
+\times Q $ cae.
 - Si la elasticidad es unitaria, $Q$ cae en la misma proporción que $P$ sube. 
 
 
 ---
+# Elasticidad Ingreso del combustible
 
-# Elasticidad Ingreso de la demanda
+![](imgs/elasticidad_ingresos_combustible_exante.png)
 
-- Cuando los ingresos de los consumidores cambian, la demanda se desplaza.
-- Para la mayoría de los bienes, si el ingreso del consumidor aumenta, la demanda de estos bienes aumenta.
-- Sin embargo, para algunos bienes, llamado __inferiores__, un aumento del ingreso de los consumidores reduce su demanda. 
 
 ---
-
-# Elasticidad Ingreso de la Demandas
-
-- S define como $$ E_d = \frac{ \Delta Q\%}{\Delta Y \%}$$
-- Mide cuanto cambia la demanda cuando cambia el ingreso.
-- Para los bienes __normales__, la demanda aumenta cuando los consumidores son más ricos.
-- Para los bienes __inferiores__ la demanda cae cuando los consumidores son más ricos.
-
----
-# Elasticidad Ingreso de la del combustibleimgs/inmgs/elasticidad_ingresos_combustible_exante.png
-
-#
----
-# Elasticidad Ingreso de los combustibles
+# Elasticidad Ingreso de la demanda de combustibles
 
 - El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible.
 - El quintil más rico gasta 4.9%.
 - Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta.
- Elasticidad Ingreso de la demanda de alimentos (2)
+---
 
-imgs/ingreso_alimentos_2.png)
+# Elasticidad Ingreso de la demanda de alimentos
+
+![](imgs/ingreso_alimentos_2.png)
 
 ---
-# Efec# Elasticidad Ingreso de los Alimentos 
+# Elasticidad Ingreso de los Alimentos 
 
 - A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece.
 
 ---
-to de un impuesto
+# Efecto de un impuesto
 
-- Incidencia legal
-- Incidencia económica
-
+- Incidencia legal vs. incidencia económica
 - A veces los productores pueden trasladar todo el peso del impuesto a los consumidores. 
-
 - Depende de las elasticades relativas de oferta y demanda.
 
 ---
