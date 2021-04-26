@@ -488,24 +488,32 @@ Donde $\Delta P$ es la variación absoluta de $P$ ( $P_1 - P_0$ ), $P_0$ es el p
 
 # Elasticidad Ingreso de la Demandas
 
-- Se define como $$ E_d = \frac{ \Delta Q\%}{\Delta Y \%}$$
+- S define como $$ E_d = \frac{ \Delta Q\%}{\Delta Y \%}$$
 - Mide cuanto cambia la demanda cuando cambia el ingreso.
 - Para los bienes __normales__, la demanda aumenta cuando los consumidores son más ricos.
 - Para los bienes __inferiores__ la demanda cae cuando los consumidores son más ricos.
 
 ---
-# Elasticidad Ingreso de la demanda de alimentos
+# Elasticidad Ingreso de la del combustibleimgs/inmgs/elasticidad_ingresos_combustible_exante.png
 
-![](imgs/ingreso_alimentos.png)
+#
+---
+# Elasticidad Ingreso de los combustibles
+
+- El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible.
+- El quintil más rico gasta 4.9%.
+- Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta.
+ Elasticidad Ingreso de la demanda de alimentos (2)
+
+imgs/ingreso_alimentos_2.png)
 
 ---
+# Efec# Elasticidad Ingreso de los Alimentos 
 
-# Elasticidad Ingreso de la demanda de alimentos (2)
-
-![](imgs/ingreso_alimentos_2.png)
+- A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece.
 
 ---
-# Efecto de un impuesto
+to de un impuesto
 
 - Incidencia legal
 - Incidencia económica
