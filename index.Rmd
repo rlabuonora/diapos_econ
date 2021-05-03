@@ -22,6 +22,15 @@ output:
   transform: translate(-50%, -50%);
 }
 
+.remark-slide-content {
+
+ height: 200px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
 </style>
 
 ```{r setup, include=FALSE}
@@ -29,7 +38,6 @@ options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE, echo = FALSE, warning = FALSE)
 library(ggplot2)
 library(dplyr)
-library(cowplot)
 library(kableExtra)
 
 source('./excedente_control_precios.R')
