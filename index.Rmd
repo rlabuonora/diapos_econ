@@ -1,5 +1,5 @@
 ---
-title: "Estructuras de Mercado"
+title: "Competencia Perfecta"
 date: "30/7/2019"
 output:
   xaringan::moon_reader:
@@ -80,10 +80,10 @@ Analizamos estos mercados y el comportamiento de las empresas en base a dos supu
 
 La curva de demanda que enfrentan los productores en compentencia perfecta es horizontal.
 
-<img src="imgs/demanda_individual_mercado.png"/>
+![](imgs/demanda_individual_mercado.png)
 
 ---
-# Maximización de beneficios
+# Motivación de los empresarios
 
 ¿Qué desean los empresarios? 
 - ¿Vender lo más posible? `r emo::ji("x")`
@@ -93,44 +93,63 @@ La curva de demanda que enfrentan los productores en compentencia perfecta es ho
 
 
 ---
-# Tabla
+# Maximización de beneficios
 
-- Relación entre Precio, Costo Medio y Beneficios.
-- Relación entre Precio, Costo Marginal y Beneficios Marginales.
-- Máximo beneficio.
+- Los beneficios son la diferecia entre las ventas y los costos.
+- Se pueden escribir como una función de la cantidad producida ($Q$):
+
+$$B(Q)=PQ-C(Q)$$
+
+---
+# Maximiazación de Beneficios (2)
+
+- El empresario elige $Q$ para maximizar beneficios.
+
+- Suponemos que dada la cantidad producida, lo hace de la forma más eficiente posible.
+- En competencia perfecta, no tiene control sobre $P$. El ingreso marginal es siempre igual al precio.
+- El ingreso marginal debe ser igual al costo marginal:
+
+$$ P = Cmg(Q)$$
 ---
 
-# Ejemplo Numérico
+# La curva de oferta.
 
-```{r}
-
-
-
-datos <- tibble(
-  q = c(0, 1000, 2000, 3000, 3999, 4000, 4001, 5000),
-  CT = c(55000, 85000, 110000, 130000, 159960.01, 160000, 160040.01, 210000),
-  CMg = c(NA, 27, 22, 21, 38.98, 40, 40.02, 60),
-  Precio=40,
-) %>% 
-  mutate(
-    Cme = CT/q,
-    Ingresos = q*Precio,
-    Beneficios=Ingresos-CT
-  ) 
-
-datos %>% 
-  kable(digits=2,  format.args = list(scientific = FALSE)) %>%
-  kable_styling()
+- Para cada precio, el empresario elige la cantidad a producir que hace que su costo marginal sea igual a ese precio.
 
 
-```
+
+---
+
+# Ejemplo 
+
+![](imgs/tabla_oferta.png)
+
+<!-- # ```{r} -->
+<!-- #  -->
+<!-- # datos <- tibble( -->
+<!-- #   q = c(0, 1000, 2000, 3000, 3999, 4000, 4001, 5000), -->
+<!-- #   CT = c(55000, 85000, 110000, 130000, 159960.01, 160000, 160040.01, 210000), -->
+<!-- #   CMg = c(NA, 27, 22, 21, 38.98, 40, 40.02, 60), -->
+<!-- #   Precio=40, -->
+<!-- # ) %>%  -->
+<!-- #   mutate( -->
+<!-- #     Cme = CT/q, -->
+<!-- #     Ingresos = q*Precio, -->
+<!-- #     Beneficios=Ingresos-CT -->
+<!-- #   )  -->
+<!-- #  -->
+<!-- # datos %>%  -->
+<!-- #   kable(digits=2,  format.args = list(scientific = FALSE)) %>% -->
+<!-- #   kable_styling() -->
+<!-- #  -->
+<!-- # ``` -->
 
 
 
 ---
 # Oferta y Costo marginal
 
-<img src="imgs/oferta_costo_margina.png"/>
+![](imgs/oferta_costo_marginal.png)
 
 ---
 # Punto de cierre
@@ -141,7 +160,7 @@ datos %>%
 ]
 
 .pull-right[
-<img src="imgs/punto_de_cierre.png"/>
+![](imgs/punto_de_cierre.png)
 
 ]
 
@@ -154,7 +173,9 @@ datos %>%
 
 
 - Si hay un aumento en la demanda, los productores van a tener un incentivo a producir más para beneficiarse del aumento de precios.
+
 - En el corto plazo, pueden aumentar la producción contratando factores __variables__ de producción, pero esto limita el aumento de la cantidad producida.
+
 - En el largo plazo, pueden invertir y contratar una mayor cantidad de factores fijos de producción (capital).
 
 - Esto implica que en el largo plazo la cantidad producida aumenta más, por lo que la elasticidad precio de la oferta en el largo plazo es __mayor__.
@@ -163,13 +184,8 @@ datos %>%
 ---
 # Equilibrio de corto y largo plazo (2)
 
-<img src="imgs/corto_largo_plazo.png"/>
+![](imgs/corto_largo_plazo.png)
 
-
-----
-# Distintas ofertas de largo plazo
-
-<img src="imgs/oferta_lp.png"/>
 
 
 ---
@@ -181,29 +197,10 @@ datos %>%
 
 
 ---
-
-# Distintos tipos de oferta
-
-.pull-left[
-<img src="imgs/costos_constantes.png"/>
-]
-
-.pull-right[
-<img src="imgs/costos_crecientes.png"/>
-]
-
----
-
-# Distintos tipos de oferta (2)
-
-<img src="imgs/oferta_fija.png"/>
-
-
-
----
 # Eficiencia
 
-¿Qué es?
+- Eficiencia Paretiana.
+- Un equilibrio es eficiente si no se puede mejorar la utilidad de ninguno de los agentes sin empeorar a otro.
 
 ---
 # Mercados Competitivos y Eficiencia
@@ -211,11 +208,13 @@ datos %>%
 - La demanda viene dada por la Utilidad Marginal
 - La demanda viene dada por el Costo Marginal
 
-<img src="imgs/excedente.png"/>
+![](imgs/excedente.png)
 
 ---
 
-# Equilibrio Competitivo
+# Eficiencia del equilibrio Competitivo
 
 - En equilibrio, $$P=C Marg = U Marg $$
 - Cualquier otro punto tiene menor excedente económico.
+- Si la producción es menor que este equilibrio, el área entre las curvas es menor.
+- Si la producción es mayor, el Costo Marginal de las unidades extra es mayor que la Utilidad Marginal que generan.

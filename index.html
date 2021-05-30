@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Estructuras de Mercado</title>
+    <title>Competencia Perfecta</title>
     <meta charset="utf-8" />
-    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
-    <script src="libs/kePrint/kePrint.js"></script>
     <link rel="stylesheet" href="custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Estructuras de Mercado
+# Competencia Perfecta
 ### 30/7/2019
 
 ---
@@ -72,10 +70,10 @@ Analizamos estos mercados y el comportamiento de las empresas en base a dos supu
 
 La curva de demanda que enfrentan los productores en compentencia perfecta es horizontal.
 
-&lt;img src="imgs/demanda_individual_mercado.png"/&gt;
+![](imgs/demanda_individual_mercado.png)
 
 ---
-# Maximización de beneficios
+# Motivación de los empresarios
 
 ¿Qué desean los empresarios? 
 - ¿Vender lo más posible? ❌
@@ -85,109 +83,63 @@ La curva de demanda que enfrentan los productores en compentencia perfecta es ho
 
 
 ---
-# Tabla
+# Maximización de beneficios
 
-- Relación entre Precio, Costo Medio y Beneficios.
-- Relación entre Precio, Costo Marginal y Beneficios Marginales.
-- Máximo beneficio.
+- Los beneficios son la diferecia entre las ventas y los costos.
+- Se pueden escribir como una función de la cantidad producida ($Q$):
+
+`$$B(Q)=PQ-C(Q)$$`
+
+---
+# Maximiazación de Beneficios (2)
+
+- El empresario elige `\(Q\)` para maximizar beneficios.
+
+- Suponemos que dada la cantidad producida, lo hace de la forma más eficiente posible.
+- En competencia perfecta, no tiene control sobre `\(P\)`. El ingreso marginal es siempre igual al precio.
+- El ingreso marginal debe ser igual al costo marginal:
+
+$$ P = Cmg(Q)$$
 ---
 
-# Ejemplo Numérico
+# La curva de oferta.
 
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:right;"&gt; q &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; CT &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; CMg &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Precio &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Cme &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Ingresos &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Beneficios &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 55000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; NA &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; Inf &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -55000.00 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 1000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 85000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 27.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 85.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -45000.00 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 2000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 110000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 55.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 80000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -30000.00 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 130000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 43.33 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 120000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -10000.00 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 3999 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 159960 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 38.98 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 159960 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -0.01 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.00 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 4001 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160040 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40.02 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 160040 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -0.01 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:right;"&gt; 5000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 210000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 60.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 40 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 42.00 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 200000 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; -10000.00 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+- Para cada precio, el empresario elige la cantidad a producir que hace que su costo marginal sea igual a ese precio.
+
+
+
+---
+
+# Ejemplo 
+
+![](imgs/tabla_oferta.png)
+
+# ```{r}
+# 
+# datos &lt;- tibble(
+#   q = c(0, 1000, 2000, 3000, 3999, 4000, 4001, 5000),
+#   CT = c(55000, 85000, 110000, 130000, 159960.01, 160000, 160040.01, 210000),
+#   CMg = c(NA, 27, 22, 21, 38.98, 40, 40.02, 60),
+#   Precio=40,
+# ) %&gt;% 
+#   mutate(
+#     Cme = CT/q,
+#     Ingresos = q*Precio,
+#     Beneficios=Ingresos-CT
+#   ) 
+# 
+# datos %&gt;% 
+#   kable(digits=2,  format.args = list(scientific = FALSE)) %&gt;%
+#   kable_styling()
+# 
+# ```
 
 
 
 ---
 # Oferta y Costo marginal
 
-&lt;img src="imgs/oferta_costo_margina.png"/&gt;
+![](imgs/oferta_costo_margina.png)
 
 ---
 # Punto de cierre
