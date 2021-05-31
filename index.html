@@ -114,32 +114,14 @@ $$ P = Cmg(Q)$$
 
 ![](imgs/tabla_oferta.png)
 
-# ```{r}
-# 
-# datos &lt;- tibble(
-#   q = c(0, 1000, 2000, 3000, 3999, 4000, 4001, 5000),
-#   CT = c(55000, 85000, 110000, 130000, 159960.01, 160000, 160040.01, 210000),
-#   CMg = c(NA, 27, 22, 21, 38.98, 40, 40.02, 60),
-#   Precio=40,
-# ) %&gt;% 
-#   mutate(
-#     Cme = CT/q,
-#     Ingresos = q*Precio,
-#     Beneficios=Ingresos-CT
-#   ) 
-# 
-# datos %&gt;% 
-#   kable(digits=2,  format.args = list(scientific = FALSE)) %&gt;%
-#   kable_styling()
-# 
-# ```
+
 
 
 
 ---
 # Oferta y Costo marginal
 
-![](imgs/oferta_costo_margina.png)
+![](imgs/oferta_costo_marginal.png)
 
 ---
 # Punto de cierre
@@ -150,7 +132,7 @@ $$ P = Cmg(Q)$$
 ]
 
 .pull-right[
-&lt;img src="imgs/punto_de_cierre.png"/&gt;
+![](imgs/punto_de_cierre.png)
 
 ]
 
@@ -163,7 +145,9 @@ $$ P = Cmg(Q)$$
 
 
 - Si hay un aumento en la demanda, los productores van a tener un incentivo a producir más para beneficiarse del aumento de precios.
+
 - En el corto plazo, pueden aumentar la producción contratando factores __variables__ de producción, pero esto limita el aumento de la cantidad producida.
+
 - En el largo plazo, pueden invertir y contratar una mayor cantidad de factores fijos de producción (capital).
 
 - Esto implica que en el largo plazo la cantidad producida aumenta más, por lo que la elasticidad precio de la oferta en el largo plazo es __mayor__.
@@ -172,13 +156,8 @@ $$ P = Cmg(Q)$$
 ---
 # Equilibrio de corto y largo plazo (2)
 
-&lt;img src="imgs/corto_largo_plazo.png"/&gt;
+![](imgs/corto_largo_plazo.png)
 
-
-----
-# Distintas ofertas de largo plazo
-
-&lt;img src="imgs/oferta_lp.png"/&gt;
 
 
 ---
@@ -190,29 +169,10 @@ $$ P = Cmg(Q)$$
 
 
 ---
-
-# Distintos tipos de oferta
-
-.pull-left[
-&lt;img src="imgs/costos_constantes.png"/&gt;
-]
-
-.pull-right[
-&lt;img src="imgs/costos_crecientes.png"/&gt;
-]
-
----
-
-# Distintos tipos de oferta (2)
-
-&lt;img src="imgs/oferta_fija.png"/&gt;
-
-
-
----
 # Eficiencia
 
-¿Qué es?
+- Eficiencia Paretiana.
+- Un equilibrio es eficiente si no se puede mejorar la utilidad de ninguno de los agentes sin empeorar a otro.
 
 ---
 # Mercados Competitivos y Eficiencia
@@ -220,14 +180,16 @@ $$ P = Cmg(Q)$$
 - La demanda viene dada por la Utilidad Marginal
 - La demanda viene dada por el Costo Marginal
 
-&lt;img src="imgs/excedente.png"/&gt;
+![](imgs/excedente.png)
 
 ---
 
-# Equilibrio Competitivo
+# Eficiencia del equilibrio Competitivo
 
 - En equilibrio, $$P=C Marg = U Marg $$
 - Cualquier otro punto tiene menor excedente económico.
+- Si la producción es menor que este equilibrio, el área entre las curvas es menor.
+- Si la producción es mayor, el Costo Marginal de las unidades extra es mayor que la Utilidad Marginal que generan.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
