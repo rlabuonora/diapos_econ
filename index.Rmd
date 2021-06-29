@@ -89,9 +89,9 @@ options(knitr.kable.NA = '')
 - La demanda de los distintos factores es interdependiente.
 
 ---
-#  El ingreso marginal del trabajo
+#  Demanda de trabajo
 
-Es lo que le ingresa a la empresa por contratar un trabajador extra.
+El _valor del producto marginal del trabajo_ es lo que el aumento en los ingresos de la empresa por contratar un trabajador extra.
 
 ```{r}
 tibble(
@@ -99,18 +99,27 @@ tibble(
   `Producto Total` = c(0, 20e3, 30e3, 35e3, 38e3, 39e3),
   `Producto Marginal` = c(NA, 20e3, 10e3, 5e3, 3e3, 1e3),
   `Precio` = 3,
-  `Ingreso Marginal del trabajo` = c(NA, 60e3, 30e3, 15e3, 9e3, 3e3)
+  `VPMg T` = c(NA, 60e3, 30e3, 15e3, 9e3, 3e3)
 ) %>% 
   knitr::kable() %>% 
   kable_styling()
 ```
 
 ---
-# Maximización de beneficios
+# Maximización de beneficios de las empresas
 
 - Si la empresa maximiza beneficios: 
 $$Salario=Precio * Producto\ Marginal\ del\ Trabajo(L)$$
 
+- Si el valor marginal del trabajo es mayor que el salario, el empresario aumenta sus beneficios si contrata un trabajador más.
+
+---
+# Equilibrio
+
+![](imgs/vmpg_trabajo.png)
+
+---
+# Estática comparativa
 
 - Si sube el salario, la cantidad de trabajadores contratados (L) debe bajar, por el supuesto de rendimientos decrecientes.
 - Esto implica que la demanda de trabajo tiene __pendiente negativa__.
@@ -199,7 +208,8 @@ Los cambios en la __estructura productiva__ de la economía producen reasignaci�
 
 --
 ### Friccional
-Siemprea va a haber alguien buscando trabajo.
+
+El mercado laboral tiene _fricciones_ que hacen que las personas que cambian de trabajo pasen un tiempo desempleadas.
 
 
 ---
@@ -228,9 +238,18 @@ Siemprea va a haber alguien buscando trabajo.
 
 
 ---
-## Mayor participación femenina
 
-![](imgs/pareja_trabaja.png)
+.pull-left[
+  ![](imgs/pareja_trabaja.png)
+
+]
+
+.pull-right[
+
+  ## Mayor participación femenina en el mercado de trabajo
+
+]
+
 
 
 ---
