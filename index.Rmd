@@ -31,6 +31,7 @@ li {
   margin-bottom: 20px;
 }
 
+
 </style>
 
 ```{r setup, include=FALSE}
@@ -197,4 +198,15 @@ tabla_completa %>%
 - Actuaban de forma inescrupulosa para eliminar a la competencia y consolidarse como monopolistas en las industrias más importantes de la época: ferrocarriles, petróleo.
 - En 1910 la Standard Oil, propiedad de Rockefeller se desmembró gracias la las leyes antimonopolio impulasadas por los gobiernos progresistas.
 ]
+
+
+---
+class: inverse, center, middle
+
+# Ejercicios
+---
+
+![](imgs/ejercicio_1.png)
+
+
 
