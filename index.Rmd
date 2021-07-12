@@ -179,8 +179,6 @@ tabla_completa %>%
 - El máximo beneficio del monopolista se da a una cantidad vendida __menor__.
 
 ---
-
----
 # Gráficamente
 
 ![dos](imgs/max_beneficio.png)
@@ -190,7 +188,30 @@ tabla_completa %>%
 
 ![tres](imgs/costos.png)
 
+
 ---
+# Regulación
+
+.pull-left[
+  ![](imgs/monopolio_natural.png)
+]
+
+.pull-right[
+
+- Sectores con altos costos fijos (infraestructura)
+- Costos medios decrecientes
+- Es más eficiente cubrir la demanda con una sola empresa.
+]
+
+---
+
+# Regulación de Precios
+
+- Si el regulador fija un precio igual al costo marginal la empresa tiene pérdidas.
+- Si el regulador fija un precio máximo de $30, la cantidad es 8 y el costo medio es $30, la empresa no tiene pérdidas.
+
+---
+
 # Grandes Monopolios de la historia
 .center[
 ![ricos](imgs/Andrew-Carnegie-John-D-Rockefeller.jpg)
