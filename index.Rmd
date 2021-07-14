@@ -28,6 +28,109 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE, echo = FALSE, warning = FALSE)
 
+library(ggplot2)
+library(tidyverse)
+library(extrafont)
+source(here::here("utils.R"))
+#font_import(pattern="Montserrat")
+loadfonts()
+
+theme_set(
+  theme_minimal(base_family = 'Montserrat',
+                base_size=18) + 
+    theme(plot.title=element_text(hjust=.5)))
+
+
+source(here::here('utils.R'))
+
+```
+
+
+
+# ¿Por qué existen los gobiernos?
+
+
+- Garantizan la propiedad privada, lo que permite que el mercado funcione.
+- Asignan los recursos de la sociedad.
+- Redistribuyen la riqueza y los ingresos de la sociedad.
+
+
+---
+
+# Bienes Públicos
+
+- Los bienes económicos se pueden clasificar según:
+  - Si son rivales o no rivales.
+  - Si son excluibles o no excluibles.
+  
+|            |  Excluibles   |  No exclubiles |
+|------------|:-------------:|---------------:|
+| Rivales    | Bienes Privados      |  Recursos comunes|
+| No Rivales | Monopolio Natural    |  Bienes Públicos |
+
+---
+
+# Externalidades y Bienes mixtos
+
+- Hay bienes cuya producción o consumo genera impactos sobre terceros.
+- Estos impactos pueden ser positivos o negativos.
+
+---
+
+# Ineficiencias
+
+- Estos bienes y servicios generan ineficiencias que pueden ser corregidas por la acción pública.
+  - Provisión de bienes públicos
+  - Conservación de recursos comunes
+  - Regulación de monopolios naturales
+  
+---
+
+# Free Riders y Bienes Públicos
+
+- Como no es posible excluir personas de su consumo, los consumidores no tienen incentivos a pagar por ellos.
+- Los __free riders__ son las personas que disfrutan de bienes públicos sin afrontar sus costos.
+- Este problema hace que las economías tiendan a producir menos del bien que lo que sería socialmente óptimo.
+
+---
+
+## Provisión de Bienes Públicos
+
+```{r}
+msc_df <- tibble(x=c(0,  3), 
+                 y=c(4, 2.5))
+
+msb_df <- tibble(x=c(0,   3),
+                 y=c(1, 2.5))
+
+
+msc_fun <- splinefun(msc_df$x, msc_df$y)
+msb_fun <- splinefun(msb_df$x, msb_df$y)
+
+ggplot(data.frame(x=0, y=0)) + 
+  geom_function(fun=msc_fun, xlim=c(0, 5.5)) +
+  annotate("text", y=1.25, x=6, size=7, label="BMS") +
+  geom_function(fun=msb_fun, xlim=c(0, 5.5)) +
+  annotate("text", y=3.8, x=6, size=7, label="CMS") +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  scale_x_continuous(limits = c(0, 6)) + 
+  marcar_punto(0, 0) +
+  annotate("text", y=.9, x=1.5, size=7, label="Eq. Privado") +
+  annotate(
+    geom = "curve", x = .75, y = .7, xend = .1, yend = .1, 
+    curvature = .1, arrow = arrow(length = unit(2, "mm"))
+  ) +
+  marcar_punto(3, 2.5) +
+  annotate("text", y=3.8, x=4, size=7, label="Eq. Eficiente") +
+  annotate(
+    geom = "curve", 
+    x = 3.5, y = 3.5, 
+    xend = 3, yend = 2.7, 
+    curvature = .1, arrow = arrow(length = unit(2, "mm"))
+  ) +
+  labs( x="Cantidad", y="Precio y Costo Social")
+
 ```
 
 
