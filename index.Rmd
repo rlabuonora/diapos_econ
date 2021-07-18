@@ -133,5 +133,87 @@ ggplot(data.frame(x=0, y=0)) +
 
 ```
 
+---
+# Bienes mixtos
 
+- Existen pocos bienes públicos puros.
+- Muchos bienes tienen impactos sobre terceros que no estan involucrados en la transacción.
+- Decimos que estos bienes son mixtos, y generan externalidades positivas o negativas.
+
+---
+# Beneficio Privado y Social
+
+- En estos casos el Beneficio Marginal Social es mayor al Beneficio Marginal Privado. 
+- La diferencia entre el Beneficio Marginal Social y el Beneficio Marginal Privado es el beneficio externo.
+
+
+---
+# Mercado de educación terciaria
+
+```{r}
+mpb_df <- tibble(x=c(0,  15), 
+                 y=c(20, 10))
+
+msb_df <- tibble(x=c(5,   15),
+                 y=c(40, 25))
+
+
+mpb_fun <- splinefun(mpb_df$x, mpb_df$y)
+msb_fun <- splinefun(msb_df$x, msb_df$y)
+
+ggplot(data.frame(x=0, y=0)) + 
+  geom_function(fun=mpb_fun, xlim=c(0, 24)) +
+  annotate("text", y=5, x=28, size=7, label="BMP") +
+  geom_function(fun=msb_fun, xlim=c(5, 24)) +
+  annotate("text", y=15, x=28, size=7, label="BMS") +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  scale_x_continuous(limits = c(0, 30)) + 
+  marcar_punto(15, 10) +
+  marcar_punto(15, 25)  + 
+  labs(x="Cantidad", y="Precio y Costo Social", 
+       title="")
+```
+
+---
+
+# Mercado de educación terciaria (2)
+
+- Si tenemos 15 millones de estudiantes, el beneficio privado es $ 10.000 por estudiante, y hay un beneficio externo de $ 15.000
+- El beneficio social por estudiante es de $ 25.000
+
+---
+
+# Equilibrio de Mercado
+
+```{r}
+
+msc_df <- tibble(x=c(0,   15),
+                 y=c(5, 25))
+
+
+msc_fun <- splinefun(msc_df$x, msc_df$y)
+
+ggplot(data.frame(x=0, y=0)) + 
+  geom_function(fun=mpb_fun, xlim=c(0, 24)) +
+  annotate("text", y=5, x=28, size=5, label="BMP") +
+  geom_function(fun=msb_fun, xlim=c(5, 24)) +
+  annotate("text", y=15, x=28, size=7, label="BMS") +
+  geom_function(fun=msc_fun, xlim=c(0, 24)) +
+  annotate("text", y=35, x=28, size=7, label="MSC") +
+  geom_vline(xintercept = 0) +
+  geom_hline(yintercept = 0) +
+  scale_x_continuous(limits = c(0, 30)) + 
+  marcar_punto(7.5, 15) +
+  marcar_punto(15, 25)  + 
+  labs(x="Cantidad", y="Precio y Costo Social", 
+       title="")
+```
+
+
+---
+# Solución Eficiente
+
+- Provisión Pública
+- Subsidio
 
