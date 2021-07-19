@@ -184,7 +184,7 @@ ggplot(data.frame(x=0, y=0)) +
 
 ---
 
-# Equilibrio de Mercado
+# Equilibrio ineficiente
 
 ```{r}
 
@@ -194,7 +194,7 @@ msc_df <- tibble(x=c(0,   15),
 
 msc_fun <- splinefun(msc_df$x, msc_df$y)
 
-ggplot(data.frame(x=0, y=0)) + 
+plt <- ggplot(data.frame(x=0, y=0)) + 
   geom_function(fun=mpb_fun, xlim=c(0, 24)) +
   annotate("text", y=5, x=28, size=5, label="BMP") +
   geom_function(fun=msb_fun, xlim=c(5, 24)) +
@@ -203,15 +203,33 @@ ggplot(data.frame(x=0, y=0)) +
   annotate("text", y=35, x=28, size=7, label="MSC") +
   geom_vline(xintercept = 0) +
   geom_hline(yintercept = 0) +
-  scale_x_continuous(limits = c(0, 30)) + 
+  scale_x_continuous(limits = c(0, 30),
+                     breaks=c(0, 5, 10, 15, 20, 25, 30)) + 
   marcar_punto(7.5, 15) +
-  marcar_punto(15, 25)  + 
   labs(x="Cantidad", y="Precio y Costo Social", 
        title="")
+
+plt
+
+```
+
+---
+# Pérdida de eficiencia
+
+```{r}
+plt +
+  marcar_punto(15, 25) + 
+  geom_ribbon(aes(x=x, ymin=msc, ymax=msb), 
+              alpha=.4,
+              data=tibble(x=7.5:15, 
+                          msc=msc_fun(x),
+                          msb=msb_fun(x)))
+
 ```
 
 
 ---
+
 # Solución Eficiente
 
 - Provisión Pública
