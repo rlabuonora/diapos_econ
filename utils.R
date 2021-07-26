@@ -1,10 +1,12 @@
-marcar_punto <- function(x, y, linetype="dashed") {
+marcar_punto <- function(x, y, linetype="dashed", 
+                         color="black", 
+                         size=3) {
   list(
-    geom_segment(x=x, y=0, xend=x, yend=y, color="gray50",
+    geom_segment(x=x, y=0, xend=x, yend=y, color="gray40",
                  linetype="dotted", inherit.aes = FALSE),
-    geom_segment(x=0, y=y, xend=x, yend=y,  color="gray50",
+    geom_segment(x=0, y=y, xend=x, yend=y,  color="gray40",
                  linetype="dotted", inherit.aes = FALSE),
-    geom_point(x=x, y=y, inherit.aes = FALSE)
+    geom_point(x=x, y=y, size=size, inherit.aes = FALSE)
   )
 }
 
