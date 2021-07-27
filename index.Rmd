@@ -79,7 +79,7 @@ source(here::here('utils.R'))
 
 # Externalidades y Bienes mixtos
 
-- Hay bienes cuya producción o consumo genera impactos sobre terceros.
+- Hay bienes cuya producción o consumo genera impactos sobre terceros. 
 
 - Estos impactos pueden ser positivos o negativos.
 
