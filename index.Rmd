@@ -11,117 +11,180 @@ output:
       countIncrementalSlides: false
 ---
 
-<style>
-
-.center2 {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.remark-slide-content {
-
- height: 200px;
-}
-
-li {
-  margin-bottom: 20px;
-}
-
-</style>
-
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(echo = TRUE, echo = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
 
 library(ggplot2)
 
 library(tidyverse)
 library(kableExtra)
+library(extrafont)
+library(latex2exp)
 
 options(knitr.kable.NA = '')
 
 
+loadfonts()
+theme_set(theme_minimal(base_family = 'Montserrat',
+                        base_size   = 16))
+
+naranja <- "#f1a340"
+violeta <- "#5e3c99"
+violeta_claro <- "#b2abd2"
+rojo <- "#e66101"
+
 
 ```
 
 
-# Riqueza e ingresos
+<!-- # Riqueza e ingresos -->
 
-- El ingreso es un flujo monetario.
-- La riqueza es un stock de activos que reportan un ingreso.
+<!-- - El ingreso es un flujo monetario. -->
+<!-- - La riqueza es un stock de activos que reportan un ingreso. -->
 
----
-# Ingresos
 
-- Los ingresos de un hogar provienen de su participación en el mercado de alguno de los factores de producción:
+# Ingresos y Factores de Producción
+
 
 ![](imgs/flujo_circular.png)
 
 ---
+# Los ingresos de los hogares
 
-# Factores de producción
-
-- Los hogares son los propietarios de los factores de producción (trabajo, capital, tierra)
-- Estos factores de producción producen un ingreso cuando las empresas los usan para producir.
-
----
-
-# El rol del estado
-
-- El estado interviene en este proceso cobrando impuestos sobre algunos ingresos y canalizándolo a otros destinos a través de las transferencias y el gasto público.
-
-- Los ingresos de los hogares se componen de los __ingresos de mercado__ más los __ingresos por transferencias__.
+- Ingresos vs. riqueza
+- Los hogares ofrecen los factores productivos
+- Obtienen ingresos por venderle estos servicios a las empresas
 
 ---
-# El precio de los factores de producción
+# Demanda de trabajo
 
-- Como todo mercado, el precio se determina por la interacción entre la oferta y la demanda de estos factores.
+- Las empresas demandan trabajo.
 
----
+- Esta demanda depende de cuánto obtienen por lo que producen con este trabajo en el mercado.
 
-# Demanda de factores productivos
+- Demanda derivada.
 
-- Es una demanda derivada.
-- La demanda de los distintos factores es interdependiente.
 
 ---
-#  Demanda de trabajo
+background-image: url("imgs/temps-modernes1.jpeg")
+background-position: right bottom
 
-El _valor del producto marginal del trabajo_ es lo que el aumento en los ingresos de la empresa por contratar un trabajador extra.
+#  El Valor del Producto Marginal
+
+Es el aumento en los ingresos de la empresa por contratar un trabajador extra.
+
+---
+# Ejemplo
 
 ```{r}
-tibble(
-  trabajo = 0:5,
-  `Producto Total` = c(0, 20e3, 30e3, 35e3, 38e3, 39e3),
-  `Producto Marginal` = c(NA, 20e3, 10e3, 5e3, 3e3, 1e3),
-  `Precio` = 3,
-  `VPMg T` = c(NA, 60e3, 30e3, 15e3, 9e3, 3e3)
-) %>% 
-  knitr::kable() %>% 
+df <- tribble(
+  ~Q, ~TP, ~MP, ~VMP,
+  0,  0,   0,   0,
+  1,  7,   7,   14,
+  2,  13,  6,   12, 
+  3,  18,  5,   10,
+  4,  22,  4,   8,
+  5,  25,  3,  6
+)
+
+df %>% 
+  knitr::kable(col.names = c("L", "Producto Total",
+                             "Producto Marginal", "VPMG T")) %>% 
   kable_styling()
 ```
 
+- ¿Cuántos trabajadores contratan las empresas?
+
+```{r results="hide"}
+# Grafico base
+plt <- df %>% 
+  ggplot(aes(Q, VMP)) +
+  geom_col(fill="gray70") +
+  scale_x_continuous(breaks=1:6) +
+  scale_y_continuous(breaks=seq(0, 16, by=2))
+
+```
+
 ---
-# Maximización de beneficios de las empresas
+# Si el VPMg > W
 
-- Si la empresa maximiza beneficios: 
-$$Salario=Precio * Producto\ Marginal\ del\ Trabajo(L)$$
 
-- Si el valor marginal del trabajo es mayor que el salario, el empresario aumenta sus beneficios si contrata un trabajador más.
+```{r}
+# Q=2 no es de equilibrio
+plt +
+  geom_col(data=filter(df, Q==2), size=4, fill=violeta_claro) + 
+    geom_hline(yintercept=10, 
+             linetype="dashed", color=rojo) +
+  annotate("text", label="W", color=rojo,
+           x=5.5, y=10.8) +
+  labs(caption="Si el valor marginal del trabajo es mayor que el salario, \nel empresario aumenta sus beneficios si contrata un trabajador más.")
+```
+
 
 ---
-# Equilibrio
+# Si el VPMg < W
 
-![](imgs/vmpg_trabajo.png)
+
+```{r}
+plt + 
+    geom_hline(yintercept=10, 
+             linetype="dashed", color=rojo) +
+  annotate("text", label="W", color=rojo,
+           x=5.5, y=10.8) +
+  geom_col(data=filter(df, Q==4), size=4, fill=violeta_claro) +
+  labs(caption="Si el valor marginal del trabajo es menor que el salario, \nel empresario aumenta sus beneficios si contrata un trabajador menos.")
+
+```
+
 
 ---
-# Estática comparativa
+
+# Maximización de Beneficios
+
+```{r}
+plt  + 
+    geom_hline(yintercept=10, 
+             linetype="dashed", color=rojo) +
+  annotate("text", label="W", color=rojo,
+           x=5.5, y=10.8) + 
+  geom_col(data=filter(df, Q==3), size=4, fill=rojo) +
+  labs(title=TeX("$ W= VPMg(Q) = P \\times PMg(Q)$"),
+                 caption="En equilibrio, el salario y el VPMg son iguales.")
+
+```
+
+---
+# ¿Qué pasa si sube el salario?
+
+```{r}
+plt +
+  geom_col(data=filter(df, Q==3), fill=violeta) +
+  geom_hline(yintercept=10, 
+             linetype="dashed", 
+             color=violeta) +
+  annotate("text", 
+           label="W[1]", 
+           parse=TRUE,
+           color=violeta,
+           x=4.5, y=10.8) +
+geom_hline(yintercept=12, 
+             linetype="dashed", color=naranja) +
+    geom_col(data=filter(df, Q==2), fill=naranja) +
+
+  annotate("text", label="W[2]", parse=TRUE, color=naranja,
+           x=3.5, y=12.8) +
+  labs(caption="Si el salario sube de 10 a 12, 
+       la cantidad de trabajo demandada baja de 3 a 2.")
+```
+
+---
+
+# Curva de demanda de trabajo
+
 
 - Si sube el salario, la cantidad de trabajadores contratados (L) debe bajar, por el supuesto de rendimientos decrecientes.
+
 - Esto implica que la demanda de trabajo tiene __pendiente negativa__.
 
 
@@ -129,14 +192,17 @@ $$Salario=Precio * Producto\ Marginal\ del\ Trabajo(L)$$
 # La oferta de trabajo
 
 - Los trabajadores ofrecen su trabajo en el mercado.
+
 - Suponemos que si les pagan más, querrán trabajar más, por lo que la curva de oferta tiene __pendiente positiva__.
 
 ---
 # Equilibrio en el mercado de trabajo
 
 ![](imgs/oferta_demanda.png)
+
 ---
-# Diferencias en el mercado de trabajo
+# Mercado de trabajo segmentado
+
 ![](imgs/cirujanos.png)
 
 
