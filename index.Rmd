@@ -261,19 +261,32 @@ $$TA = \frac{PEA}{PET}$$
 
 ![](imgs/insuficiencia_empleo.png)
 ---
-## Tipos de desempleo
+## Tres Tipos de desempleo
   
---
-### Cíclico
+- Cíclico
+- Estructural
+- Friccional
+
+---
+background-image: url("imgs/unemployed.jpeg")
+background-position: bottom right
+background-size: 600px 450px
+## Desempleo Cíclico
+
 
 El nivel de actividad económica es cíclico. En fases de __expansión__ el desempleo baja. En fases de __contracción__ el desempleo sube.
 
---
-### Estructural
+---
+background-image: url("https://media.giphy.com/media/8AsDKgzfouxJC/source.gif")
+background-position: bottom right
+## Desempleo Estructural
+
 Los cambios en la __estructura productiva__ de la economía producen reasignación de trabajadores de un sector a otro.
 
---
-### Friccional
+
+
+---
+## Desempleo Friccional
 
 El mercado laboral tiene _fricciones_ que hacen que las personas que cambian de trabajo pasen un tiempo desempleadas.
 
@@ -304,11 +317,8 @@ El mercado laboral tiene _fricciones_ que hacen que las personas que cambian de 
 
 
 ---
-
-.pull-left[
-  ![](imgs/pareja_trabaja.png)
-
-]
+background-image: url("imgs/pareja_trabaja.png") 
+background-position:  left top
 
 .pull-right[
 
@@ -319,27 +329,7 @@ El mercado laboral tiene _fricciones_ que hacen que las personas que cambian de 
 
 
 ---
-## Aumentos en la tasa de actividad
+## Activos por sexo
 
 ![](imgs/pea_sexo_opp_sin_proy.png)
-
-
-
----
-## Postergación de edad de ingreso al mercado laboral
-
-![](imgs/tasa_actividad_15_19.png)
-
----
-## Posibles causas
-
-
-![](imgs/anios_educ.png)
-
-
----
-## Postergación de edad de egreso del mercado de trabajo.
-
-![](imgs/tasa_actividad_edad_celade_tramos_altos.png)
-
 
