@@ -260,6 +260,11 @@ $$TA = \frac{PEA}{PET}$$
 ## Otros problemas de empleo
 
 ![](imgs/insuficiencia_empleo.png)
+
+---
+## Diferencias en el mercado laboral
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/InformeCapital?src=hash&amp;ref_src=twsrc%5Etfw">#InformeCapital</a> Columna <br><br>Economía con <a href="https://twitter.com/German_Deagosto?ref_src=twsrc%5Etfw">@German_Deagosto</a>: &quot;Los jóvenes y el mercado laboral&quot;. <a href="https://t.co/hzFHVXfYmW">pic.twitter.com/hzFHVXfYmW</a></p>&mdash; Informe Capital (@infocapitaluy) <a href="https://twitter.com/infocapitaluy/status/1428490715806507010?ref_src=twsrc%5Etfw">August 19, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
 ## Tres Tipos de desempleo
   
