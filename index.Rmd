@@ -41,4 +41,120 @@ theme_set(
 
 ```
 
+# Bienestar
+
+- Si pudieran nacer de nuevo en otro país, ¿cuál elegirían?
+- ¿Qué tanta suerte tuvieron por haber nacido en Uruguay?
+
+- Bienestar objetivo vs. subjetivo.
+- La función de utilidad. Jeremy Bentham.
+
+---
+# Medición 
+
+- Permite comparar en el __tiempo__ y __entre países__.
+
+Dos Indicadores:
+
+- PIB per cápita
+
+- Índice de Desarrollo Humano (IDH)
+
+---
+# PIB per cápita
+
+- Repartimos la producción del país entre todos los habitantes.
+
+- Nos da una medida de cuánto produce una sociedad.
+
+## Problemas
+
+- No toma en cuenta como se distribuye la riqueza.
+
+- Solo toma en cuenta aspectos económicos del bienestar.
+---
+
+# El IDH
+
+- Toma en cuenta la salud, la educación y el acceso a bienes y servicios.
+
+## Cálculo
+
+Usa los indicadores de: 
+
+- Esperanza de vida al nacer
+
+- Años promedio de educación
+
+- Ingreso per cápita
+
+Los convierte en un índice (para que tengan una unidad de medida comparable) y calcula el promedio.
+
+---
+## Gráfico del IDH
+
+- Marcar Uruguay (50/187)
+
+---
+## PIB per capita e IDH
+
+- Cuba, EAU, Emiratos Árabes.
+
+---
+## Pobreza
+
+- Es la privación de un hogar o una persona en el acceso a bienes y servicios que le permiten desarrollar una vida plena.
+
+- No hay consenso en qué significa esta "vida plena", ni cuál es el nivel de acceso a bienes y servicios mínimos necesario para lograrla.
+
+- Hay consenso sobre que esto requiere ciertas capacidades para hacer ciertas cosas, así como desempeñar ciertos roles.
+
+---
+## Medición
+
+### El enfoque monetario
+
+- Implica definir un nivel monetario de ingreso debajo del cual las personas se consideran pobres.
+
+- En Uruguay, el INE realiza una encuesta (la Encuesta de Continua de Hogares) en las que releva todas las fuentes de ingresos de los hogares:
+
+  - Ingreso Laboral.
+  - Jubilaciones y Pensiones.
+  - Ingresos del capital.
+  - Transferencias
+  
+
+---
+
+## La línea de pobreza
+
+- La línea de pobreza es el umbral de ingresos por debajo del que un hogar se considera pobre.
+- Se calcula en base a una Canasta de Bienes Alimentarios y una Canasta de Bienes no Alimentarios.
+
+---
+## Pobreza vs. indigencia
+
+- Los hogares con ingresos menores a la CBA son clasificados como indigentes.
+
+- Los hogares con ingresos menores a la $CBA + CBNA$ son clasificados como pobres.
+
+- La fórmula exacta toma en cuenta la cantidad de personas del hogar.
+
+
+---
+## Necesidades Básicas Insatisfechas
+
+
+
+---
+## Pobreza en Uruguay
+![](imgs/pobreza_evolucion_cepal.png)
+
+Fuente: [CEPAL](https://repositorio.cepal.org/bitstream/handle/11362/44415/1/S1801038_es.pdf)
+
+---
+## Pobreza en Uruguay
+
+![](imgs/pobreza_infantil.jpeg)
+---
 <blockquote class="twitter-tweet"><p lang="es" dir="ltr"><a href="https://twitter.com/hashtag/LaLetraChica?src=hash&amp;ref_src=twsrc%5Etfw">#LaLetraChica</a> Vigorito: &quot;La pobreza cuando uno la mide por ingresos comparada con otras dimensiones, da resultados diferentes. Me sorprende que alguien se sorprenda de eso&quot;. <a href="https://t.co/EjArngkTnu">pic.twitter.com/EjArngkTnu</a></p>&mdash; laletrachicatv (@laletrachicatv) <a href="https://twitter.com/laletrachicatv/status/1308563649620049920?ref_src=twsrc%5Etfw">September 23, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
