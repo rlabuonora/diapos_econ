@@ -31,6 +31,7 @@ library(ggplot2)
 library(dplyr)
 library(cowplot)
 library(kableExtra)
+library(readxl)
 
 theme_set(
   theme_classic() + 
@@ -67,11 +68,36 @@ Dos Indicadores:
 
 - Nos da una medida de cuánto produce una sociedad.
 
+---
+# PIB per cápita en Uruguay
+
+```{r fig.width=10}
+maddison <- here::here('mpd2018.xlsx') %>% 
+  read_xlsx(sheet="Full data") %>% 
+  filter(countrycode %in% c("URY", "ARG", "FIN", "USA", "ITA")) %>% 
+  filter(year %in% c(1900, 1955, 2000))
+
+maddison %>% 
+  ggplot(aes(year, cgdppc, color = country)) + 
+  geom_line() + 
+  geom_point() +
+  scale_color_discrete(name = "País") +
+  labs(x="Año", y="PIB per cápita", caption="Fuente: Angus Maddison") +
+ theme_minimal(base_size = 18) + 
+  theme(legend.position = "bottom")
+
+```
+
+
+---
+
 ## Problemas
 
 - No toma en cuenta como se distribuye la riqueza.
 
 - Solo toma en cuenta aspectos económicos del bienestar.
+
+
 ---
 
 # El IDH
