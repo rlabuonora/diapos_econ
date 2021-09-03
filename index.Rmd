@@ -257,15 +257,65 @@ background-position: right bottom
 
 ![](imgs/gini_world.png)
 
+---
+# Ingreso y Desigualdad
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)
+library(readxl)
+library(ggrepel)
+
+theme_set(theme_minimal() + 
+            theme(plot.title = element_text(hjust=.5)))
+
+# PIB per capita
+# GDP per capita (2017 PPP $)
+pib_per_cap <- read_xlsx("gdp_per_capita.xlsx", skip=5) %>% 
+  filter(!is.na(`HDI Rank`)) %>% 
+  filter(!is.na(Country)) %>% 
+  transmute(pais=Country, pib_per_cap=as.numeric(`2019`))
+
+# Indice de GINI
+# Income inequality, Gini coefficient
+desigualdad <- read_xlsx("gini.xlsx", skip=5) %>% 
+  filter(!is.na(`HDI Rank`)) %>% 
+  filter(!is.na(Country)) %>% 
+  transmute(pais=Country, gini=as.numeric(`2010-2018`))
+
+df <- inner_join(pib_per_cap, desigualdad, by="pais")
+
+
+
+# Casos interesantes
+df_highlight <- filter(df, pais %in% c("Chile", "Uruguay", "United States", 
+                                       "Brazil", "South Africa",
+                                       "Norway", "Sweden", "Denmark"))
+
+
+ggplot(df, 
+       aes(x=log(pib_per_cap), y=gini)) +
+  geom_point() + 
+  geom_smooth(method="lm") +
+  geom_point(color="red", data=df_highlight) +
+  geom_label_repel(aes(label=pais), data=df_highlight) +
+  labs(title="Desarrollo económico y desigualdad",
+       x="Pib per Cápita (log)", y="Índice de Gini", 
+       caption="Fuente: http://hdr.undp.org/")
+```
+
 
 ---
 
 # Causas de las desigualdades económicas
 
 - Cambio tecnológico
+
 - Globalización
+
 - Assortative mating
+
 - Participación del capital
+
 - Transmisión intergeneracional de la riqueza
 
 ---
@@ -281,7 +331,10 @@ background-position: right bottom
 # Redistribución de la riqueza
 
 - Impuestos
+
 - Transferencias
+
 - Servicios subsidiados 
   - Educación
+  
   - Salud
