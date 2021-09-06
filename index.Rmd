@@ -319,11 +319,28 @@ ggplot(df,
 - Transmisión intergeneracional de la riqueza
 
 ---
-
 # Cambio tecnológico
 
+.pull-left[
+![](imgs/impacto_tecno.png)
+]
 
-- Plot
+
+.pull-right[
+![](imgs/impacto_tecno_2.png)
+]
+
+
+---
+# Discriminación Laboral
+
+.pull-left[
+![](imgs/discriminacion.png)
+]
+
+.pull-right[
+![](imgs/discriminacion_2.png)
+]
 
 
 ---
@@ -338,3 +355,8 @@ ggplot(df,
   - Educación
   
   - Salud
+  
+---
+# Impacto de las transferencias
+
+![](imgs/gini_mercado_vs_transfers.png)
