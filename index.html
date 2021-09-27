@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>Macroeconomía</title>
     <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -33,6 +34,70 @@ class: center, middle, inverse, title-slide
 
 
 
+## PIB
+
+Es una medida de todos los bienes y servicios _finales_ que se producen _en una región o país_ en un _período de tiempo_ valuada a _precios de mercado_.
+
+---
+## Varias formas de medir el PIB
+
+Como el PIB se mide por un conjunto de transacciones económicas, su valor es igual si lo medimos desde el punto de vista de la demanda que de la oferta.
+
+---
+
+# La oferta
+En este enfoque, medimos el Valor Agregado que genera cada sector de actividad de la economía (industria, agro, servicios, etc.).
+
+$$ PIB = \Sigma\ VAB_{sectores} $$
+El Valor Agregado de cada sector se define como la diferencia entre el Valor de Producción y el Consumo Intermedio (gasto en materias primas).
+
+---
+
+# El gasto agregado
+
+Desde el punto de vista de la demanda, el PIB se mide como la suma de los distintos gastos de la economía
+
+$$ PIB = C + I + G + X$$
+
+- C es el Consumo
+- I es la inversión
+- G es el Gasto Público
+- X son las exportaciones netas ($Exportaciones - Importaciones$)
+
+---
+
+Las importaciones se restan porque es una parte del gasto de la economía que termina demando productos producidos en otra economía.
+
+Para poder medir todos los productos que produce la economía, se usa el valor monetario de la producción tomando en cuenta los precios. Si usamos los precios del período en que produjeron los bienes, tenemos el PIB _en precios corrientes_. Si queremos sacar el efecto de los cambios en los precios para comparar el PIB de dos períodos, tomamos los precios de un _año base_, para calcular el PIB en precios constantes de ese año.
+
+---
+## Los Ingresos
+
+Como todo lo que se vende en el mercado es el ingreso de algún factor (trabajo, capital, tierra), el PIB es igual si se mide por las ventas de las empresas o por las remuneraciones a los factores.
+
+$$ PIB = Sueldos + Beneficios + Rentas + Impuestos\ Netos + Depreciación $$
+
+---
+
+## El problema de la doble contabilización
+
+¿Qué pasa con los productos que no son comprados para ser consumidos (bienes finales), sino que son comprados por otras empresas como insumos para producir otros bienes?
+
+
+---
+
+## PIB nominal vs PIB real
+
+- Como el valor de la producción se hace a precios de mercado, el aumento en los precios hace que el PIB suba. 
+
+- Pero si solo suben los precios, la economía no produce más.
+
+---
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Growth in the &lt;a href="https://twitter.com/hashtag/advancedeconomies?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#advancedeconomies&lt;/a&gt; group is projected at –5.8% in 2020, 2.3 percentage points stronger than in the June 2020 WEO Update reflecting better-than-foreseen &lt;a href="https://twitter.com/hashtag/US?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#US&lt;/a&gt; and &lt;a href="https://twitter.com/hashtag/euroarea?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#euroarea&lt;/a&gt; GDP growth. Read more in the &lt;a href="https://twitter.com/hashtag/WEO?src=hash&amp;amp;ref_src=twsrc%5Etfw"&gt;#WEO&lt;/a&gt; &lt;a href="https://t.co/XMCO1e58iW"&gt;https://t.co/XMCO1e58iW&lt;/a&gt; &lt;a href="https://t.co/eL0MkNEA0i"&gt;pic.twitter.com/eL0MkNEA0i&lt;/a&gt;&lt;/p&gt;&amp;mdash; IMF (@IMFNews) &lt;a href="https://twitter.com/IMFNews/status/1316019642398175233?ref_src=twsrc%5Etfw"&gt;October 13, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+---
+
+
+
 # Macroeconomía
 
 - Es la rama de la economía que estudia el comportamiento de la economía de una región, un país o el mundo.
@@ -45,8 +110,11 @@ class: center, middle, inverse, title-slide
 Busca responder preguntas como:
 
 - ¿Qué tan difícil es encontrar empleo?
+
 - ¿Los salarios y el bienestar material de la población esta mejorando?
+
 - ¿Qué pasa con el nivel de precios y el poder adquisitivo de los ingresos?
+
 - ¿Cómo se comporta el tipo de cambio?
 
 ---
@@ -394,6 +462,8 @@ Es el gasto que hacen los extranjeros en nuestra economía (exportaciones) __men
 &lt;!-- ## Aumento del gasto exógeno (2) --&gt;
 
 &lt;!-- El efecto multiplicador --&gt;
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -440,9 +510,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -451,7 +537,23 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
   }
 })();
-</script>
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 slideshow._releaseMath = function(el) {
