@@ -86,8 +86,18 @@ $$ PIB = Sueldos + Beneficios + Rentas + Impuestos\ Netos + Depreciación $$
 
 ¿Qué pasa con los productos que no son comprados para ser consumidos (bienes finales), sino que son comprados por otras empresas como insumos para producir otros bienes?
 
+---
+# Producto Real y Producto Potencial
+
+- El producto real es la producción de la economía en cada año.
+- El producto potencial busca eliminar el componente cíclico.
 
 ---
+# Evolución Reciente en Uruguay
+
+![](imgs/ciclo_pib.png)
+---
+
 
 ## PIB nominal vs PIB real
 
@@ -98,12 +108,20 @@ $$ PIB = Sueldos + Beneficios + Rentas + Impuestos\ Netos + Depreciación $$
 ---
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Growth in the <a href="https://twitter.com/hashtag/advancedeconomies?src=hash&amp;ref_src=twsrc%5Etfw">#advancedeconomies</a> group is projected at –5.8% in 2020, 2.3 percentage points stronger than in the June 2020 WEO Update reflecting better-than-foreseen <a href="https://twitter.com/hashtag/US?src=hash&amp;ref_src=twsrc%5Etfw">#US</a> and <a href="https://twitter.com/hashtag/euroarea?src=hash&amp;ref_src=twsrc%5Etfw">#euroarea</a> GDP growth. Read more in the <a href="https://twitter.com/hashtag/WEO?src=hash&amp;ref_src=twsrc%5Etfw">#WEO</a> <a href="https://t.co/XMCO1e58iW">https://t.co/XMCO1e58iW</a> <a href="https://t.co/eL0MkNEA0i">pic.twitter.com/eL0MkNEA0i</a></p>&mdash; IMF (@IMFNews) <a href="https://twitter.com/IMFNews/status/1316019642398175233?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ---
+## Algunos usos del PIB
 
+![](imgs/pib-exante.jpeg)
 
+---
+## Algunos usos del PIB (2)
 
-# Macroeconomía
+![](imgs/pib-gasto.jpeg)
 
-- Es la rama de la economía que estudia el comportamiento de la economía de una región, un país o el mundo.
+---
+## Algunos usos del PIB (3)
+
+![](imgs/pib-industrias.jpeg)
+
 
 
 ---
@@ -170,18 +188,7 @@ A través de los impuestos, el gobierno afecta los ingresos de los hogares y los
 - __Endógenas__: Crisis Financieras y ciclos de negocios
 - __Exógenas__: Pánicos, hiperinflación, burbuja de la nueva economía, burbuja inmobiliaria, pandemias.
 
----
-# Producto Real y Producto Potencial
 
-- El producto real es la producción de la economía en cada año.
-- El producto potencial busca eliminar el componente cíclico.
-
----
-# Evolución Reciente en Uruguay
-
-
-
-![](imgs/ciclo_pib.png)
 
 ---
 # El modelo de Oferta y Demanda Agregadas
