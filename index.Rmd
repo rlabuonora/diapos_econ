@@ -75,16 +75,18 @@ theme_set(
 
 .pull-left[
 - Google Classroom 
-- [Sitio web](econ.rlabuonora.com)
+- [Sitio web](https://econ.rlabuonora.com)
+
   - Ejercicios
   - Notas de clase
-- Libro
-  - Parkin y Loría: Microeconomía. Editorial Pearson
+  - Libro Microeconomía (Parkin y Loría)
 ]
 
 
+
+
 .pull-right[
-![](imgs/parkin_micro.png)
+!(imgs/parkin_micro.jpg)    
 ]
 
 
@@ -92,8 +94,9 @@ theme_set(
 ---
 # Evaluación
 
-- Participación en clase
-- Escrito
+- Participación en clase (50%)
+
+- Pruebas Escritas (50%)
 
   - 2 escritos
   - 2 parciales
