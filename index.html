@@ -3,6 +3,7 @@
   <head>
     <title>Demanda y Oferta</title>
     <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
@@ -12,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Demanda y Oferta
-### 30/7/2020
+### 30/3/2022
 
 ---
 
@@ -54,31 +55,29 @@ La demanda de un bien es la cantidad que alguien está dispuesto a comprar de es
 Es la __relación__ entre la cantidad demandada y el precio del bien.
 
 ---
-# Varias formas de visualizarlo
+# Varias formas de visualizarla
 
 .pull-left[
+  
 Como una tabla
 
-Precio | Cantidad demandada  
--------| ------------------- 
-10     | 0                   
-8      | 10                  
-6      | 20                  
-4      | 30                  
-2      | 40                  
+Precio | Cantidad demandada
+-------| -------------------
+10     | 0
+8      | 10
+6      | 20
+4      | 30
+2      | 40
 0      | 125
 ]
-                 
+
 
 
 .pull-right[
 Como una función
 
-
 $$ Q_d = Q(p_d) $$
 ]
-
-
 
 ---
 class: center
@@ -88,7 +87,7 @@ class: center
 
 ---
 
-# La cantidad demandada no es la demanda
+# La cantidad demandada y la demanda
 
 - La _demanda_ es la _cantidad demandada_ __para cada precio__.
 - Un cambio en la demanda no es lo mismo que un cambio en la cantidad demandada.
@@ -106,7 +105,7 @@ class: center
 - En el modelo de demanda, las variables endógenas son
   - La cantidad
   - El precio
-  
+
 ---
 # Factores exógenos
 
@@ -145,12 +144,6 @@ class: center
 
 ---
 
-# Oferta
-
-&lt;img src="imgs/oferta.jpeg"&gt;
-
----
-
 # La curva de oferta
 
 Cuando aumenta el precio del bien que venden, los empresarios quieren producir más de ese bien. Eso implica que la curva de oferta de un bien tiene **pendiente positiva** en el plano `\((Q, P)\)`
@@ -159,6 +152,7 @@ Cuando aumenta el precio del bien que venden, los empresarios quieren producir m
 
 ![](index_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
 
+- Si el precio aumenta los productores producen más
 ---
 
 # Factores que desplazan la curva de oferta
@@ -217,165 +211,171 @@ Un aumento de la oferta provoca un aumento en la cantidad ofrecida y demandada y
 - Si el gobierno fija un precio máximo menor que el precio de equilibrio, hay un exceso de demanda.
 
 ---
-# Precios máximos en Argentina   🇦🇷
+# Precios máximos en Argentina
 
 ![](imgs/precios_maximos.png)
 
-![](imgs/precios_populares.png)
+---
+
+# Precios máximos en Argentina (2)
+
+![](imgs/precios_cuidados.jpeg)
 
 ---
-# Precios máximos en Venezuela 🇻🇪
+# Precios máximos en Venezuela
 
 ![](imgs/super_venezuela_2.png)
 
 
 ---
 
-# Precios máximos en Venezuela 🇻🇪
+# Precios máximos en Venezuela (2)
 
 ![](imgs/super_venezuela_3.png)
 
----
-# Elasticidad Precio de la Demanda
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Precio de la Demanda --&gt;
 
 
-- Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad precio de la demanda ( `\(E_p\)` cuantifica esa caída.
+&lt;!-- - Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad precio de la demanda ( `\(E_p\)` cuantifica esa caída. --&gt;
 
-- Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio.
+&lt;!-- - Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio. --&gt;
 
-- Se calcula como el valor absoluto del cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio:
+&lt;!-- - Se calcula como el valor absoluto del cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio: --&gt;
 
-$$ E_d = | \frac{ \Delta Q\%}{\Delta P \%} |$$
----
-# Elasticidad Precio de la Demanda (2)
-
-
-- La elasticidad de la demanda de un bien depende de varios factores:
-  - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica.
-  - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo.
-  - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica.
-
----
-# Elasticidad Precio de la Demanda (3)
+&lt;!-- $$ E_d = | \frac{ \Delta Q\%}{\Delta P \%} |$$ --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Precio de la Demanda (2) --&gt;
 
 
-  - Si `\(E_p = 1\)` el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien.
-  - Si `\(E_p &gt; 1\)` el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien.
-  - Si `\(E_p &lt; 1\)` el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien.
+&lt;!-- - La elasticidad de la demanda de un bien depende de varios factores: --&gt;
+&lt;!--   - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica. --&gt;
+&lt;!--   - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo. --&gt;
+&lt;!--   - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Precio de la Demanda (3) --&gt;
+
+
+&lt;!--   - Si `\(E_p = 1\)` el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien. --&gt;
+&lt;!--   - Si `\(E_p &gt; 1\)` el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien. --&gt;
+&lt;!--   - Si `\(E_p &lt; 1\)` el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien. --&gt;
 
 
 
----
+&lt;!-- --- --&gt;
 
-# A tener en cuenta:
+&lt;!-- # A tener en cuenta: --&gt;
 
-  - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida. 
-  - Para calcular la variación porcentual, usamos el promedio del valor inicial y el final como denominador. 
- 
-$$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$
-Donde `\(\Delta P\)` es la variación absoluta de `\(P\)` ( `\(P_1 - P_0\)` ), `\(P_0\)` es el precio inicial y `\(P_1\)` el precio final.
+&lt;!--   - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida.  --&gt;
+&lt;!--   - Para calcular la variación porcentual, usamos el promedio del valor inicial y el final como denominador.  --&gt;
 
-- Si no usamos valor absoluto, la elasticidad sería negativa.
+&lt;!-- $$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$ --&gt;
+&lt;!-- Donde `\(\Delta P\)` es la variación absoluta de `\(P\)` ( `\(P_1 - P_0\)` ), `\(P_0\)` es el precio inicial y `\(P_1\)` el precio final. --&gt;
 
-
----
-# Ejemplo
+&lt;!-- - Si no usamos valor absoluto, la elasticidad sería negativa. --&gt;
 
 
-&lt;img src="imgs/elasticidad.png"&gt;
-
----
-
-# Ejemplo (1)
-
-- El precio pasa de 90 a 110.
-- La cantidad pasa de 240 a 160.
-
----
-
-# Ejemplo (2)
-
-- La variación absoluta del precio es 20.
-- La variación absoluta de la cantidad es 80.
-
-- La variación porcentual del precio es 20%. `\((\frac{20}{\frac{90+110}{2}})\)`
-- La variación porcentual de la cantidad es 40% `\((\frac{80}{\frac{160+240}{2}})\)`.
-
----
-# Casos extremos
-
-![](imgs/extremos.png)
+&lt;!-- --- --&gt;
+&lt;!-- # Ejemplo --&gt;
 
 
----
-# La elasticidad y los ingresos de las empresas
+&lt;!-- &lt;img src="imgs/elasticidad.png"&gt; --&gt;
 
-- Si hay un aumento en la oferta, baja el precio ( `\(P\)` ) y sube la cantidad ( `\(Q\)` ) .
-- ¿Qué pasa con el ingreso de las empresas ( `\(P \times Q\)` )?
+&lt;!-- --- --&gt;
 
-- Depende de la elasticidad de la demanda.
+&lt;!-- # Ejemplo (1) --&gt;
 
----
-# Elasticidad e ingresos (2)
+&lt;!-- - El precio pasa de 90 a 110. --&gt;
+&lt;!-- - La cantidad pasa de 240 a 160. --&gt;
 
-&lt;img src="imgs/casos.png"&gt;
+&lt;!-- --- --&gt;
 
+&lt;!-- # Ejemplo (2) --&gt;
 
----
+&lt;!-- - La variación absoluta del precio es 20. --&gt;
+&lt;!-- - La variación absoluta de la cantidad es 80. --&gt;
 
-# Elasticidad e ingresos
+&lt;!-- - La variación porcentual del precio es 20%. `\((\frac{20}{\frac{90+110}{2}})\)` --&gt;
+&lt;!-- - La variación porcentual de la cantidad es 40% `\((\frac{80}{\frac{160+240}{2}})\)`. --&gt;
 
-- Si la demanda es elástica, el aumento en `\(Q\)` va a ser mayor que la caída en `\(P\)`, por lo que el ingreso total `\(P \times Q\)` sube.
-- Si la demanda es inelástica, el aumento en `\(Q\)` va a ser menor que la caída en `\(P\)` y el ingreso total $ P
-\times Q $ cae.
-- Si la elasticidad es unitaria, `\(Q\)` cae en la misma proporción que `\(P\)` sube. 
+&lt;!-- --- --&gt;
+&lt;!-- # Casos extremos --&gt;
 
-
----
-# Elasticidad Ingreso del combustible
-
-![](imgs/elasticidad_ingresos_combustible_exante.png)
+&lt;!-- ![](imgs/extremos.png) --&gt;
 
 
----
-# Elasticidad Ingreso de la demanda de combustibles
+&lt;!-- --- --&gt;
+&lt;!-- # La elasticidad y los ingresos de las empresas --&gt;
 
-- El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible.
-- El quintil más rico gasta 4.9%.
-- Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta.
----
+&lt;!-- - Si hay un aumento en la oferta, baja el precio ( `\(P\)` ) y sube la cantidad ( `\(Q\)` ) . --&gt;
+&lt;!-- - ¿Qué pasa con el ingreso de las empresas ( `\(P \times Q\)` )? --&gt;
 
-# Elasticidad Ingreso de la demanda de alimentos
+&lt;!-- - Depende de la elasticidad de la demanda. --&gt;
 
-![](imgs/ingreso_alimentos_2.png)
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad e ingresos (2) --&gt;
 
----
-# Elasticidad Ingreso de los Alimentos 
-
-- A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece.
-
----
-# Efecto de un impuesto
-
-- Incidencia legal vs. incidencia económica
-- A veces los productores pueden trasladar todo el peso del impuesto a los consumidores. 
-- Depende de las elasticades relativas de oferta y demanda.
-
----
-# Análisis económico
-
-![](imgs/impuesto.png)
+&lt;!-- &lt;img src="imgs/casos.png"&gt; --&gt;
 
 
----
-# Análisis económico (2)
+&lt;!-- --- --&gt;
 
-- El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos.
+&lt;!-- # Elasticidad e ingresos --&gt;
 
-- El impuesto hace que la oferta se desplace hacia la izquierda por $2.
-- Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes.
+&lt;!-- - Si la demanda es elástica, el aumento en `\(Q\)` va a ser mayor que la caída en `\(P\)`, por lo que el ingreso total `\(P \times Q\)` sube. --&gt;
+&lt;!-- - Si la demanda es inelástica, el aumento en `\(Q\)` va a ser menor que la caída en `\(P\)` y el ingreso total $ P --&gt;
+&lt;!-- \times Q $ cae. --&gt;
+&lt;!-- - Si la elasticidad es unitaria, `\(Q\)` cae en la misma proporción que `\(P\)` sube.  --&gt;
 
-- El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores.
+
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Ingreso del combustible --&gt;
+
+&lt;!-- ![](imgs/elasticidad_ingresos_combustible_exante.png) --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Ingreso de la demanda de combustibles --&gt;
+
+&lt;!-- - El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible. --&gt;
+&lt;!-- - El quintil más rico gasta 4.9%. --&gt;
+&lt;!-- - Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta. --&gt;
+&lt;!-- --- --&gt;
+
+&lt;!-- # Elasticidad Ingreso de la demanda de alimentos --&gt;
+
+&lt;!-- ![](imgs/ingreso_alimentos_2.png) --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Elasticidad Ingreso de los Alimentos  --&gt;
+
+&lt;!-- - A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Efecto de un impuesto --&gt;
+
+&lt;!-- - Incidencia legal vs. incidencia económica --&gt;
+&lt;!-- - A veces los productores pueden trasladar todo el peso del impuesto a los consumidores.  --&gt;
+&lt;!-- - Depende de las elasticades relativas de oferta y demanda. --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- # Análisis económico --&gt;
+
+&lt;!-- ![](imgs/impuesto.png) --&gt;
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # Análisis económico (2) --&gt;
+
+&lt;!-- - El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos. --&gt;
+
+&lt;!-- - El impuesto hace que la oferta se desplace hacia la izquierda por $2. --&gt;
+&lt;!-- - Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes. --&gt;
+
+&lt;!-- - El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores. --&gt;
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

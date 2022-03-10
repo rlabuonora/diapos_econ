@@ -1,6 +1,6 @@
 ---
 title: "Demanda y Oferta"
-date: "30/7/2020"
+date: "30/3/2022"
 output:
   xaringan::moon_reader:
     css: ["default", "default-fonts", "custom.css"]
@@ -64,31 +64,29 @@ La demanda de un bien es la cantidad que alguien está dispuesto a comprar de es
 Es la __relación__ entre la cantidad demandada y el precio del bien.
 
 ---
-# Varias formas de visualizarlo
+# Varias formas de visualizarla
 
 .pull-left[
+  
 Como una tabla
 
-Precio | Cantidad demandada  
--------| ------------------- 
-10     | 0                   
-8      | 10                  
-6      | 20                  
-4      | 30                  
-2      | 40                  
+Precio | Cantidad demandada
+-------| -------------------
+10     | 0
+8      | 10
+6      | 20
+4      | 30
+2      | 40
 0      | 125
 ]
-                 
+
 
 
 .pull-right[
 Como una función
 
-
 $$ Q_d = Q(p_d) $$
 ]
-
-
 
 ---
 class: center
@@ -107,12 +105,12 @@ df <- tribble(
   1,     20,          "E",  "Después"
 )
 
-ggplot(df, aes(x=cantidad, y=precio, color = momento)) + 
-  geom_line(size = 1) + 
+ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
+  geom_line(size = 1) +
   geom_point(size= 4) +
-  #geom_text_repel(aes(label=lab), show.legend=FALSE, size = 8) + 
-  xlim(5, 20) + 
-  ylim(0, 5) + 
+  #geom_text_repel(aes(label=lab), show.legend=FALSE, size = 8) +
+  xlim(5, 20) +
+  ylim(0, 5) +
   labs(x="Cantidad de Maíz",
        y="Precio del Maíz",
        title = "Demanda de Maíz"
@@ -126,7 +124,7 @@ ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
 
 ---
 
-# La cantidad demandada no es la demanda
+# La cantidad demandada y la demanda
 
 - La _demanda_ es la _cantidad demandada_ __para cada precio__.
 - Un cambio en la demanda no es lo mismo que un cambio en la cantidad demandada.
@@ -144,7 +142,7 @@ ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
 - En el modelo de demanda, las variables endógenas son
   - La cantidad
   - El precio
-  
+
 ---
 # Factores exógenos
 
@@ -181,18 +179,18 @@ ggplot(df, aes(x=cantidad, y=precio, color = momento)) +
 ```{r, warning=FALSE}
 df_2 <- bind_rows(
   df,
-  mutate(df, 
+  mutate(df,
          momento = "Antes",
          cantidad = cantidad-5)
 )
 
-ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) + 
-  geom_line(size = 2) + 
+ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) +
+  geom_line(size = 2) +
   geom_point() +
-  xlim(0, 20) + 
-  ylim(0, 5) + 
-  annotate("segment", x = 6, xend = 9, y=4, yend=4, arrow = arrow(length = unit(0.2, "cm"))) + 
-  annotate("segment", x = 11, xend = 14, y=2, yend=2, arrow = arrow(length = unit(0.2, "cm"))) + 
+  xlim(0, 20) +
+  ylim(0, 5) +
+  annotate("segment", x = 6, xend = 9, y=4, yend=4, arrow = arrow(length = unit(0.2, "cm"))) +
+  annotate("segment", x = 11, xend = 14, y=2, yend=2, arrow = arrow(length = unit(0.2, "cm"))) +
   labs(x="Cantidad de Maíz",
        y="Precio del Maíz",
        title = "Demanda de Maíz",
@@ -203,12 +201,6 @@ ggplot(df_2, aes(x=cantidad, y=precio, color=momento)) +
 
 ---
 
-# Oferta
-
-<img src="imgs/oferta.jpeg">
-
----
-
 # La curva de oferta
 
 Cuando aumenta el precio del bien que venden, los empresarios quieren producir más de ese bien. Eso implica que la curva de oferta de un bien tiene **pendiente positiva** en el plano $(Q, P)$
@@ -216,19 +208,19 @@ Cuando aumenta el precio del bien que venden, los empresarios quieren producir m
 ---
 
 ```{r}
-df_3 <- mutate(df, 
+df_3 <- mutate(df,
          cantidad_ofrecida = c(18, 16, 12, 7, 0))
 
-ggplot(df_3, aes(x=cantidad_ofrecida, y=precio, color = momento)) + 
-  geom_line() + 
+ggplot(df_3, aes(x=cantidad_ofrecida, y=precio, color = momento)) +
+  geom_line() +
   geom_point() +
   labs(x="Cantidad de Maíz",
        y="Precio del Maíz",
-       title = "Oferta de Maíz",
-       subtitle = "Si el precio aumenta \nlos productores producen más") +
+       title = "Oferta de Maíz") + 
   theme(legend.position = "none")
 ```
 
+- Si el precio aumenta los productores producen más
 ---
 
 # Factores que desplazan la curva de oferta
@@ -252,9 +244,7 @@ ggplot(df_3, aes(x=cantidad_ofrecida, y=precio, color = momento)) +
 # Gráficamente
 
 ```{r, message=FALSE}
-theme_set(theme_minimal() + 
-            theme(axis.text = element_text(size=8),
-              plot.title = element_text(hjust = 0.5)))
+theme_set(theme_minimal(base_size = 18))
 
 library(reconPlots)
 library(viridis)
@@ -269,7 +259,7 @@ line.2 <- data.frame(x = c(x_max, 0),
                      y = c(0, x_max),
                      name="demand")
 
-line.3 <- line.1 %>% 
+line.3 <- line.1 %>%
   mutate(y = y + 2,
          name="demand_1")
 
@@ -278,25 +268,25 @@ line.intersection <- curve_intersect(line.1, line.2)
 line.intersection.1 <- curve_intersect(line.3, line.2)
 
 
-ggplot(mapping = aes(x=x, y=y)) + 
-  geom_line(data = line.1, aes(color=name), size = 2) + 
-  geom_line(data = line.2, aes(color=name), size = 2) + 
-  geom_segment(lty = "dashed", 
-               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) + 
-  geom_segment(lty = "dashed", 
+ggplot(mapping = aes(x=x, y=y)) +
+  geom_line(data = line.1, aes(color=name), size = 2) +
+  geom_line(data = line.2, aes(color=name), size = 2) +
+  geom_segment(lty = "dashed",
+               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) +
+  geom_segment(lty = "dashed",
                aes(x=line.intersection$x, y=0, xend=line.intersection$x, yend=line.intersection$y)) +
-  scale_color_manual(name = NULL, 
+  scale_color_manual(name = NULL,
                      labels = c("Demanda", "Oferta"),
-                     values = c("#23576E", "#099FDB", 
-                                "#29B00E", "#208F84", 
+                     values = c("#23576E", "#099FDB",
+                                "#29B00E", "#208F84",
                                 "#F55840", "#924F3E")) +
   scale_x_continuous(expand = c(0, 0.2), breaks = c(0, line.intersection$x), labels=c("", expression(~Q[0])))  +
-  scale_y_continuous(expand = c(0, 0.2), breaks = c(0, line.intersection$y), labels=c("", expression(~P[0]))) + 
+  scale_y_continuous(expand = c(0, 0.2), breaks = c(0, line.intersection$y), labels=c("", expression(~P[0]))) +
   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 6), arrow = arrow(length=unit(0.2, "cm"))) +
-  geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + 
-  theme(axis.title.y = 
+  geom_segment(aes(x=0, y=0, xend = 6, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) +
+  theme(axis.title.y =
           element_text(angle = 0),
-        axis.title.x = 
+        axis.title.x =
           element_text(hjust=0.95, vjust=6))  +
   labs(x="Q", y="P")
 ```
@@ -307,25 +297,25 @@ ggplot(mapping = aes(x=x, y=y)) +
 Un aumento de la oferta provoca un aumento en la cantidad ofrecida y demandada y en una caída del precio.
 
 ```{r}
-ggplot(mapping = aes(x=x, y=y)) + 
-  geom_line(data = line.1, aes(group = 1, color=name), size=2) + 
-  geom_line(data = line.2, aes(group = 1, color=name), size=2) + 
-  geom_line(data = line.3, aes(group = 1, color=name), size=2) + 
-  geom_segment(lty = "dashed", 
-               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) + 
-  geom_segment(lty = "dashed", 
-               aes(x=line.intersection$x, y=0, xend=line.intersection$x, yend=line.intersection$y)) + 
+ggplot(mapping = aes(x=x, y=y)) +
+  geom_line(data = line.1, aes(group = 1, color=name), size=2) +
+  geom_line(data = line.2, aes(group = 1, color=name), size=2) +
+  geom_line(data = line.3, aes(group = 1, color=name), size=2) +
   geom_segment(lty = "dashed",
-               aes(x=line.intersection.1$x, y=0, xend=line.intersection.1$x, yend=line.intersection.1$y)) + 
+               aes(x=0, y = line.intersection$y, xend=line.intersection$x, yend=line.intersection$y)) +
   geom_segment(lty = "dashed",
-               aes(x=0, y=line.intersection.1$y, xend=line.intersection.1$x, yend=line.intersection.1$y)) + 
-  annotate("point", x=line.intersection$x, y=line.intersection$y) + 
-  annotate("point", x=line.intersection.1$x, y = line.intersection.1$y) + 
-  ylim(c(0, 7)) + 
+               aes(x=line.intersection$x, y=0, xend=line.intersection$x, yend=line.intersection$y)) +
+  geom_segment(lty = "dashed",
+               aes(x=line.intersection.1$x, y=0, xend=line.intersection.1$x, yend=line.intersection.1$y)) +
+  geom_segment(lty = "dashed",
+               aes(x=0, y=line.intersection.1$y, xend=line.intersection.1$x, yend=line.intersection.1$y)) +
+  annotate("point", x=line.intersection$x, y=line.intersection$y) +
+  annotate("point", x=line.intersection.1$x, y = line.intersection.1$y) +
+  ylim(c(0, 7)) +
   geom_segment(aes(x = 0, y = 0, xend = 0, yend = 7), arrow = arrow(length=unit(0.2, "cm"))) +
-  geom_segment(aes(x=0, y=0, xend = 7, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) + 
-  scale_color_manual( name="", values = c("#23576E", "#099FDB", 
-                                 "#29B00E", "#208F84", 
+  geom_segment(aes(x=0, y=0, xend = 7, yend = 0), arrow = arrow(length=unit(0.2, "cm"))) +
+  scale_color_manual( name="", values = c("#23576E", "#099FDB",
+                                 "#29B00E", "#208F84",
                                  "#F55840", "#924F3E"),
                       labels=c("Demanda",
                                "Oferta (t=0)",
@@ -362,164 +352,168 @@ ggplot(mapping = aes(x=x, y=y)) +
 - Si el gobierno fija un precio máximo menor que el precio de equilibrio, hay un exceso de demanda.
 
 ---
-# Precios máximos en Argentina   🇦🇷
+# Precios máximos en Argentina
 
 ![](imgs/precios_maximos.png)
 
-![](imgs/precios_populares.png)
+---
+
+# Precios máximos en Argentina (2)
+
+![](imgs/precios_cuidados.jpeg)
 
 ---
-# Precios máximos en Venezuela 🇻🇪
+# Precios máximos en Venezuela
 
 ![](imgs/super_venezuela_2.png)
 
 
 ---
 
-# Precios máximos en Venezuela 🇻🇪
+# Precios máximos en Venezuela (2)
 
 ![](imgs/super_venezuela_3.png)
 
----
-# Elasticidad Precio de la Demanda
+<!-- --- -->
+<!-- # Elasticidad Precio de la Demanda -->
 
 
-- Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad precio de la demanda ( $E_p$ cuantifica esa caída.
+<!-- - Ya sambemos que si el precio sube la cantidad demandada baja, la elasticidad precio de la demanda ( $E_p$ cuantifica esa caída. -->
 
-- Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio.
+<!-- - Mide __cuánto__ cambia la cantidad demandada cuando cambia el precio. -->
 
-- Se calcula como el valor absoluto del cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio:
+<!-- - Se calcula como el valor absoluto del cociente entre la variación porcentual en la cantidad y la variación porcentual en el precio: -->
 
-$$ E_d = | \frac{ \Delta Q\%}{\Delta P \%} |$$
----
-# Elasticidad Precio de la Demanda (2)
-
-
-- La elasticidad de la demanda de un bien depende de varios factores:
-  - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica.
-  - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo.
-  - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica.
-
----
-# Elasticidad Precio de la Demanda (3)
+<!-- $$ E_d = | \frac{ \Delta Q\%}{\Delta P \%} |$$ -->
+<!-- --- -->
+<!-- # Elasticidad Precio de la Demanda (2) -->
 
 
-  - Si $E_p = 1$ el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien.
-  - Si $E_p > 1$ el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien.
-  - Si $E_p < 1$ el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien.
+<!-- - La elasticidad de la demanda de un bien depende de varios factores: -->
+<!--   - Si el bien tiene muchos **sustitutos**, su demanda va a ser más elástica. -->
+<!--   - Si tomamos un **plazo de tiempo** largo, la demanda del bien es más elástica, porque los consumidores se ajustan mejor en el largo plazo. -->
+<!--   - Los **bienes de lujo** tienen demanda más elástica que los bienes de necesidad básica. -->
+
+<!-- --- -->
+<!-- # Elasticidad Precio de la Demanda (3) -->
+
+
+<!--   - Si $E_p = 1$ el bien tiene **elasiticidad unitaria**. Eso implica que un cambio en 1% en el precio del bien implica un cambio de 1% en la cantidad demandada de ese bien. -->
+<!--   - Si $E_p > 1$ el bien tiene **demanda elástica**, un cambio de 1% en el precio del bien implica un cambio mayor a 1% en la cantidad demandada del bien. -->
+<!--   - Si $E_p < 1$ el bien tiene **demanda inelástica**, un cambio de 1% en el precio del bien implica un cambio menor a 1% en la cantidad demandada del bien. -->
 
 
 
----
+<!-- --- -->
 
-# A tener en cuenta:
+<!-- # A tener en cuenta: -->
 
-  - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida. 
-  - Para calcular la variación porcentual, usamos el promedio del valor inicial y el final como denominador. 
- 
-$$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$
-Donde $\Delta P$ es la variación absoluta de $P$ ( $P_1 - P_0$ ), $P_0$ es el precio inicial y $P_1$ el precio final.
+<!--   - Usamos cambios porcentuales y no absolutos. Esto permite comparar elasticidades de distintos productos, y hace que los cálculos sean independientes de las unidades de medida.  -->
+<!--   - Para calcular la variación porcentual, usamos el promedio del valor inicial y el final como denominador.  -->
 
-- Si no usamos valor absoluto, la elasticidad sería negativa.
+<!-- $$ \Delta P\%\ = \frac{\Delta P}{(P_0 + P_1) / 2}$$ -->
+<!-- Donde $\Delta P$ es la variación absoluta de $P$ ( $P_1 - P_0$ ), $P_0$ es el precio inicial y $P_1$ el precio final. -->
 
-
----
-# Ejemplo
+<!-- - Si no usamos valor absoluto, la elasticidad sería negativa. -->
 
 
-<img src="imgs/elasticidad.png">
-
----
-
-# Ejemplo (1)
-
-- El precio pasa de 90 a 110.
-- La cantidad pasa de 240 a 160.
-
----
-
-# Ejemplo (2)
-
-- La variación absoluta del precio es 20.
-- La variación absoluta de la cantidad es 80.
-
-- La variación porcentual del precio es 20%. $(\frac{20}{\frac{90+110}{2}})$
-- La variación porcentual de la cantidad es 40% $(\frac{80}{\frac{160+240}{2}})$.
-
----
-# Casos extremos
-
-![](imgs/extremos.png)
+<!-- --- -->
+<!-- # Ejemplo -->
 
 
----
-# La elasticidad y los ingresos de las empresas
+<!-- <img src="imgs/elasticidad.png"> -->
 
-- Si hay un aumento en la oferta, baja el precio ( $P$ ) y sube la cantidad ( $Q$ ) .
-- ¿Qué pasa con el ingreso de las empresas ( $P \times Q$ )?
+<!-- --- -->
 
-- Depende de la elasticidad de la demanda.
+<!-- # Ejemplo (1) -->
 
----
-# Elasticidad e ingresos (2)
+<!-- - El precio pasa de 90 a 110. -->
+<!-- - La cantidad pasa de 240 a 160. -->
 
-<img src="imgs/casos.png">
+<!-- --- -->
 
+<!-- # Ejemplo (2) -->
 
----
+<!-- - La variación absoluta del precio es 20. -->
+<!-- - La variación absoluta de la cantidad es 80. -->
 
-# Elasticidad e ingresos
+<!-- - La variación porcentual del precio es 20%. $(\frac{20}{\frac{90+110}{2}})$ -->
+<!-- - La variación porcentual de la cantidad es 40% $(\frac{80}{\frac{160+240}{2}})$. -->
 
-- Si la demanda es elástica, el aumento en $Q$ va a ser mayor que la caída en $P$, por lo que el ingreso total $P \times Q$ sube.
-- Si la demanda es inelástica, el aumento en $Q$ va a ser menor que la caída en $P$ y el ingreso total $ P
-\times Q $ cae.
-- Si la elasticidad es unitaria, $Q$ cae en la misma proporción que $P$ sube. 
+<!-- --- -->
+<!-- # Casos extremos -->
 
-
----
-# Elasticidad Ingreso del combustible
-
-![](imgs/elasticidad_ingresos_combustible_exante.png)
+<!-- ![](imgs/extremos.png) -->
 
 
----
-# Elasticidad Ingreso de la demanda de combustibles
+<!-- --- -->
+<!-- # La elasticidad y los ingresos de las empresas -->
 
-- El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible.
-- El quintil más rico gasta 4.9%.
-- Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta.
----
+<!-- - Si hay un aumento en la oferta, baja el precio ( $P$ ) y sube la cantidad ( $Q$ ) . -->
+<!-- - ¿Qué pasa con el ingreso de las empresas ( $P \times Q$ )? -->
 
-# Elasticidad Ingreso de la demanda de alimentos
+<!-- - Depende de la elasticidad de la demanda. -->
 
-![](imgs/ingreso_alimentos_2.png)
+<!-- --- -->
+<!-- # Elasticidad e ingresos (2) -->
 
----
-# Elasticidad Ingreso de los Alimentos 
-
-- A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece.
-
----
-# Efecto de un impuesto
-
-- Incidencia legal vs. incidencia económica
-- A veces los productores pueden trasladar todo el peso del impuesto a los consumidores. 
-- Depende de las elasticades relativas de oferta y demanda.
-
----
-# Análisis económico
-
-![](imgs/impuesto.png)
+<!-- <img src="imgs/casos.png"> -->
 
 
----
-# Análisis económico (2)
+<!-- --- -->
 
-- El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos.
+<!-- # Elasticidad e ingresos -->
 
-- El impuesto hace que la oferta se desplace hacia la izquierda por $2.
-- Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes.
+<!-- - Si la demanda es elástica, el aumento en $Q$ va a ser mayor que la caída en $P$, por lo que el ingreso total $P \times Q$ sube. -->
+<!-- - Si la demanda es inelástica, el aumento en $Q$ va a ser menor que la caída en $P$ y el ingreso total $ P -->
+<!-- \times Q $ cae. -->
+<!-- - Si la elasticidad es unitaria, $Q$ cae en la misma proporción que $P$ sube.  -->
 
-- El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores.
+
+<!-- --- -->
+<!-- # Elasticidad Ingreso del combustible -->
+
+<!-- ![](imgs/elasticidad_ingresos_combustible_exante.png) -->
+
+
+<!-- --- -->
+<!-- # Elasticidad Ingreso de la demanda de combustibles -->
+
+<!-- - El quintil más pobre de los hogares Uruguayos gasta 3,9% de sus ingresos en combustible. -->
+<!-- - El quintil más rico gasta 4.9%. -->
+<!-- - Cuando aumenta el ingreso, la participación de los combustibles en el prespuuesto total aumenta. -->
+<!-- --- -->
+
+<!-- # Elasticidad Ingreso de la demanda de alimentos -->
+
+<!-- ![](imgs/ingreso_alimentos_2.png) -->
+
+<!-- --- -->
+<!-- # Elasticidad Ingreso de los Alimentos  -->
+
+<!-- - A medida que los países se hacen más ricos, su gasto en alimentos aumenta, pero la participación de los alimentos en el gasto total decrece. -->
+
+<!-- --- -->
+<!-- # Efecto de un impuesto -->
+
+<!-- - Incidencia legal vs. incidencia económica -->
+<!-- - A veces los productores pueden trasladar todo el peso del impuesto a los consumidores.  -->
+<!-- - Depende de las elasticades relativas de oferta y demanda. -->
+
+<!-- --- -->
+<!-- # Análisis económico -->
+
+<!-- ![](imgs/impuesto.png) -->
+
+
+<!-- --- -->
+<!-- # Análisis económico (2) -->
+
+<!-- - El equilibrio inicial es con un precio de $2 y 100 billones de galones vendidos. -->
+
+<!-- - El impuesto hace que la oferta se desplace hacia la izquierda por $2. -->
+<!-- - Esto se debe a que ahora los productores tienen que recibir $2 más por galón para producir la misma cantidad que antes. -->
+
+<!-- - El nuevo equilibrio (E'), el precio es $3.8 y la cantidad 80 billones de galones. De esos $3.8, los productores reciben $1.8 y pagan $2 de impuestos, pero lograron trasladar la mayor parte de la suba a los consumidores. -->
 
 
