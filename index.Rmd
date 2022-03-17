@@ -27,9 +27,11 @@ output:
  height: 200px;
 }
 
+
 li {
   margin-bottom: 20px;
 }
+
 
 </style>
 
@@ -50,7 +52,6 @@ demand <- Hmisc::bezier(c(1, 3, 9),
                         c(9, 3, 1)) %>%
   as_data_frame()
 ```
-
 # La Demanda
 
 <img src="imgs/demanda.jpg">
@@ -324,6 +325,10 @@ ggplot(mapping = aes(x=x, y=y)) +
   labs(x="", y="")
 
 ```
+---
+
+![](imgs/commodities_guerra.jpeg)
+
 ---
 # Precios mínimos
 
