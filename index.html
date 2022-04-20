@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Demanda Agregada y Política Fiscal</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Demanda Agregada y Política Fiscal
+### 30/7/2019
+
+---
+
+
+&lt;style&gt;
+
+li {
+  margin: 40px;
+}
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+&lt;/style&gt;
+
+
+
+
+# Ciclos de Negocios
+.pull-left[
+- El análisis de los ciclos de negocios es uno de los temas centrales de la macroeconomía.
+- John Maynard Keynes fue el que originó esta rama de la economía en los años 30.
+]
+
+.pull-right[
+&lt;img src="imgs/keynes.jpg"&gt;
+
+]
+
+---
+# Ciclos de Negocios
+
+- Las economías modernas pasan por períodos de auge y caída.
+- El empleo baja.
+- La inversión baja.
+- Ganacias de las empresas bajan.
+
+
+---
+
+# ¿Por qué hay ciclos?
+
+- Teorías con causas exógenas (Guerras, demografía) 
+- Teorías con causas endógenas (crisis financieras y bancarias, pánicos, burbujas)
+
+---
+# Demanda Agregada
+
+- Es la producción total de bienes y servicios de una economía que alguien se planifica comprar a cierto precio.
+
+  
+---
+# Demanda Agregada
+
+.pull-left[
+- Tiene pendiente negativa
+- Si aumenta el nivel de precio cae la riqueza real y las exportaciones netas.
+]
+
+
+.pull-right[
+![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+]
+
+---
+# Demanda Agregada
+
+.pull-left[
+- Tiene pendiente negativa
+- Si aumenta el nivel de precio cae la riqueza real y las exportaciones netas.
+- Tiene 4 componentes: Consumo, Inversión, Compras del Gobierno, Exportaciones Netas
+]
+
+
+.pull-right[
+![](index_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+]
+
+
+---
+# Cambios en la DA
+
+- Variables de política: Política Fiscal, Política Monetaria
+- Variables exógenas: Ingreso internacional, Riqueza, Tecnología, Otros
+  
+---
+
+## Movimientos de la DA vs. Movimientos sobre la DA
+
+
+
+
+
+.center2[
+![](index_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+]
+
+
+
+---
+&lt;!-- # Caída en la demanda agregada --&gt;
+
+&lt;!-- ```{r} --&gt;
+&lt;!-- demand &lt;- function(q) (q - 10)^2 --&gt;
+&lt;!-- demand_2 &lt;- function(q) (q - 10)^2 + 40 --&gt;
+&lt;!-- supply &lt;- function(q) q^2 + 2*q + 8 --&gt;
+
+&lt;!-- x &lt;- 0:10 --&gt;
+
+
+&lt;!-- q_1 &lt;- uniroot(function(x) demand(x) - supply(x), range(x))$root --&gt;
+&lt;!-- q_2 &lt;- uniroot(function(x) demand_2(x) - supply(x), range(x))$root --&gt;
+
+
+&lt;!-- p_1 &lt;- supply(q_1) --&gt;
+&lt;!-- p_2 &lt;- supply(q_2) --&gt;
+
+&lt;!-- chart &lt;- ggplot() + --&gt;
+&lt;!--   stat_function(aes(x, color = "Demand_2"),  --&gt;
+&lt;!--                 xlim = c(1.5, 8), --&gt;
+&lt;!--                 fun = demand, linetype = "dashed") + --&gt;
+&lt;!--   stat_function(aes(x, color = "Demand_1"),  --&gt;
+&lt;!--                 xlim = c(1.5, 8), --&gt;
+&lt;!--                 fun = demand_2) + --&gt;
+&lt;!--   stat_function(aes(x, color = "Supply"), fun = supply) + --&gt;
+&lt;!--   labs(title = "Caída en la DA", --&gt;
+&lt;!--     caption = "Una caída de la demanda agregada reduce el PIB y el nivel de precios",  --&gt;
+&lt;!--     y="P", x="Q") --&gt;
+
+&lt;!-- caida &lt;- chart + --&gt;
+&lt;!--   annotate("point", x = q_1, y = p_1) + # Refactor to use another data set? --&gt;
+&lt;!--   annotate("point", x = q_2, y = p_2) + # geom_point, geom_step, geom_text_repel --&gt;
+&lt;!--   annotate("segment", x=0, y=p_1, xend=q_1, yend=p_1, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=q_1, y=p_1, xend=q_1, yend=0, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=0, y=p_2, xend=q_2, yend=p_2, linetype = "dashed") +  --&gt;
+&lt;!--   annotate("segment", x=q_2, y=p_2, xend=q_2, yend=0, linetype = "dashed") +  --&gt;
+&lt;!--   scale_x_continuous(breaks = c(q_1, q_2), labels = expression(Q[1], Q[2]), --&gt;
+&lt;!--                      expand = expand_scale(add = c(0, 2), --&gt;
+&lt;!--                                            mult = c(0, 0))) + --&gt;
+&lt;!--   scale_y_continuous(breaks = c(p_1, p_2),  --&gt;
+&lt;!--                      labels = expression(P[1], P[2]), --&gt;
+&lt;!--                      limits = c(0, 101), --&gt;
+&lt;!--                      expand = c(0, 0)) + --&gt;
+&lt;!--   geom_segment(aes(color = "Qd", x = 10, xend = 10, y=0, yend = 100), size = 1) + # Add manual legend --&gt;
+&lt;!--   theme( --&gt;
+&lt;!--     axis.title.y = element_text(angle = 0, vjust = 1) , --&gt;
+&lt;!--     axis.title.x = element_text(hjust = 1, vjust = 6) --&gt;
+&lt;!--   ) --&gt;
+
+&lt;!-- caida --&gt;
+&lt;!-- ``` --&gt;
+
+
+---
+## El modelo del multiplicador
+
+
+Ejemplo numérico
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; GDP &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Consumo &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; S &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; I &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 400 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3900 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3600 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3400 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3300 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3200 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3000 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2700 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 2800 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; -100 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 200 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$ C = 1000 + \frac{2}{3} GDP $$
+
+
+---
+## Gráficamente: Equilibrio
+
+
+
+
+![](index_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+## Ajustes fuera del equilibrio
+
+![](index_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+
+
+---
+## Aumento del gasto exógeno
+
+![](index_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+## El multiplicador
+
+- El multiplicador es el impacto de un cambio en el gasto exógeno sobre el PIB.
+- Si hay trabajadores desempleados y los contratamos para construir una carretera de $1000, el PIB aumenta más que $1000.
+- Si ahorran todo lo que les pagamos, el PIB aumenta $1000, pero como una parte de esos ingresos lo consumen, se generan aumentos del PIB de *segunda vuelta*. 
+
+
+---
+## El multiplicador (2)
+
+
+
+- Estos aumentos generan más aumentos encadenados. El aumento total en el PIB es:
+
+$$ \$1000 + \frac{2}{3} \$1000 + (\frac{2}{3}) (\frac{2}{3}) \$1000 + ...$$
+
+- Es una suma infinita, pero converge a una cantidad finita:
+
+$$ \$1000 * \frac{1}{1-\frac{2}{3}} $$
+
+## Gráficamente
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
