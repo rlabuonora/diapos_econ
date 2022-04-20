@@ -1,6 +1,6 @@
 ---
-title: "Introducción a la Economía"
-date: "22/2/22"
+title: "Teoría del Consumidor"
+date: "30/7/2019"
 output:
   xaringan::moon_reader:
     css: ["default", "default-fonts", "custom.css"]
@@ -38,311 +38,203 @@ library(cowplot)
 library(knitr)
 library(kableExtra)
 
-theme_set(
-  theme_classic() + 
-    theme(
-      plot.title = element_text(hjust = 0.5)
-    ))
+
+source('./excedente_control_precios.R')
+source('./excedente_impuestos.R')
+
+
+theme_set(theme_minimal(base_size = 16))
+
+
 
 ```
 
-# Introducción a la Economía
+# La teoría del consumidor
 
-
-- Martes  9:50 - 10:30
-- Viernes 8:25 - 9:50
-
----
-# Docente
-
-- Rafael La Buonora (rafael.labuonora `r emo::ji("e-mail")`) 
-
-- Economista
-  - Ministerio de Industria
-  - Ministerio de Economía
-  - Oficina de Planeamiento y Presupuesto
+- Es la base conceptual de la curva de demanda que analizamos en la unidad anterior.
+- Permite analizar como un consumidor toma decisiones económicas.
 
 
 ---
-# Objetivos del curso
+# La utilidad
+- Es un concepto fundamental para analizar las decisiones del consumidor.
+- El consumidor toma decisiones económicas para obtener la máxima utilidad, o satisfacción derivada de los bienes que consume.
 
-- Presentar las principales herramientas de la ciencia economómica para entender el mundo.
-- Dar un panorama de qué hacen los economistas.
+---
+# Utilidad total
+- El consumidor elige entre combinaciones de bienes:
+  - 1 kilo de papas y 0.5 de zanahorias.
+  - 2 kilos de cebollas y 0.5 kilos de papas.
+  
+- Elige la combinación (o canasta) que le reporta mayor utilidad total.
+
+---
+# Utilidad marginal
+
+- Es la utilidad extra que le reporta al consumidor agregar una unidad de un bien a la canasta.
+- Es una función de la cantidad consumida del bien.
+- Si 1 helado me da 10 unidades de utilidad y dos helados me dan 18, la segunda unidad me agregó 8 unidades de utilidad.
+
+---
+# Ejemplo
+
+| Cantidad  | Utilidad Total  | Utilidad Marginal   |
+|-----------|-----------------|---------------------|
+|     0     |   0             | -                    |
+|     1     |   4             |   4                   |
+|     2     |   7             |   3                  |
+|     3     |   9             |   2                  |
+|     4     |   10            |   1                  |
+|     5     |   10            |   0                  |
+
+
+La utilidad total es la suma de las utilidades marginales de las unidades consumidas.
+
+---
+# Utilidad marginal decreciente
+
+- Si bien la utilidad total aumenta a medida que consumimos mayores cantidades de un bien, la utilidad marginal decrece.
+
+- Si no tomamos Coca Cola, el primer vaso nos da mucha satisfacción. Si nos ofrecen otro vaso, probablemente prefiramos dos vasos a uno solo, pero el segundo vaso aumenta menos mi utilidad que el primero.
+---
+
+# El principio de equimarginalidad
+
+- Este principio implica que la utilidad marginal del dinero gastado en todos los bienes que compramos debe ser igual.
+
+- Qué es $\frac{UM_{alfajores}}{P_{alfajores}}$?
+
+Es la utilidad que me da gastar un peso extra en alfajores. Si un alfajor vale $50 y me da 100 unidades de utilidad, un peso extra gastado en alfajores me da 2 unidades de utilidad.
+---
+
+# El principio de equimarginalidad (2)
+
+- En equilibrio debe cumplirse que 
+$$ \frac{MU_1}{P_1} = \frac{MU_2}{P_2} = ... = \frac{MU_n}{P_n}$$
+
+---
+# La pendiente de la curva de demanda
+
+- Esta ecuación me permite derivar la pendiente negativa de la curva de demanda.
+- Recordamos que $MU$ es una función de la cantidad consumida $(Q)$.
+- Si sube $P_1$, para mantener la igualdad, $MU_{1}$ tiene que subir. La forma de hacer que $MU_{1}$ suba es consumir menos del bien 1.
+
+---
+# El excedente del consumidor
+
+- La curva de demanda representa la disponiblidad a pagar por cierta cantidad demandada.
+- El precio de equilibrio se determina en el cruce con la curva de oferta.
+- Para las primeras unidades compradas la disponiblidad a pagar es más alta que para las últimas.
+- Pero todas las unidades se venden al mismo precio.
 
 ---
 
-# Recursos (1)
+# Consumidor individual
 
-.pull-left[
-- Google Classroom 
-- [Sitio web](econ.rlabuonora.com)
-  - Ejercicios
-  - Notas de clase
-- Libro
-  - Parkin y Loría: Microeconomía. Editorial Pearson
-]
-
-
-.pull-right[
-![](imgs/parkin_micro.png)
-]
-
-
-
----
-# Evaluación
-
-- Participación en clase
-- Escrito
-
-  - 2 escritos
-  - 2 parciales
+<img src="imgs/excedente_1.png">
 
 ---
 
-# ¿Qué estudia la economía?
+# Consumidor individual (2)
 
-- ¿Por qué algunos países son más ricos que otros?
-
-- ¿Cómo se determina el salario de los trabajadores?
-
-- ¿Qué medidas debe tomar el gobierno para mejorar el bienestar de la población?
-
-- ¿A quién beneficia una política económica?
-
----
-
-# Contenido del curso
-
-- Microeconomía
-
-  - Consumidores
-  - Productores
-  - Mercados
-  - Mercado de Trabajo
-  - Distribución del Ingreso
-- Macroeconomía
-  - Actividad Económica
-  - Desempleo
-  - Inflación
-  - Dólar y Comercio Exterior
-
----
-
-# Problemas económicos de la sociedad
-
-- ¿Qué producir?
-
-Economías con __estructura productivas__ diferentes.
-
-- ¿Cómo producir?
-
-Economías disponen de diferentes __tecnologías__.
-
-- ¿Para quién producir?
-
-__Distribución__ del producto de la economía.
-
----
-# Economías Mixtas
-
-- Las economías modernas don __economías **mixtas**__ 
-- Combinan dos mecanismos para asignar recursos:
-  - El mercado
-  - El estado
+- Las unidades anteriores generan mayor satisfacción que el precio que paga el consumidor.
 
 ---
 
 # El mercado
 
-.pull-left[
-
-- Reúne compradores (demanda) y vendedores (oferta).
-
-- Coordina millones de agentes __descentralizadamente__.
-
-- Determinan el precio de un bien y la cantidad vendida
-
-]
-
-.pull-right[
-  <img src="imgs/mercado.jpg">
-]
+<img src="imgs/excedente_2.png">
 
 
 ---
-# Mercado y Precios 
 
-.pull-left[
+# Usos
 
-<img src="imgs/smith.jpg">
+- Se calcula como el área entre el precio y la curva de demanda.
+- Si la curva de demanda es lineal, es un triángulo.
+- Sirve para calcular el bienestar que los consumidores obtienen por participar en un mercado.
+- Sirve para cuantificar los efectos de políticas económicas (impuestos, etc.) o distintos regímenes de competencia.
 
-]
+---
+# Aplicación a controles de precios
 
-.pull-right[
+El gobierno impone un precio mínimo de $4
+```{r}
+antes
+```
 
-- El primero en entender la importancia de los mercados.
+---
+# Antes del control
 
-- Los precios son señales para que los agentes tomen decisiones.
 
-- Determinan qué, cómo y para quién se produce.
+|       Concepto              | Valor           |
+|-----------------------------|-----------------|
+| Excedente del Productor     |   90000         |
+| Excedente del Consumidor    |   90000         |
+| Recaudación                 |   0             | 
+| Total                       |    180000       | 
 
-]
 
 
 ---
-## El mercado como mecanismo de asignación de recursos
+# Controles de precios
+```{r}
+despues
 
-
-- No hay un individuo o empresa responsable de "hacer funcionar" los mercados. Hay mercados de muchos tipos (centralizados, descentralizados, electrónicos, etc.).
-
-- El rol de los mercados es determinar los **precios** y las **cantidades** que se compran de cada bien en la economía (autos, toneladas de celulosa, clases de economía).
-
-- Estos precios sirven como **señales** para los agentes económicos, y son imprescindibles para **coordinar** su acción.
-
-- El **equilibrio** de mercado es una combinación de precios y cantidades que haya un balance entre oferta y demanda, y que no se produzca de más ni de menos.
-
----
-## El mercado como mecanismo de asignación de recursos (2)
-
-- Los mercados son una forma de determinar
-  - ¿Qué producir? Si nadie compra algo, el productor recibe una señal de que no es socialmente deseable destinar recursos a su producción.
-  
-  - ¿Cómo producir? Una nueva tecnología de producción será adoptada si aumenta más los ingresos que los costos.
-  
-  - ¿Para quién producir? Los ingresos de los miembros de una sociedad se determinan por los precios de los factores productivos que poseen.
-  
-  
----
-## El mercado como mecanismo de asignación de recursos (3)
-
-- Los principales fuerzas que determinan el funcionamiento de la economía: las preferencias y la tecnología.
-
-- Las preferencias son los gustos de los consumidores, y determinan donde nos vamos a parar en la FPP.
-
-- La tecnología determina los límites de lo que podemos producir con los factores productivos que poseemos.
+```
 
 
 ---
-# El rol del Estado
+# Análisis del bienestar
 
-.pull-left[
+|            Concepto         | Valor             |
+|-----------------------------|-------------------|
+| Excedente del Productor     |     40000         |
+| Excedente del Consumidor    | 800 + 400 = 120000|
+| Total                       |     160000        |
 
-En una economía mixta, el Estado es necesario cuando:
-- Resultados ineficientes
-- Resultados eficientes pero injustos
-- Estabilidad macroeconómica
-]
 
-.pull-right[
-  <img src="imgs/tabare.jpg">
-]
+- Pérdida del  bienestar: 20000
 
 ---
-# Competencia Imperfecta
+# Aplicación a impuestos
 
-Los oferentes o los demandantes tienen __poder de mercado__.
-
-<img src="imgs/food.jpg">
- 
- 
----
-# Competencia Imperfecta (2)
-
-.pull-left[
-  <img src="imgs/ancap.png">
-]
-
-.pull-right[
-  <img src="imgs/tech.jpeg">
-]
+El gobierno impone un impuesto de $3.
+```{r}
+impuesto_consumidores
+```
 
 ---
-# Externalidades
-
-La actividad económica genera efectos que no se reflejan en los precios.
-
-.pull-left[
-  <img src="imgs/innovation.jpg">
-]
-
-.pull-right[
-  <img src="imgs/pollution.jpg">
-
-]
-
----
-class: center
-# Bienes Públicos
-
-No es posible excluir personas de su consumo
-
-<img src="imgs/ejercito.jpeg">
-
----
-class:center
-
-# Desigualdad
-
-
--Algunos resultados pueden ser eficientes pero injustos
-
-<img src="imgs/distribucion.jpg">
-
----
-# Estabilidad Macroeconómica
-
-El nivel de actividad, el empleo y el nivel general de precios.
-
-.pull-left[
-  - Política Fiscal (Ministerio de Economía)
-
-  <img src="imgs/mef.png">
-]
-
-.pull-right[
-  - Política Monetaria (Bancos Central)
-  <img src="imgs/bcu.jpg">
-]
+# Impuestos
+```{r}
+impuesto_productores
+```
 
 
 ---
-# Método: ¿Cómo estudia la economía?
+# Bienestar antes del impuesto
 
-- La economía como ciencia.
-- Matemática: el lenguaje de la ciencia.
-
----
-# Variables
-
-- Las ventas de una empresa (precios, cantidades, ventas).
-- La cantidad de empleos en una economía.
-- El valor de las exportaciones de un país.
+|       Concepto              |  Valor          |
+|-----------------------------|-----------------|
+| Excedente del Productor     |         8       |
+| Excedente del Consumidor    |         4       |
+| Recaudación                 |         0       | 
+| Total                       |         12      |
 
 ---
-# Ecuaciones
-
-$$ Beneficios = Ingresos - Costos $$
-
-$$ Consumo = f(Ingreso) $$
-
----
-# Funciones
-
-$$ Producción = f(Trabajadores) $$
-$$ Demanda = Q_d(Precio, Ingresos, ...) $$
+# Bienestar
+```{r}
+bienestar_con_impuesto
+```
 
 ---
-# El diagrama del flujo circular
+# Cálculo
 
-.pull-left[
-  -Es un esquema de como se relacionan los agentes de la economía.
-  - Aparecen los hogares, y las empresas.
-  - Se vinculan a través de mercados.
+|    Concepto               |  Valor        |
+|---------------------------|---------------|
+| Excedente del Productor   |     2         |
+| Excedente del Consumidor  |     1         |
+| Recaudación               |     6         | 
+| Total                     |     9         |
 
-]
-
-.pull-right[
-  <img src="imgs/flujo_circular.png">
-
-]
+Pérdida: 4
